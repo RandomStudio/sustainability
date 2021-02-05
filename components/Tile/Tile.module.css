@@ -1,0 +1,41 @@
+.tile {
+	background: $darkGrey;
+	border-radius: 20px;
+	padding: 20px;
+	min-height: 184px;
+	
+	@media (min-width: 760px) {
+		min-height: 242px;
+		padding: 32px 40px;
+	}
+
+	&.hasTitle {
+		min-height: 336px;
+		padding: 32px 20px;
+	
+		@media (min-width: 760px) {
+			min-height: 242px;
+			padding: 32px 40px;
+		}
+	}
+}
+
+.title {
+	@mixin highlightText;
+	padding: 0;
+	margin: 0 0 32px;
+
+	@media (min-width: 760px) {
+		margin-bottom: 26px;
+	}
+}
+
+.copy {
+	@mixin highlightText;
+	padding: 0;
+	margin: 0;
+
+	.hasTitle & {
+		@mixin normalText;
+	}
+}

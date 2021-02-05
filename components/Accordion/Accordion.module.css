@@ -1,0 +1,56 @@
+.accordion {
+	@mixin wrapper;
+}
+
+.checkbox {
+	display: none;
+}
+
+.title {
+	@mixin accordionTitle;
+	display: block;
+	margin-bottom: 24px;
+	position: relative;
+	user-select: none;
+
+	&::after {
+		background-color: transparent;
+		border: 1px solid #FFFFFF;
+		border-width: 1px 1px 0 0;
+		box-sizing: border-box;
+		transform: translateY(-50%) rotate(-135deg);
+		width: 12px;
+		height: 12px;
+		position: absolute;
+		right: 0;
+		top: 50%;
+		content: '';
+
+		.checkbox:checked ~ & {
+				transform: translateY(-50%) rotate(-225deg);
+		}
+	}
+}
+
+.contents {
+	border-bottom: 1px solid rgba(255,255,255,0.5);
+	max-height: 0;
+	margin-bottom: 24px;
+	overflow: hidden;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: auto;
+	row-gap: 8px;
+	
+	@media (min-width: 760px) {
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: auto;
+		column-gap: 20px;
+		row-gap: 20px;
+	}
+
+	.checkbox:checked ~ & {
+		max-height: 999px;
+		padding: 16px 0 97px;
+	}
+}

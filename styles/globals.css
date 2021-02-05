@@ -4,6 +4,8 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    background-color: black;
+    color: white;
 }
 
 a {
@@ -13,4 +15,16 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Random';
+  src: url('/fonts/random/Random-Regular.woff2') format('woff2'),
+        url('/fonts/random/Random-Regular.woff') format('woff'),
+       url('/fonts/random/Random-Regular.ttf')  format('truetype'),
+       url('/fonts/random/Random-Regular.svg#svgFontName') format('svg');
+}
+
+body {
+	@mixin bodyText;
 }

@@ -1,0 +1,54 @@
+@define-mixin wrapper {
+	padding: 0 20px;
+}
+
+@define-mixin accordionTitle {
+	font-size: 28px;
+	line-height: 1;
+	text-transform: uppercase;
+
+	@media (min-width: 760px) {
+		font-size: 32px;
+		line-height: 29px;
+	}
+}
+
+@define-mixin ledeText {
+  font-size: 23px;
+  line-height: 31px;
+
+	@media (min-width: 760px) {
+		font-size: 32px;
+		line-height: 42px;
+	}
+}
+
+@define-mixin highlightText {
+	line-height: 29px;
+	font-size: 23px;
+
+	@media (min-width: 760px) {
+		font-size: 20px;
+		line-height: 24px;
+	}
+}
+
+@define-mixin normalText {
+	line-height: 29px;
+	font-size: 20px;
+}
+
+@define-mixin bodyText {
+	font-size: 16px;
+	line-height: 23px;
+	font-family: Random;
+	font-style: normal;
+	font-weight: 400;
+	letter-spacing: 0em;
+	text-align: left;
+
+	@media (min-width: 760px) {
+		font-size: 20px;
+		line-height: 29px;
+	}
+}
