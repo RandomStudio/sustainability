@@ -9,8 +9,10 @@
 .title {
 	@mixin accordionTitle;
 	display: block;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
+	padding: 12px 0;
 	position: relative;
+	cursor: pointer;
 	user-select: none;
 
 	&::after {
@@ -35,7 +37,7 @@
 .contents {
 	border-bottom: 1px solid rgba(255,255,255,0.5);
 	max-height: 0;
-	margin-bottom: 24px;
+	margin-bottom: 12px;
 	overflow: hidden;
 	display: grid;
 	grid-template-columns: 1fr;

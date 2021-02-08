@@ -7,7 +7,7 @@ import Hero from '../components/Hero/Hero'
 const Principles = () => {
   return (
     <>
-      <Hero image="blank">
+      <Hero image="blank" isReversed>
         <p className={styles.lede}>If we can prove to decision makers how sustainable futures could look and feel like by prototyping* them, we can lower the perceived threshold for change, and ultimately bring about real systemic change to various industries.</p>
         <p>Random Studio aims to create work which connects people, and connects them to their environment. The studio consists of an international team of 30+ visual artists, designers, producers, creative technologists, producers and software engineers, enabling Random to control the entire design process from ideation to production and installation. It is this capacity; the ability to dream, design and build small pieces of the future— that positions the studio uniquely well, showing our clients what could be and encouraging them to take the next step.</p>
       </Hero>

@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 
-const Hero = ({ children, image, isReversed }) => (
-	<div className={`${styles.hero} ${isReversed ? styles.isReversed : ''}`}>
+const Hero = ({ children, className, image, isReversed }) => (
+	<div className={`${styles.hero} ${isReversed ? styles.isReversed : ''} ${className}`}>
 		<div className={styles.copy}>
 			{children}
 		</div>
