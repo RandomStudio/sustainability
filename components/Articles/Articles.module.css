@@ -1,0 +1,46 @@
+.articles {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	row-gap: 40px;
+	column-gap: 16px;
+	
+	@media (min-width: 760px) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-rows: auto;
+	}
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	object-fit: cover;
+}
+
+.imageFrame {
+	position: relative;
+	background-color: red;
+	width: 100%;
+	padding-top: 70%;
+	margin: 0 0 12px;
+}
+
+.title {
+	@mixin ledeText;
+	margin: 0 0 20px;
+	padding: 0;
+}
+
+.copy {
+	@mixin bodyText;
+	margin: 0;
+	padding: 0;
+}

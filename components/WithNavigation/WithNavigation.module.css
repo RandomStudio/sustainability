@@ -1,0 +1,8 @@
+.frame {
+	@mixin wrapper;
+	width: 100vw;
+
+	@media (min-width: 960px) {
+		//padding-left: 12%;
+	}
+}

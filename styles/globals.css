@@ -27,4 +27,13 @@ a {
 
 body {
 	@mixin bodyText;
+  width: 100%;
+}
+
+.main {
+  background-color: black;
+  color: white;
+  max-width: 1440px;
+  margin: 0 auto;
+  width: 100%;
 }
