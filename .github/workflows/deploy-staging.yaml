@@ -9,6 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SERVER_IP: 195.114.30.143
+      SERVER_PORT: 22
       SOURCE_DIR: 'out'
     steps:
       - uses: actions/checkout@v1
@@ -26,7 +27,7 @@ jobs:
           host: ${{ env.SERVER_IP }}
           username: staging-bot
           key: ${{ secrets.SSH_KEY }}
-          port: 22
+          port: ${{ env.SERVER_PORT }}
           script: mkdir -p /var/www/staging.random.studio/${{ github.event.repository.name }}
       - name: Deploy preview
         uses: AEnterprise/rsync-deploy@1.0.1
