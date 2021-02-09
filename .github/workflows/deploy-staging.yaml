@@ -8,6 +8,7 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     env:
+      SERVER_IP: 195.114.30.143
       SOURCE_DIR: 'out'
     steps:
       - uses: actions/checkout@v1
@@ -22,7 +23,7 @@ jobs:
       - name: Create folders
         uses: appleboy/ssh-action@master
         with:
-          host: 195.114.30.143
+          host: ${{ env.SERVER_IP }}
           username: staging-bot
           key: ${{ secrets.SSH_KEY }}
           port: 22
