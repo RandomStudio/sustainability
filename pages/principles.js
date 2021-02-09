@@ -1,4 +1,3 @@
-import styles from './principles.module.css';
 import Accordion from '../components/Accordion/Accordion';
 import Tile from '../components/Tile/Tile';
 import Hero from '../components/Hero/Hero';
@@ -16,7 +15,7 @@ const Principles = () => {
       </Accordion>
       <Accordion id="principles" title="Principles" />
       <Accordion id="statement" title="Mission Statement">
-        <div className={styles.twoCol}></div>
+        <div></div>
       </Accordion>
       <Accordion id="impact" title="Impact Reports" />
     </>
