@@ -9,7 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     env:
       SOURCE_DIR: 'out'
-      SSH_KEY: ${{ secrets.SSH_KEY }}
     steps:
       - uses: actions/checkout@v1
       - name: Install dependencies
@@ -25,14 +24,14 @@ jobs:
         with:
           host: 195.114.30.143
           username: staging-bot
-          key: ${{ env.SSH_KEY }}
+          key: ${{ secrets.SSH_KEY }}
           port: 22
           script: mkdir -p /var/www/staging.random.studio/${{ github.event.repository.name }}
       - name: Deploy preview
         uses: AEnterprise/rsync-deploy@1.0.1
         env:
           ARGS: "-e -c -r --delete"
-          DEPLOY_KEY: ${{ env.SSH_KEY }}
+          DEPLOY_KEY: ${{ secrets.SSH_KEY }}
           USERNAME: staging-bot
           FOLDER: "./${{ env.SOURCE_DIR }}/"
           SERVER_DESTINATION: '/var/www/staging.random.studio/${{ github.event.repository.name }}'
