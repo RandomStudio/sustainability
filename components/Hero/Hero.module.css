@@ -3,20 +3,29 @@
 	grid-template-columns: 100%;
 	grid-template-rows: auto auto;
 	width: 100%;
-	margin-bottom: 48px;
-	border: 1px solid red;
+	margin-bottom: 120px;
 
 	@media (min-width: 760px) {
 		margin-bottom: 152px;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 90vh;
+		grid-template-rows: 75vh;
+	}
+}
+
+.hero + .hero {
+	margin-top: -120px;
+	
+	@media (min-width: 760px) {
+		margin-top: -152px;
 	}
 }
 
 .copy {
 	@mixin wrapper;
+	@mixin copy;
 	grid-row: 1/2;
 	width: 100vw;
+	margin-bottom: 56px;
 
 	@media (min-width: 760px) {
 		grid-column: 2 / 3;
@@ -28,6 +37,19 @@
 			grid-column: 1 /2;
 		}
 	}
+
+	:global(p) {
+		margin-bottom: 1em;
+	}
+
+	:global(p:last-child) {
+		margin-bottom: 0;
+	}
+}
+
+/* Workaround: Mixins cannot be included in a nested global */
+.copy :global(p:first-child) {
+	@mixin title;
 }
 
 .image {

@@ -1,12 +1,15 @@
 @define-mixin wrapper {
-	padding: 0 20px;
+	padding-left: 20px;
+	padding-right: 20px;
 
 	@media (min-width: 760px) {
-		padding: 0 32px;
+		padding-left: 32px;
+		padding-right: 32px;
 	}
 
 	@media (min-width: 960px) {
-		padding: 0 40px;
+		padding-left: 40px;
+		padding-right: 40px;
 	}
 }
 
@@ -61,21 +64,56 @@
 @define-mixin footerText {
 	font-size: 16px;
 	line-height: 20px;
-	font-weight: 400;
-	letter-spacing: 0em;
+}
+
+/*
+*/
+@define-mixin title {
+	font-size: 32px;
+	line-height: 1.25;
+
+	@media (min-width: 760px) {
+		font-size: 40px;
+	}
+}
+
+@define-mixin subtitle {
+	font-size: 24px;
+
+	@media (min-width: 760px) {
+		font-size: 32px;
+	}
+}
+
+@define-mixin copy {
+	font-size: 18px;
+	line-height: 24px;
+
+	@media (min-width: 760px) {
+		font-size: 20px; 
+	}
+}
+
+@define-mixin labels-desktop {
+	font-size: 16px;
+	line-height: 1.25;
+}
+
+@define-mixin labels {
+	font-size: 14px;
+	line-height: 1.5;
+
+	@media (min-width: 760px) {
+		@mixin labels-desktop;
+	}
 }
 
 @define-mixin bodyText {
-	font-size: 16px;
-	line-height: 23px;
+	@mixin copy;
 	font-family: Random;
 	font-style: normal;
 	font-weight: 400;
-	letter-spacing: 0em;
+	line-height: 1.5;
+	letter-spacing: -0.005em;
 	text-align: left;
-
-	@media (min-width: 760px) {
-		font-size: 20px;
-		line-height: 29px;
-	}
 }
