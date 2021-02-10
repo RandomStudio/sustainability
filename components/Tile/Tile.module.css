@@ -1,0 +1,23 @@
+ .tile {
+	border: 1px solid white;
+	padding: 36px 24px 44px;
+	width: 100%;
+	min-height: 35vw;
+	margin-bottom: 12px;
+
+	@media $(medium) {
+		min-height: calc(50vw * 0.4);
+		padding: 36px 44px 44px;
+	}
+}
+
+.title {
+	@mixin subtitle;
+	margin-bottom: 1em;
+	padding: 0;
+}
+
+.copy {
+	@mixin copy;
+	line-height: 1.5;
+}

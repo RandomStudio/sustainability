@@ -1,6 +1,6 @@
 import styles from './principles.module.css';
 import Accordion from '../components/Accordion/Accordion';
-import Tile from '../components/Accordion/Tile/Tile';
+import Tile from '../components/Tile/Tile';
 import Hero from '../components/Hero/Hero';
 
 const Principles = () => {
@@ -13,10 +13,37 @@ const Principles = () => {
       <Accordion id="goals" title="Goals">
         <div className={styles.tiles}>
           <Tile copy="Increase the demand for sustainable design of interactive spaces." />
-          <Tile copy="Our first step in becoming sustainable is transparency. We are honest in the depiction of ourselves, and where we are on the scale. We are accountable to facts, and acknowledge that we are responsible for the impact we have in this transitioning world." title="Be accountable" />
+          <Tile copy="Become a resource and collaborative partner for our clients and design peers in the conversion to sustainable design." />
         </div>
       </Accordion>
-      <Accordion id="principles" title="Principles" />
+      <Accordion id="principles" title="Principles">
+        <div className={styles.tiles}>
+          <Tile
+            copy="Our first step in becoming sustainable is transparency. We are honest in the depiction of ourselves, and where we are on the scale. We are accountable to facts, and acknowledge that we are responsible for the impact we have in this transitioning world."
+            title="Be accountable"
+          />
+          <Tile
+            copy="As a general rule, we take the life after the project into account when designing and engineering the experience. How will the materials, code and designs be reused or at least recycled?"
+            title="Design for post-use"
+          />
+          <Tile
+            copy="We are realistic that right now we are not 100% sustainable, but we are dedicated to finding opportunities to improve. We review our environmental impacts regularly and continually work to reduce it."
+            title="Always aim up"
+          />
+          <Tile
+            copy="Transport has a great impact. We prefer local materials wherever possible. A modular design is more easily shipped, allows components to be replaced, and the design to be disassembled for post-use. Also applies to software."
+            title="Go modular and local"
+          />
+          <Tile
+            copy="With every project, we ask how the brief can be fulfilled in the most sustainable way, and we present this option to our clients."
+            title="Green is the default"
+          />
+          <Tile
+            copy="Select materials based on project duration. A durable material is a more sustainable option for long-term projects, where compostable or rented structures for shorter timelines."
+            title="Optimise for duration"
+          />
+        </div>
+      </Accordion>
       <Accordion id="statement" title="Mission Statement">
         <div className={styles.halfCol}>
           <p>With our work we aim to create a context where we evoke feelings of curiosity and wonder. A play field that invites people to create and open new worlds.</p>
