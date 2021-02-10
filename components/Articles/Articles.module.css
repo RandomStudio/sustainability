@@ -44,6 +44,15 @@
 		width: calc(100% / 3 - (32px / 3));
 		margin-right: 16px;
 	}
+
+	&:nth-child(n+4) {
+		display: none;
+
+		@media $(medium) {
+			display: flex;
+		}
+	}
+
 }
 
 .image {

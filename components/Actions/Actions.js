@@ -1,4 +1,4 @@
-import Tile from '../Tile/Tile';
+import Tile from './Tile/Tile';
 import styles from './Actions.module.css';
 
 const Actions = ({ children, image }) => (

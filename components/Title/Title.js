@@ -7,6 +7,10 @@ const useIntersectionObserver = (ref) => {
 	const [intersectionState, setIntersectionState] = useState([]);
 	
 	useEffect(() => {
+		if (!ref?.current) {
+			return undefined;
+		}
+		let refRef = ref.current;
 		const observer = new IntersectionObserver(
 			([entry]) => {
 				setIntersectionState([entry.isIntersecting, entry.boundingClientRect.top]);
@@ -17,11 +21,9 @@ const useIntersectionObserver = (ref) => {
 			}
 		);
 
-		if (ref.current) {
-			observer.observe(ref.current);
-		}
+		observer.observe(refRef);
 		return () => {
-			observer.unobserve(ref.current);
+			observer.unobserve(refRef);
 		};
 	}, []);
 

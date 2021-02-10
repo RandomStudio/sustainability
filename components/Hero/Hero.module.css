@@ -8,7 +8,7 @@
 	@media $(medium) {
 		margin-bottom: 152px;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 75vh;
+		grid-template-rows: 90vh;
 	}
 }
 

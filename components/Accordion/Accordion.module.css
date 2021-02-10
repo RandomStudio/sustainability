@@ -7,7 +7,7 @@
 }
 
 .title {
-	@mixin subtitle;
+	@mixin title;
 	display: block;
 	margin-bottom: 12px;
 	padding: 12px 0;
@@ -39,20 +39,9 @@
 	max-height: 0;
 	margin-bottom: 12px;
 	overflow: hidden;
-	display: grid;
-	grid-template-columns: 1fr;
-	grid-template-rows: auto;
-	row-gap: 8px;
-	
-	@media $(medium) {
-		grid-template-columns: repeat(2, 1fr);
-		grid-template-rows: auto;
-		column-gap: 20px;
-		row-gap: 20px;
-	}
 
 	.checkbox:checked ~ & {
-		max-height: 999px;
+		max-height: 9999px;
 		padding: 16px 0 97px;
 	}
 }
