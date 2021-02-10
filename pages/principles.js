@@ -103,7 +103,16 @@ const Principles = () => {
           </ul>
         </div>
       </Accordion>
-      <Accordion id="impact" title="Impact Reports" />
+      <Accordion id="impact" title="Impact Reports">
+        <div className={styles.impact}>
+          <ul>
+            <li><a href="#" target="_external"><span>Chloe</span><span>2019</span></a></li>
+            <li><a href="#" target="_external"><span>CP</span><span>2020</span></a></li>
+            <li><a href="#" target="_external"><span>Sony</span><span>2021</span></a></li>
+          </ul>
+          <img src="#" />
+        </div>
+      </Accordion>
     </>
   )
 }

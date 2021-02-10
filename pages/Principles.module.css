@@ -58,3 +58,49 @@
 		row-gap: 20px;
 	}
 }
+
+.impact {
+	@mixin subtitle;
+
+	@media $(medium) {
+		display: grid;
+		grid-template-columns: 50% 50%;
+		column-gap: 56px;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+	}
+	
+	li {
+		border-bottom: 1px solid white;
+		list-style: none;
+		padding: 0;
+		margin: 0;
+	}
+	
+	li:first-child {
+		border-top: 1px solid white;
+	}
+
+	li a {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		line-height: 2;
+	}
+
+	img {
+		display: none;
+	}
+}
+
+.impact img {
+	@media $(medium) {
+		display: block;
+		width: 100%;
+		background-color: white;
+		height: calc(50vw * 0.6);
+	}
+}
