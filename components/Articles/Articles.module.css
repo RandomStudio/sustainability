@@ -8,9 +8,8 @@
 	margin-bottom: 48px;
 	
 	@media $(medium)  {
-		grid-template-columns: repeat(3, 1fr);
-		grid-template-rows: auto;
-		column-gap: 16px;
+		display: flex;
+		flex-direction: column;
 		margin-bottom: 120px;
 	}
 }
@@ -25,9 +24,26 @@
 	}
 }
 
+.container {
+	display: contents;
+	width: 100%;
+
+	@media $(medium) {
+		display: flex;
+		flex-direction: row;
+		overflow: scroll;
+	}
+}
+
 .article {
 	display: flex;
 	flex-direction: column;
+	flex-shrink: 0;
+
+	@media $(medium) {
+		width: calc(100% / 3 - (32px / 3));
+		margin-right: 16px;
+	}
 }
 
 .image {
