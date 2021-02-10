@@ -61,8 +61,10 @@
 
 .impact {
 	@mixin subtitle;
-
+	padding-top: 60px;
+	
 	@media $(medium) {
+		padding-top: 80px;
 		display: grid;
 		grid-template-columns: 50% 50%;
 		column-gap: 56px;
