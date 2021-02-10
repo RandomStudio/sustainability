@@ -8,6 +8,7 @@ const Actions = ({ children, image }) => (
 		<Tile copy="Use modular design if it reduces the project’s footprint" />
 		<Tile copy="Design for post-use, for example opting for reusable materials or rental" />
 		<Tile copy="Consider sustainability while ideating during the concept phase" />
+		<Tile copy="Propose a new action..." isContact />
 	</div>
 )
 
