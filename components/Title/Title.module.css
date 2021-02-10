@@ -1,0 +1,19 @@
+.title {
+	@mixin copy;
+	position: relative;
+	margin-bottom: 12px;
+	z-index: 11;
+
+	@media $(large) {
+		@mixin wrapper;
+		position: absolute;
+		left: 0;
+	}
+
+	&.isStuck {
+		@mixin wrapper;
+		position: fixed;
+		top: 20px;
+		color: red;
+	}
+}

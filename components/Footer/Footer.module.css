@@ -6,13 +6,13 @@
 	grid-template-columns: 100%;
 	row-gap: 0px;
 
-	@media (min-width: 760px) {
+	@media $(medium) {
 		grid-template-rows: auto;
 		grid-gap: 48px;
 		grid-template-columns: min-content min-content 236px;
 	}
 
-	@media (min-width: 960px) {
+	@media $(large) {
 		grid-template-rows: auto;
 		grid-template-columns: min-content min-content auto 236px 100px;
 	}
@@ -22,7 +22,7 @@
 	@mixin labels-desktop;
 	margin-bottom: 48px;
 
-	@media (min-width: 960px) {
+	@media $(large) {
 		grid-column: 4 / 5;
 		grid-row: 1 / 2;
 	}
@@ -65,7 +65,7 @@
 	font-style: normal;
 	margin-bottom: 48px;
 
-	@media (min-width: 960px) {
+	@media $(large) {
 		grid-row: 1 / 2;
 	}
 

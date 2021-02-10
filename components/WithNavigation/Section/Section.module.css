@@ -5,7 +5,7 @@
 	width: 100vw;
 	margin-bottom: 48px;
 	
-	@media (min-width: 760px) {
+	@media $(medium) {
 		grid-template-columns: 50vw 50vw;
 		grid-template-rows: 100vh;
 	}
@@ -16,7 +16,7 @@
 	grid-row: 1/2;
 	width: 100vw;
 
-	@media (min-width: 760px) {
+	@media $(medium) {
 		grid-column: 1 /2;
 		width: 100%;
 		align-self: center;
@@ -30,7 +30,7 @@
 	width: 100vw;
 	height: 125vw;
 
-	@media (min-width: 760px) {
+	@media $(medium) {
 		grid-row: 1 / 2;
 		grid-column: 2 /3;
 		width: 100%;

@@ -1,12 +1,12 @@
 module.exports = {
 	plugins: [
-		"postcss-nested",
 		[
 			"postcss-mixins",
 			{
 				mixinsFiles: './styles/mixins.pcss'
 			}
 		],
+		"postcss-nested",
 		[
 			"postcss-simple-vars",
 			{

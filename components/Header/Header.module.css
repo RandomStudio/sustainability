@@ -11,13 +11,13 @@
 	padding-bottom: 12px;
 	margin-bottom: 52px;
 
-	@media (min-width: 760px) {
+	@media $(medium) {
 		padding-top: 24px;
 		padding-bottom: 24px;
 		margin-bottom: 0;
 	}
 
-	@media (min-width: 960px) {
+	@media $(large) {
 		padding-top: 24px;
 		padding-bottom: 28px;
 	}

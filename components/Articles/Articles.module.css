@@ -1,5 +1,5 @@
 .articles {
-	@mixin wrapper;
+	@mixin wrapper-with-navigation;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: auto;
@@ -7,7 +7,7 @@
 	column-gap: 16px;
 	margin-bottom: 48px;
 	
-	@media (min-width: 760px)  {
+	@media $(medium)  {
 		grid-template-columns: repeat(3, 1fr);
 		grid-template-rows: auto;
 		column-gap: 16px;
@@ -19,7 +19,7 @@
 	@mixin title;
 	margin-bottom: 1.5em;
 
-	@media (min-width: 760px)  {
+	@media $(medium)  {
 		grid-column: 1 / 4;
 		margin-bottom: 0.5em;
 	}

@@ -44,7 +44,7 @@
 	grid-template-rows: auto;
 	row-gap: 8px;
 	
-	@media (min-width: 760px) {
+	@media $(medium) {
 		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: auto;
 		column-gap: 20px;

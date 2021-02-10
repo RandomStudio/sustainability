@@ -2,7 +2,7 @@
 	@mixin wrapper;
 	width: 100vw;
 
-	@media (min-width: 960px) {
+	@media $(large) {
 		//padding-left: 12%;
 	}
 }
