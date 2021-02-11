@@ -34,6 +34,11 @@
 		margin-top: -52px;
 		margin-bottom: 52px;
 	}
+
+	@media (min-width: $(max-width)) {
+		/* Shift to far left of screen. 504 relates to initial left offset in X axis from centre */
+		transform: translateX(calc((100vw - 1440px) / -2));
+	}
 }
 
 .fauxTitle h2 {
