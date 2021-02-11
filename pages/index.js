@@ -11,7 +11,7 @@ export default function Home() {
         <p>This toolkit includes an overview of practical application methods and tools that help us put sustainable principles into practice and covers topics such as material selection and design strategies, but also describes how to measure success.</p>
       </Hero>
       <section className={styles.section}>
-        <Title title="Design" />
+        <Title id="design" title="Design" />
         <div className={`${styles.column} isWithinNavigation`}>
           <Hero hasNavigation isReversed>
             <p>Sustainable design begins with the right idea</p>
@@ -23,7 +23,7 @@ export default function Home() {
         </div>
       </section>
       <section className={styles.section}>
-        <Title title="Development" />
+        <Title id="development" title="Development" />
         <div className={styles.column}>
           <Hero hasNavigation isReversed>
             <p>Consider The Real-World Impact Of Digital Computing.</p>
@@ -32,6 +32,9 @@ export default function Home() {
           </Hero>
         </div>
       </section>
+      <div className={styles.overlay}>
+        <h2 className={styles.fauxTitle}>Sustainability Toolkit</h2>
+      </div>
     </>
   )
 }

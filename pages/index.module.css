@@ -9,3 +9,21 @@
 .column {
 	display: block;
 }
+
+.overlay {
+	@mixin wrapper;
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100vh;
+	z-index: 11;
+}
+
+.fauxTitle {
+	@mixin copy;
+	position: sticky;
+	top: 0;
+	padding-top: 24px;
+}

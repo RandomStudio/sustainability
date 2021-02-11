@@ -33,4 +33,8 @@
 		/* Shift to far left of screen. 504 relates to initial left offset in X axis from centre */
 		transform: translateX(calc(-50vw + 504px));
 	}
+
+	&.isActive {
+		text-decoration: underline;
+	}
 }

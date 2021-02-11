@@ -16,7 +16,7 @@ const useIntersectionObserver = (ref) => {
 				setIntersectionState([entry.isIntersecting, entry.boundingClientRect.top]);
 			},
 			{
-				rootMargin: ['200px'],
+				rootMargin: ['0px'],
 				threshold: [0]
 			}
 		);
@@ -30,13 +30,47 @@ const useIntersectionObserver = (ref) => {
 	return intersectionState;
 }
 
-const Title = ({ title }) => {
+const Title = ({ id, title }) => {
 	const ref = useRef();
 	const [isIntersecting, top] = useIntersectionObserver(ref);
+	const [isActive, setIsActive] = useState(false);
 
-	const isFixed = isIntersecting && top <= 0;
+	useEffect(() => {
+		const onActiveStateChange = ({ detail: { activeId } }) => {
+			setIsActive(activeId === id);
+		}
+	
+		window.dispatchEvent(new CustomEvent('addNav', {
+			detail: {
+				id,
+				title
+			}
+		}));
+
+		window.addEventListener('navStateChange', onActiveStateChange);
+		
+		return () => {
+			window.dispatchEvent(new CustomEvent('removeNav', {
+				detail: {
+					id,
+					title
+				}
+			}));
+			window.removeEventListener('navStateChange', onActiveStateChange);
+		}
+	}, []);
+
+	useEffect(() => {
+		window.dispatchEvent(new CustomEvent('changeNav', {
+			detail: {
+				id,
+				isAbove: !isIntersecting && top <= 0
+			}
+		}));
+	}, [isIntersecting]);
+
 	return (
-		<h2 className={`${styles.title} ${isFixed ? styles.isFixed : ''}`} ref={ref}>{title}</h2>
+		<h2 className={`${styles.title} ${isActive ? styles.isActive : ''}`} ref={ref}>{title}</h2>
 	);
 }
 

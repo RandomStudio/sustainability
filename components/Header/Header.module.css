@@ -24,3 +24,7 @@
 	
 	@mixin wrapper;
 }
+
+.menu {
+	opacity: 0;
+}
