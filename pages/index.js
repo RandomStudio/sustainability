@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from './Home.module.css';
 import Actions from '../components/Actions/Actions'
 import Articles from '../components/Articles/Articles'
 import Hero from '../components/Hero/Hero'

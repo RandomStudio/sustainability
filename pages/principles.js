@@ -1,4 +1,4 @@
-import styles from './principles.module.css';
+import styles from './Principles.module.css';
 import Accordion from '../components/Accordion/Accordion';
 import Tile from '../components/Tile/Tile';
 import Hero from '../components/Hero/Hero';
