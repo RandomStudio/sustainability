@@ -1,12 +1,16 @@
 .header {
 	@mixin copy;
 	z-index: 10;
-	background-color: black;
 	position: sticky;
 	top: 0;
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: flex-end;
+}
+
+.header,
+.menu {
+	background-color: black;
 	padding-top: 20px;
 	padding-bottom: 12px;
 	margin-bottom: 52px;
@@ -25,6 +29,55 @@
 	@mixin wrapper;
 }
 
+.principles {
+	margin-left: auto;
+}
+
 .menu {
-	opacity: 0;
+	@mixin wrapper;
+	z-index: 11;
+	max-height: 0px;
+	overflow: hidden;
+	width: 100vw;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: black;
+	display: flex;
+	flex-direction: column;
+
+	@media $(large) {
+		width: 25vw;
+	}
+
+	@media $(x-large) {
+		width: 20vw;
+	}
+
+	@media $(max-width) {
+		width: 15vw;
+	}
+
+	a {
+		padding-bottom: 0.5em;
+
+		&.active {
+			text-decoration: underline;
+		}
+	}
+
+	&.hasNav {
+		a:first-child {
+			opacity: 0;
+		}
+	}
+}
+
+:global(#navcheckbox:checked) + .header .menu {
+	max-height: 999px;
+	z-index: 20;
+
+	&.hasNav a:first-child {
+		opacity: 0.5;
+	}
 }

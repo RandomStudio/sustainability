@@ -10,6 +10,7 @@ function MyApp({ Component, pageProps }) {
         <title>Sustainability Toolkit</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
+			<input id="navcheckbox" type="checkbox" />
       <Header />
       <main className="main">
         <Component {...pageProps} />

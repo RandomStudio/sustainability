@@ -3,11 +3,12 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
+	const [activeId, setActiveId] = useState(null);
 	const [links, setLinks] = useState([]);
 
 	useEffect(() => {
 		const addNav = ({ detail: { id, title }}) => {
-			setLinks(l => [...l, { id, isAbove: false, title }])
+			setLinks(l => [...l, { id, isAbove: l.length === 0, title }])
 		}
 		
 		const removeNav = ({ detail: { id }}) => {
@@ -23,9 +24,11 @@ const Header = () => {
 
 			const filteredLinks = clonedLinks.filter(({ isAbove }) => !isAbove);
 			setLinks(clonedLinks);
+			setActiveId(filteredLinks[0].id);
+	
 			window.dispatchEvent(new CustomEvent('navStateChange', {
 				detail: {
-					activeId: filteredLinks[0].id,
+					activeId: filteredLinks[0].id
 				}
 			}))
 		}
@@ -43,16 +46,11 @@ const Header = () => {
 
 	return (
 		<header className={styles.header}>
-			<nav className={styles.menu}>
-				{
-					links.length === 0 ? (
-						<Link href="/">Sustainability Toolkit</Link>
-					) : (
-						links.map(({ id, title }) => <Link href={`#${id}`}>{title}</Link>)
-					)
-				}
+			<nav className={`${styles.menu} ${links.length > 0 ? styles.hasNav : ''}`}>
+				<Link href="/">Sustainability Toolkit</Link>
+				{links.map(({ id, title }) => <Link href={`#${id}`}><a className={id === activeId ? styles.active : ''}>{title}</a></Link>)}
 			</nav>
-			<Link href="/principles">Goals & Principles</Link>
+			<Link href="/principles" className={styles.principles}>Goals & Principles</Link>
 		</header>
 	)
 }

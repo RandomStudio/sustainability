@@ -46,3 +46,11 @@ body {
   margin: 0 auto 120px;
   width: 100%;
 }
+
+#navcheckbox {
+  display: none;
+}
+
+#navcheckbox:checked ~ main section .activeTitle {
+  opacity: 0;
+}
