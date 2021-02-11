@@ -3,15 +3,23 @@
 	grid-template-columns: 100%;
 	grid-template-rows: auto auto;
 	width: 100%;
-	margin-bottom: 120px;
+	margin-bottom: 104px;
 
 	@media $(medium) {
 		margin-bottom: 152px;
 		grid-template-columns: 50% 50%;
-		grid-template-rows: 90vh;
+		grid-template-rows: minmax(min-content, 90vh);
+	}
+	
+	@media $(x-large) {
+		grid-template-rows: minmax(720px, min-content);
+		:global(.isWithinNavigation) & {
+			grid-template-columns: 41% 59%;
+		}
 	}
 }
 
+.hero + section,
 .hero + .hero {
 	@media $(medium) {
 		margin-top: -152px;
@@ -35,7 +43,18 @@
 			grid-column: 1 /2;
 		}
 	}
+
+	@media $(medium) {
+		padding-bottom: 80px;
+		padding-top: calc($TITLE_OFFSET_WHEN_MEDIUM + 1.25em);
+	}
+	
+	@media $(large) {
+		padding-top: calc($TITLE_OFFSET_WHEN_LARGE + 1.25em);
+	}
+	
 	@media $(x-large) {
+		padding-top: calc($TITLE_OFFSET_WHEN_XLARGE - 0.5em);
 		padding-right: 72px;
 	}
 
@@ -71,16 +90,3 @@
 	}
 }
 
-
-.hasNavigation {
-	@media $(x-large) {
-		grid-template-columns: 15% 35% 50%;
-
-		.image {
-			grid-column: 3 / 4;
-		}
-		.copy {
-			grid-column: 2 / 3;
-		}
-	}
-}

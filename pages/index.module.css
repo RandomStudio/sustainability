@@ -1,8 +1,11 @@
-.navWrapper {
-	@media (min-width: 1140px) {
-		padding-left: 200px;
+.section {
+	display: block;
+
+	@media $(x-large) {
+		padding-left: 15%;
 	}
-	@media (min-width: 1640px) {
-		padding-left: 0;
-	}
+}
+
+.column {
+	display: block;
 }

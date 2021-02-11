@@ -1,5 +1,5 @@
 .actions {
-	@mixin wrapper-with-navigation;
+	@mixin wrapper;
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: auto;
