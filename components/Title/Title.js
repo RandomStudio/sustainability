@@ -70,7 +70,11 @@ const Title = ({ id, title }) => {
 	}, [isIntersecting]);
 
 	return (
-		<h2 className={`${styles.title} ${isActive ? styles.isActive : ''}`} ref={ref}>{title}</h2>
+		<h2 className={`${styles.title} ${isActive ? styles.isActive : ''}`} ref={ref}>
+			<span>
+				{title}
+			</span>
+		</h2>
 	);
 }
 
