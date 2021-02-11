@@ -26,6 +26,10 @@
 	}
 }
 
+.hero:last-child {
+	margin-bottom: 0;
+}
+
 .copy {
 	@mixin wrapper;
 	@mixin copy;

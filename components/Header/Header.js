@@ -45,13 +45,15 @@ const Header = () => {
 	}, [links]);
 
 	return (
-		<header className={styles.header}>
-			<nav className={`${styles.menu} ${links.length > 0 ? styles.hasNav : ''}`}>
-				<Link href="/">Sustainability Toolkit</Link>
-				{links.map(({ id, title }) => <Link href={`#${id}`}><a className={id === activeId ? styles.active : ''}>{title}</a></Link>)}
-			</nav>
-			<Link href="/principles" className={styles.principles}>Goals & Principles</Link>
-		</header>
+		<>
+			<header className={styles.header} style={{ '--links': links.length }}>
+				<nav className={`${styles.menu} ${links.length > 0 ? styles.hasNav : ''}`}>
+					{links.length > 0 ? links.map(({ id, title }) => <Link href={`#${id}`}><a className={id === activeId ? styles.active : ''}>{title}</a></Link>) : <Link href="/">Sustainability Toolkit</Link>}
+				</nav>
+				<Link href="/principles" className={styles.principles}>Goals & Principles</Link>
+			</header>
+			<label className={styles.close} for="navcheckbox"></label>
+		</>
 	)
 }
 

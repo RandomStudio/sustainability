@@ -10,20 +10,28 @@
 	display: block;
 }
 
-.overlay {
-	@mixin wrapper;
-	position: absolute;
-	pointer-events: none;
-	top: 0;
-	left: 0;
-	right: 0;
-	height: 100vh;
+.intro {
 	z-index: 11;
 }
 
 .fauxTitle {
-	@mixin copy;
+	@mixin wrapper;
+    margin-top: -84px;
+    margin-bottom: 84px;
 	position: sticky;
-	top: 0;
-	padding-top: 24px;
+	cursor: pointer;
+	height: 0;
+	z-index: 11;
+	display: block;
+	top: 24px;
+
+	@media $(medium) {
+		margin-top: -52px;
+		margin-bottom: 52px;
+	}
+}
+
+.fauxTitle h2 {
+	@mixin copy;
+	display: inline-block;
 }

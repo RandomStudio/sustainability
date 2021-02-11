@@ -7,9 +7,12 @@ import Title from '../components/Title/Title'
 export default function Home() {
   return (
     <>
-      <Hero>
-        <p>This toolkit includes an overview of practical application methods and tools that help us put sustainable principles into practice and covers topics such as material selection and design strategies, but also describes how to measure success.</p>
-      </Hero>
+      <div className={styles.intro}>
+        <Title className={styles.fauxTitle} id="index" title="Sustainability Toolkit" />
+        <Hero>
+          <p>This toolkit includes an overview of practical application methods and tools that help us put sustainable principles into practice and covers topics such as material selection and design strategies, but also describes how to measure success.</p>
+        </Hero>
+      </div>
       <section className={styles.section}>
         <Title id="design" title="Design" />
         <div className={`${styles.column} isWithinNavigation`}>
@@ -32,9 +35,6 @@ export default function Home() {
           </Hero>
         </div>
       </section>
-      <div className={styles.overlay}>
-        <h2 className={styles.fauxTitle}>Sustainability Toolkit</h2>
-      </div>
     </>
   )
 }
