@@ -60,17 +60,18 @@ const Title = ({ className, id, title }) => {
 		}
 	}, []);
 
+	const isAbove = !isIntersecting && top <= 0;
 	useEffect(() => {
 		window.dispatchEvent(new CustomEvent('changeNav', {
 			detail: {
 				id,
-				isAbove: !isIntersecting && top <= 0
+				isAbove
 			}
 		}));
 	}, [isIntersecting]);
 
 	return (
-		<label className={`${className ? className : styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''}`} for="navcheckbox" ref={ref}>
+		<label className={`${className ? className : styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} for="navcheckbox" ref={ref}>
 			<h2 id={id}>
 				{title}
 			</h2>

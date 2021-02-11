@@ -5,7 +5,9 @@
 	top: 20px;
 	margin-bottom: 12px;
 	z-index: 11;
-	
+	transition: opacity 300ms cubic-bezier(0.215, 0.610, 0.355, 1);
+	opacity: 1;
+
 	@media $(medium) {
 		--top-offset: $TITLE_OFFSET_WHEN_MEDIUM;
 	}
@@ -36,6 +38,10 @@
 
 	&.isActive {
 		cursor: pointer;
+	}
+
+	&.isAbove {
+		opacity: 0;
 	}
 }
 
