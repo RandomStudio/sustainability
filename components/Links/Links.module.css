@@ -6,6 +6,7 @@
 	row-gap: 0px;
 	column-gap: 16px;
 	margin-bottom: 48px;
+	overflow-y: hidden;
 	
 	@media $(small)  {
 		display: flex;
@@ -66,6 +67,8 @@
 	right: 0;
 	bottom: 0;
 	object-fit: cover;
+	height: 100%;
+	width: 100%;
 }
 
 .imageFrame {
@@ -74,6 +77,7 @@
 	width: 100%;
 	padding-top: 70%;
 	margin: 0 0 12px;
+	overflow: hidden;
 }
 
 .subtitle {

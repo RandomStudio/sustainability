@@ -8,11 +8,10 @@ const Links = ({ links }) => (
 			{links.map(({ description, image, link, title }) => (
 				<article className={styles.article}>
 					<div className={styles.imageFrame}>
-						<Image
+						<img decoding="async" loading="lazy"
 							className={styles.image}
 							src={`/images/${image}`}
 							alt={title}
-							layout="fill"
 						/>
 					</div>
 					<a href={link} className={styles.subtitle}><h3>{title}</h3></a>

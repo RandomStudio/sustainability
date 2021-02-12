@@ -6,7 +6,7 @@ const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
 			{children}
 		</div>
 		<div className={styles.image}>
-			<img src={image} />
+			<img decoding="async" loading="lazy" src={image} />
 		</div>
 	</div>
 )
