@@ -37,6 +37,7 @@ p {
 body {
 	@mixin bodyText;
   width: 100%;
+  overflow-x: hidden;
 }
 
 .main {

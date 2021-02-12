@@ -6,7 +6,7 @@ import Hero from '../components/Hero/Hero';
 const Principles = () => {
   return (
     <>
-      <Hero image="blank" isReversed>
+      <Hero image="/images/featured/GOALS PAGE_ HEADER_goals.png" isReversed>
         <p>If we can prove to decision makers how sustainable futures could look and feel like by prototyping* them, we can lower the perceived threshold for change, and ultimately bring about real systemic change to various industries.</p>
         <p>Random Studio aims to create work which connects people, and connects them to their environment. The studio consists of an international team of 30+ visual artists, designers, producers, creative technologists, producers and software engineers, enabling Random to control the entire design process from ideation to production and installation. It is this capacity; the ability to dream, design and build small pieces of the future— that positions the studio uniquely well, showing our clients what could be and encouraging them to take the next step.</p>
       </Hero>
@@ -101,16 +101,6 @@ const Principles = () => {
             <li>Inspiring (motivating, stimulating, sensory)</li>
             <li>Adaptive (agile, lean, reinventing)</li>
           </ul>
-        </div>
-      </Accordion>
-      <Accordion id="impact" title="Impact Reports">
-        <div className={styles.impact}>
-          <ul>
-            <li><a href="#" target="_external"><span>Chloe</span><span>2019</span></a></li>
-            <li><a href="#" target="_external"><span>CP</span><span>2020</span></a></li>
-            <li><a href="#" target="_external"><span>Sony</span><span>2021</span></a></li>
-          </ul>
-          <img src="#" />
         </div>
       </Accordion>
     </>
