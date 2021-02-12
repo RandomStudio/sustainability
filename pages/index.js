@@ -20,7 +20,7 @@ export default function Home({ files }) {
             <div className={`${styles.column} isWithinNavigation`}>
               <Hero hasNavigation image={`/images/${image}`} isReversed>
                 <p>{headline}</p>
-                {description.map(paragraph => <p>{paragraph}</p>)}
+                {description.map((paragraph, index) => <p key={index}>{paragraph}</p>)}
               </Hero>
               <Actions actions={actions} />
               <Links links={links} />

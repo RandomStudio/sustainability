@@ -5,7 +5,7 @@ const Links = ({ links }) => (
 	<div className={styles.articles}>
 		<h3 className={styles.title}>Some useful articles</h3>
 		<div className={styles.container}>
-			{links.map(({ description, image, title }) => (
+			{links.map(({ description, image, link, title }) => (
 				<article className={styles.article}>
 					<div className={styles.imageFrame}>
 						<Image
@@ -15,7 +15,7 @@ const Links = ({ links }) => (
 							layout="fill"
 						/>
 					</div>
-					<h3 className={styles.subtitle}>{title}</h3>
+					<a href={link} className={styles.subtitle}><h3>{title}</h3></a>
 					<p className={styles.copy}>{description}</p>
 				</article>
 			))}

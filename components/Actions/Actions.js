@@ -4,7 +4,7 @@ import styles from './Actions.module.css';
 const Actions = ({ actions }) => (
 	<div className={styles.actions}>
 		<h3 className={styles.title}>Actions</h3>
-		{actions.map(action => <Action copy={action} />)}
+		{actions.map((action, index) => <Action copy={action} key={index} />)}
 		<Action copy="Propose a new action..." isContact />
 	</div>
 )
