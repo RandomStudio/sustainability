@@ -30,7 +30,7 @@ const useIntersectionObserver = (ref) => {
 	return intersectionState;
 }
 
-const Title = ({ className, id, title }) => {
+const Title = ({ className, id, isOnRight, title }) => {
 	const ref = useRef();
 	const [isIntersecting, top] = useIntersectionObserver(ref);
 	const [isActive, setIsActive] = useState(false);
@@ -71,7 +71,7 @@ const Title = ({ className, id, title }) => {
 	}, [isIntersecting]);
 
 	return (
-		<label className={`${className ? className : styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} for="navcheckbox" ref={ref}>
+		<label className={`${className} ${styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} for="navcheckbox" ref={ref}>
 			<h2 id={id}>
 				{title}
 			</h2>

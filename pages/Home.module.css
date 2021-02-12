@@ -11,37 +11,27 @@
 }
 
 .intro {
-	z-index: 11;
+	position: relative;
+	top: -36px;
+	margin-bottom: -36px;
+	@media $(medium) {
+		top: 0;
+		margin-bottom: 0;
+	}
 }
 
-.fauxTitle {
-	@mixin wrapper;
-    margin-top: -88px;
-    margin-bottom: 88px;
-	position: sticky;
-	cursor: pointer;
-	height: 0;
-	z-index: 11;
-	display: block;
-	top: 20px;
-
-	:global(#navcheckbox:checked ~ main) & {
-		opacity: 0;
-	}
-	
+/* Increase selector specifity to override child styles */
+label.introTitle {
+	margin-top: -56px;
+	margin-bottom: 64px;
 	@media $(medium) {
 		top: 24px;
-		margin-top: -52px;
-		margin-bottom: 52px;
+		padding-top: 0; 
+		margin-bottom: 56px;
+		transform: none;
 	}
 
-	@media (min-width: $(max-width)) {
-		/* Shift to far left of screen. 504 relates to initial left offset in X axis from centre */
-		transform: translateX(calc((100vw - 1440px) / -2));
+	@media $(max-width) {
+		transform: translateX(calc((100vw - 1440px) / -2))
 	}
-}
-
-.fauxTitle h2 {
-	@mixin copy;
-	display: inline-block;
 }

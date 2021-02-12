@@ -20,7 +20,7 @@
 
 .title {
 	@mixin title;
-	margin-bottom: 1.5em;
+	margin-bottom: 1em;
 
 	@media $(small)  {
 		grid-column: 1 / 3;

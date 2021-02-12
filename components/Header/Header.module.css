@@ -1,26 +1,11 @@
-.header {
-	--links: 0;
-	@mixin copy;
-	z-index: 10;
-	position: sticky;
-	top: 0;
-	width: 100vw;
-	display: flex;
-	flex-direction: row;
-	justify-content: flex-end;
-}
-
 .header,
 .menu {
-	background-color: black;
 	padding-top: 20px;
 	padding-bottom: 12px;
-	margin-bottom: 52px;
 
 	@media $(medium) {
 		padding-top: 24px;
 		padding-bottom: 24px;
-		margin-bottom: 0;
 	}
 
 	@media $(large) {
@@ -31,8 +16,26 @@
 	@mixin wrapper;
 }
 
+.header {
+	--links: 0;
+	@mixin copy;
+	z-index: 10;
+	position: sticky;
+	top: 0;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin-bottom: 52px;
+
+	@media $(medium) {
+		margin-bottom: 0;
+	}
+}
+
 .principles {
 	margin-left: auto;
+	line-height: 1;
 }
 
 .menu {
@@ -41,7 +44,6 @@
 
 .menu {
 	z-index: 11;
-	max-height: 0px;
 	overflow: hidden;
 	width: 100vw;
 	position: absolute;
@@ -73,6 +75,9 @@
 	}
 
 	&.hasNav {
+		max-height: 0px;
+		pointer-events: none;
+
 		a:first-child {
 			opacity: 0;
 		}
@@ -97,6 +102,7 @@
 	max-height: calc(var(--links) * 2.5em);
 	z-index: 20;
 	background-color: black;
+	pointer-events: auto;
 
 	&.hasNav a:first-child {
 		opacity: 0.5;

@@ -51,6 +51,7 @@
 	@mixin labels-desktop;
 	color: white;
 	padding: 0 0 4px;
+	width: 100%;
 }
 
 .submit {

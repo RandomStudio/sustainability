@@ -19,15 +19,10 @@
 	}
 }
 
-.hero + section,
-.hero + .hero {
-	@media $(medium) {
-		margin-top: -152px;
-	}
-}
-
 .hero:last-child {
-	margin-bottom: 0;
+	@media $(medium) {
+		margin-bottom: 0;
+	}
 }
 
 .copy {
