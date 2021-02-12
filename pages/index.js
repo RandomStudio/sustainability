@@ -15,7 +15,7 @@ export default function Home({ files }) {
       </section>
       {
         files.map(({ actions, description, headline, id, image, links, title }) => (
-          <section className={styles.section}>
+          <section className={styles.section} key={id}>
             <Title id={id} title={title} />
             <div className={`${styles.column} isWithinNavigation`}>
               <Hero hasNavigation image={`/images/${image}`} isReversed>
@@ -32,7 +32,7 @@ export default function Home({ files }) {
   )
 }
 
-export async function getServerSideProps(context) {
+export async function getStaticProps(context) {
   const yaml = require('js-yaml');
   const fs = require('fs');
   const files = fs.readdirSync('./content').map(filename => {
