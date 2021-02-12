@@ -17,7 +17,7 @@ const Footer = () => (
 				Westzaanstraat 10<br />
 				1013 NG Amsterdam<br />
 				The Netherlands<br />
-				<a href="#" className={styles.directions}>
+				<a href="https://goo.gl/maps/7rGuGBBfhms" className={styles.directions}>
 					Directions
 				</a><br />
 				<a href="tel:+31207797735" className={styles.telephone}>
@@ -34,7 +34,7 @@ const Footer = () => (
 				174 Quai de Jemmapes<br />
 				75010 Paris<br />
 				France<br />
-				<a href="#" className={styles.directions}>
+				<a href="https://goo.gl/maps/8JhU7KsTLAaZZtGA9" className={styles.directions}>
 					Directions
 				</a><br />
 				<a href="tel:+33140364144" className={styles.telephone}>

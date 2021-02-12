@@ -1,8 +1,10 @@
 import styles from './Header.module.css';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
 const Header = () => {
+	const router = useRouter();
 	const [activeId, setActiveId] = useState(null);
 	const [links, setLinks] = useState([]);
 
@@ -48,11 +50,11 @@ const Header = () => {
 		<>
 			<header className={styles.header} style={{ '--links': links.length }}>
 				<nav className={`${styles.menu} ${links.length > 0 ? styles.hasNav : ''}`}>
-					{links.length > 0 ? links.map(({ id, title }) => <Link href={`#${id}`}><a className={id === activeId ? styles.active : ''}>{title}</a></Link>) : <Link href="/">Sustainability Toolkit</Link>}
+					{links.length > 0 ? links.map(({ id, title }) => <Link href={`#${id}`} key={id}><a className={id === activeId ? styles.isActive : ''}>{title}</a></Link>) : <Link href="/">Sustainability Toolkit</Link>}
 				</nav>
-				<Link href="/principles" className={styles.principles}>Goals & Principles</Link>
+				<Link href="/principles"><a className={`${styles.principles} ${router.pathname === '/principles' ? styles.isActive : ''}`}>Goals & Principles</a></Link>
 			</header>
-			<label className={styles.close} for="navcheckbox"></label>
+			<label className={styles.close} htmlFor="navcheckbox"></label>
 		</>
 	)
 }

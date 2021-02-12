@@ -1,0 +1,87 @@
+.articles {
+	@mixin wrapper;
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	row-gap: 0px;
+	column-gap: 16px;
+	margin-bottom: 48px;
+	
+	@media $(small)  {
+		display: flex;
+		flex-direction: column;
+		margin-bottom: 120px;
+	}
+}
+
+.title {
+	@mixin title;
+	margin-bottom: 1.5em;
+
+	@media $(small)  {
+		grid-column: 1 / 4;
+		margin-bottom: 0.5em;
+	}
+}
+
+.container {
+	width: 100%;
+
+	@media $(small) {
+		display: flex;
+		flex-direction: row;
+		overflow: scroll;
+	}
+}
+
+.article {
+	display: flex;
+	flex-direction: column;
+	flex-shrink: 0;
+
+	@media $(small) {
+		width: calc(100% / 2 - (32px / 2));
+		margin-right: 16px;
+	}
+
+	@media $(large) {
+		width: calc(100% / 3 - (32px / 3));
+		margin-right: 16px;
+	}
+
+	&:nth-child(n+4) {
+		display: none;
+
+		@media $(small) {
+			display: flex;
+		}
+	}
+
+}
+
+.image {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	object-fit: cover;
+}
+
+.imageFrame {
+	position: relative;
+	background-color: rgba(255,255,2550.5);
+	width: 100%;
+	padding-top: 70%;
+	margin: 0 0 12px;
+}
+
+.subtitle {
+	@mixin subtitle;
+	margin-bottom: 12px;
+}
+
+.copy {
+	@mixin copy;
+	margin-bottom: 1.5em;
+}

@@ -71,7 +71,7 @@ const Title = ({ className, id, isOnRight, title }) => {
 	}, [isIntersecting]);
 
 	return (
-		<label className={`${className} ${styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} for="navcheckbox" ref={ref}>
+		<label className={`${className} ${styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} htmlFor="navcheckbox" ref={ref}>
 			<h2 id={id}>
 				{title}
 			</h2>

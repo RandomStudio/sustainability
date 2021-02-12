@@ -53,6 +53,7 @@ $aspect-ratio: 0.75;
 	margin: 0;
 }
 
+.isContact .copy,
 .hasTitle .copy {
 	@mixin copy;
 }

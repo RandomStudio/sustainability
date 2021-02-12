@@ -67,6 +67,7 @@
 		padding-top: 80px;
 		display: grid;
 		grid-template-columns: 50% 50%;
+		grid-template-rows: auto;
 		column-gap: 56px;
 	}
 

@@ -1,40 +1,47 @@
 import styles from './Home.module.css';
 import Actions from '../components/Actions/Actions'
-import Articles from '../components/Articles/Articles'
 import Hero from '../components/Hero/Hero'
+import Links from '../components/Links/Links'
 import Title from '../components/Title/Title'
 
-export default function Home() {
+export default function Home({ files }) {
   return (
     <>
       <section className={styles.intro}>
         <Title className={styles.introTitle} id="index" title="Sustainability Toolkit" />
-        <Hero>
+        <Hero image="/images/featured/1_HEADER_toolkit_intro.jpg">
           <p>This toolkit includes an overview of practical application methods and tools that help us put sustainable principles into practice and covers topics such as material selection and design strategies, but also describes how to measure success.</p>
         </Hero>
       </section>
-      <section className={styles.section}>
-        <Title id="design" title="Design" />
-        <div className={`${styles.column} isWithinNavigation`}>
-          <Hero hasNavigation isReversed>
-            <p>Sustainable design begins with the right idea</p>
-            <p>Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead are aiming to achieve goals in terms of eliciting emotions in the context of various brands and products; using either spectacle or convention-breaking designs to attract and focus attention.</p>
-            <p>Yet when sustainability is considered at the earliest stages, it can help guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable materials or are inefficient to manufacture and hard to re-use. For example, considering shipping logistics early in the design process could reduce or even prevent environmental impact in later stages of production.</p>
-          </Hero>
-          <Actions />
-          <Articles />
-        </div>
-      </section>
-      <section className={styles.section}>
-        <Title id="development" title="Development" />
-        <div className={styles.column}>
-          <Hero hasNavigation isReversed>
-            <p>Consider The Real-World Impact Of Digital Computing.</p>
-            <p>Apart from a few exceptions, most of our concepts will not be about sustainability itself but instead are aiming to achieve goals in terms of eliciting emotions in the context of various brands and products; using either spectacle or convention-breaking designs to attract and focus attention.</p>
-            <p>Yet when sustainability is considered at the earliest stages, it can help guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable materials or are inefficient to manufacture and hard to re-use. Considering shipping logistics early in the design process could reduce or even prevent environmental impact in later stages of production.</p>
-          </Hero>
-        </div>
-      </section>
+      {
+        files.map(({ actions, description, headline, id, image, links, title }) => (
+          <section className={styles.section}>
+            <Title id={id} title={title} />
+            <div className={`${styles.column} isWithinNavigation`}>
+              <Hero hasNavigation image={`/images/${image}`} isReversed>
+                <p>{headline}</p>
+                {description.map(paragraph => <p>{paragraph}</p>)}
+              </Hero>
+              <Actions actions={actions} />
+              <Links links={links} />
+            </div>
+          </section>
+        ))
+      }
     </>
   )
+}
+
+export async function getServerSideProps(context) {
+  const yaml = require('js-yaml');
+  const fs = require('fs');
+  const files = fs.readdirSync('./content').map(filename => {
+    const data = yaml.load(fs.readFileSync(`./content/${filename}`, 'utf8'));
+    return data;
+  });
+  return {
+    props: {
+      files
+    },
+  }
 }

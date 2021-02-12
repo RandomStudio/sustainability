@@ -5,7 +5,9 @@ const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
 		<div className={styles.copy}>
 			{children}
 		</div>
-		<img className={styles.image} src={image} />
+		<div className={styles.image}>
+			<img src={image} />
+		</div>
 	</div>
 )
 

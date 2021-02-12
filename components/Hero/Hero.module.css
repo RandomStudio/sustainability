@@ -12,9 +12,12 @@
 	}
 	
 	@media $(x-large) {
+		grid-template-columns: 50% 50%;
 		grid-template-rows: minmax(720px, min-content);
+
 		:global(.isWithinNavigation) & {
 			grid-template-columns: 41% 59%;
+			grid-template-rows: minmax(720px, min-content);
 		}
 	}
 }
@@ -76,7 +79,8 @@
 	grid-row: 2 / 3;
 	width: 100vw;
 	height: 125vw;
-
+	position: relative;
+	
 	@media $(medium) {
 		grid-row: 1 / 2;
 		grid-column: 1 / 2;
@@ -88,4 +92,35 @@
 		}
 	}
 }
+.image img {
+	object-fit: cover;
+	position: absolute;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	height: 100%;
+	width: 100%;
 
+	@media $(medium) {
+		object-position: right;
+
+		.isReversed & {
+			object-position: left;
+		}
+	}
+
+	@media (min-width: $(max-width)) {
+		top: 0;
+		right: 0;
+		left: initial;
+		bottom: initial;
+		width: initial;
+	
+		.isReversed & {
+			right: initial;
+			left: 0;
+		}
+	}
+}
+			
