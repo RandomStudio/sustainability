@@ -82,6 +82,7 @@
 
 .subtitle {
 	@mixin subtitle;
+	line-height: 1.25;
 	margin-bottom: 12px;
 }
 
