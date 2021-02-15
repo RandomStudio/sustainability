@@ -54,10 +54,14 @@
 	line-height: 1.25;
 }
 
-@define-mixin labels {
+
+@define-mixin labels-small {
 	font-size: 14px;
 	line-height: 1.5;
+}
 
+@define-mixin labels {
+	@mixin labels-small;
 	@media $(medium) {
 		@mixin labels-desktop;
 	}

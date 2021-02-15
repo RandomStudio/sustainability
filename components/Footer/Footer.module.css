@@ -28,39 +28,6 @@
 	}
 }
 
-.field {
-	width: 100%;
-	position: relative;
-	border-bottom: 1px solid white;
-}
-
-.input,
-.submit {
-	appearance: none;
-	border: none;
-	background: none;
-	-webkit-appearance: none;
-	border-radius: 0;
-	background-color: transparent;
-	font: inherit;
-	padding: 0;
-	margin: 0;
-}
-
-.input {
-	@mixin labels-desktop;
-	color: white;
-	padding: 0 0 4px;
-	width: 100%;
-}
-
-.submit {
-	position: absolute;
-	right: 0;
-	bottom: 50%;
-	transform: translateY(50%);
-}
-
 .address {
 	@mixin labels-desktop;
 	font-style: normal;

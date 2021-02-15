@@ -16,9 +16,9 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Random Studio Sustainability Toolkit</title>
+        <title>Sustainability Toolkit</title>
         <meta name="description" content="An overview of practical application methods and tools that help us put sustainable principles into practice" />
-        <meta name="og:site_name" content="Random Studio Sustainability Toolkit" />
+        <meta name="og:site_name" content="Sustainability Toolkit" />
         <meta name="og:type" content="website" />
         <meta name="og:image" content="https://sustainability.staging.random.studio/social.png" />
         <meta name="og:image:width" content="1200" />
