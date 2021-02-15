@@ -16,8 +16,51 @@ function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Sustainability Toolkit</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Random Studio Sustainability Toolkit</title>
+        <meta name="description" content="An overview of practical application methods and tools that help us put sustainable principles into practice" />
+        <meta name="og:site_name" content="Random Studio Sustainability Toolkit" />
+        <meta name="og:type" content="website" />
+        <meta name="og:image" content="https://sustainability.staging.random.studio/social.png" />
+        <meta name="og:image:width" content="1200" />
+        <meta name="og:image:height" content="630" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@random_studio" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/favicons/apple-touch-icon.png"
+        />
+        <link
+          rel="apple-touch-icon-precomposed"
+          href="/favicons/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicons/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicons/favicon-16x16.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="192x192"
+          href="/favicons/android-chrome-192x192.png"
+        />
+        <link rel="manifest" href="/favicons/site.webmanifest" />
+        <link
+          rel="mask-icon"
+          href="/favicons/safari-pinned-tab.svg"
+          color="#0000ff"
+        />
+        <link rel="manifest" href="/favicons/manifest.json" />
+        <link rel="shortcut icon" href="/favicons/favicon.ico" />
+        <link rel="icon" href="/favicons/favicon.ico" />
       </Head>
 			<input checked={isChecked} id="navcheckbox" onChange={({ target: { checked } }) => setIsChecked(checked)} type="checkbox" />
       <Header setNavCheckedState={setIsChecked} />
