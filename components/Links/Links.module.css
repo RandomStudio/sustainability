@@ -31,7 +31,8 @@
 	@media $(small) {
 		display: flex;
 		flex-direction: row;
-		overflow: scroll;
+		overflow-y: hidden;
+		overflow-x: scroll;
 	}
 }
 
