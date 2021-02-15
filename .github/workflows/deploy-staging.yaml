@@ -18,7 +18,7 @@ jobs:
       - uses: actions/cache@v2
         with:
           path: ${{ github.workspace }}/.next/cache
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-nextjs-20210215-${{ hashFiles('**/package-lock.json') }}
       - name: Build
         run: yarn build
       - name: Create folders
