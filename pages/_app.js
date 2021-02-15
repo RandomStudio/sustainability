@@ -20,7 +20,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 			<input checked={isChecked} id="navcheckbox" onChange={({ target: { checked } }) => setIsChecked(checked)} type="checkbox" />
-      <Header />
+      <Header setNavCheckedState={setIsChecked} />
       <main className="main">
         <Component {...pageProps} />
       </main>

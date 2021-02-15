@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 
-const Header = () => {
+const Header = ({ setNavCheckedState }) => {
 	const router = useRouter();
 	const [activeId, setActiveId] = useState(null);
 	const [links, setLinks] = useState([]);
@@ -46,11 +46,24 @@ const Header = () => {
 		}
 	}, [links]);
 
+	const scrollToLink = (e, id) => {
+		e.preventDefault();
+		const el = document.getElementById(id);
+		el.scrollIntoView({
+			behavior: 'smooth',
+		});
+		setNavCheckedState(false);
+		return false;
+	}
+
 	return (
 		<>
 			<header className={styles.header} style={{ '--links': links.length }}>
 				<nav className={`${styles.menu} ${links.length > 0 ? styles.hasNav : ''}`}>
-					{links.length > 0 ? links.map(({ id, title }) => <Link href={`#${id}`} key={id}><a className={id === activeId ? styles.isActive : ''}>{title}</a></Link>) : <Link href="/">Sustainability Toolkit</Link>}
+					{links.length > 0 ? links.map(({ id, title }) => (
+						<Link href={`#${id}`} key={id}><a className={id === activeId ? styles.isActive : ''} onClick={e => scrollToLink(e, id)}>{title}</a></Link>
+					))
+					: <Link href="/">Sustainability Toolkit</Link>}
 				</nav>
 				<Link href="/principles"><a className={`${styles.principles} ${router.pathname === '/principles' ? styles.isActive : ''}`}>Goals & Principles</a></Link>
 			</header>

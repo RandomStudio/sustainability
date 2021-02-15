@@ -1,16 +1,18 @@
 .header,
 .menu {
-	padding-top: 20px;
-	padding-bottom: 12px;
+	--padding-top: 20px;
+	--padding-bottom: 12px;
+	padding-top: var(--padding-top);
+	padding-bottom: var(--padding-bottom);
 
 	@media $(medium) {
-		padding-top: 24px;
-		padding-bottom: 24px;
+		--padding-top: 24px;
+		--padding-bottom: 24px;
 	}
 
 	@media $(large) {
-		padding-top: 24px;
-		padding-bottom: 28px;
+		--padding-top: 24px;
+		--padding-bottom: 28px;
 	}
 	
 	@mixin wrapper;
@@ -44,7 +46,6 @@
 			background-color: white;
 			height: 1px;
 			transform: translateX(-100%);
-			transition: transform 600ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
 			content: '';
 		}
 
@@ -75,7 +76,6 @@
 	align-items: flex-start;
 	flex-direction: column;
 	background-color: transparent;
-	transition: background-color 200ms ease-out, max-height 600ms cubic-bezier(0.215, 0.610, 0.355, 1);
 
 	@media $(large) {
 		width: 25vw;
@@ -94,15 +94,19 @@
 		padding-bottom: 0.5em;
 
 		&::after {
-			bottom: 5px;
+			bottom: 12px !important;
 		}
 	}
 	
 
 	&.hasNav {
-		max-height: 0px;
+		max-height: clc;
 		pointer-events: none;
-
+		
+		a {
+			opacity: 0;
+		}
+	
 		a:first-child {
 			opacity: 0;
 		}
@@ -129,7 +133,13 @@
 	background-color: black;
 	pointer-events: auto;
 
-	&.hasNav a:first-child {
-		opacity: 0.5;
+	&.hasNav {
+		a {
+			opacity: 1;
+		}
+
+		a:first-child {
+			opacity: 0.5;
+		}
 	}
 }

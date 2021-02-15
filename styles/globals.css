@@ -51,7 +51,3 @@ body {
 #navcheckbox {
   display: none;
 }
-
-#navcheckbox:checked ~ main section .activeTitle {
-  opacity: 0;
-}
