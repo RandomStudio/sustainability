@@ -1,5 +1,4 @@
 import styles from './Links.module.css';
-import Image from 'next/image';
 
 const Links = ({ links }) => (
 	<div className={styles.articles}>
