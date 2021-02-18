@@ -61,6 +61,7 @@ function MyApp({ Component, pageProps }) {
         <link rel="manifest" href="/favicons/manifest.json" />
         <link rel="shortcut icon" href="/favicons/favicon.ico" />
         <link rel="icon" href="/favicons/favicon.ico" />
+        <script async defer data-domain="sustainability.random.studio" src="https://plausible.io/js/plausible.js"></script>
       </Head>
 			<input checked={isChecked} id="navcheckbox" onChange={({ target: { checked } }) => setIsChecked(checked)} type="checkbox" />
       <Header setNavCheckedState={setIsChecked} />

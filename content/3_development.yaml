@@ -1,7 +1,7 @@
 id: development
 title: Development
 headline: Consider the real-world impact of digital computing.
-image: featured/development.png
+image: featured/03_development.png
 description:
   - Digital computation has a real-world impact that is obscured to most people. The power usage of both individual servers and data centres is directly dependent on how we task them and the design of the software that completes these tasks. Digital operations like queries, file transfers, image analysis and the use of AI all have a real, environmental footprint that quickly scales.
   - Sustainable design thinking can be applied at a systems-level, such as considering cloud hosting for large scale online roll-outs. Choosing hosting partners carefully is the first step, with optimising both server-side and client-side processing second, to allow for potentially very significant environmental impact reduction. This optimisation may range from more efficient algorithms that reduce the power consumption of servers to the background colour of websites that require less power to display.

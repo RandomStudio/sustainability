@@ -18,9 +18,9 @@
 }
 
 .input {
-	@mixin labels-desktop;
+	@mixin labels;
 	color: white;
-  padding: 0 0 0.25em;
+	padding: 0 0 0.25em;
 	width: 100%;
 }
 
@@ -32,12 +32,12 @@
 }
 
 .error {
-  @mixin labels-small;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  color: red;
-  margin-top: 0.5em;
+	@mixin labels;
+	position: absolute;
+	top: 100%;
+	left: 0;
+	color: red;
+	margin-top: 0.5em;
 }
 
 .check {

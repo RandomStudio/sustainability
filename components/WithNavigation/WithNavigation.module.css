@@ -1,8 +1,0 @@
-.frame {
-	@mixin wrapper;
-	width: 100vw;
-
-	@media $(large) {
-		//padding-left: 12%;
-	}
-}

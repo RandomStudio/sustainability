@@ -7,7 +7,11 @@
 }
 
 .title {
-	@mixin title;
+	@mixin subtitle;
+	line-height: 1;
+}
+
+.title {
 	display: block;
 	margin-bottom: 12px;
 	padding: 12px 0;

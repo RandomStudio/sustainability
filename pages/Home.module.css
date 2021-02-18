@@ -1,9 +1,5 @@
 .section {
 	display: block;
-
-	@media $(x-large) {
-		padding-left: 15%;
-	}
 }
 
 .column {

@@ -1,8 +1,10 @@
 .halfCol {
 	width: 100%;
-
+	margin-bottom: 48px;
+	
 	@media $(medium) {
 		width: calc(50% - 32px);
+		margin-bottom: 160px;
 	}
 
 	@media $(large) {

@@ -1,7 +1,7 @@
 id: install
 title: Install
 headline: Maximise efficiency and minimise non-renewable energy use.
-image: featured/install.png
+image: featured/05_install.png
 description:
   - When working with a project that will be running elsewhere, the source of energy is often out of our hands. Finding ways to reduce energy usage is where we can make a real difference. For example opting for less energy intensive electronics (if available), using natural sources like sunlight, or having the project shut down whenever it’s not in use.
 actions:

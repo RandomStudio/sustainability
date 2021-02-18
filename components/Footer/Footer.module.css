@@ -19,7 +19,10 @@
 }
 
 .newsletter {
-	@mixin labels-desktop;
+	@mixin labels;
+}
+
+.newsletter {
 	margin-bottom: 48px;
 
 	@media $(large) {
@@ -29,8 +32,11 @@
 }
 
 .address {
-	@mixin labels-desktop;
+	@mixin labels;
 	font-style: normal;
+}
+
+.address {
 	margin-bottom: 48px;
 
 	@media $(large) {

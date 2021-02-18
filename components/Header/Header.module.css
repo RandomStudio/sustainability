@@ -29,6 +29,7 @@
 	flex-direction: row;
 	justify-content: flex-end;
 	margin-bottom: 52px;
+	mix-blend-mode: difference;
 
 	@media $(medium) {
 		margin-bottom: 0;

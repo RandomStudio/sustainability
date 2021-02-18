@@ -46,7 +46,7 @@
 }
 
 .title h2 {
-	@mixin copy;
+	@mixin navigation;
 	position: relative;
 	overflow: hidden;
 	margin: 0;

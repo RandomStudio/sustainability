@@ -6,7 +6,6 @@
 	margin-bottom: 104px;
 
 	@media $(medium) {
-		margin-bottom: 152px;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: minmax(min-content, 90vh);
 	}
@@ -15,8 +14,8 @@
 		grid-template-columns: 50% 50%;
 		grid-template-rows: minmax(720px, min-content);
 
-		:global(.isWithinNavigation) & {
-			grid-template-columns: 41% 59%;
+		&.isReversed {
+			grid-template-columns: 15% 35% 50%;
 			grid-template-rows: minmax(720px, min-content);
 		}
 	}
@@ -29,17 +28,24 @@
 }
 
 .copy {
-	@mixin wrapper;
 	@mixin copy;
+}
+
+.copy :global(p:first-of-type) {
+	@mixin title;
+}
+
+.copy {
+	@mixin wrapper;
 	grid-row: 1/2;
 	width: 100vw;
-	margin-bottom: 56px;
+	margin-bottom: 48px;
 
 	@media $(medium) {
 		grid-column: 2 / 3;
 		width: 100%;
 		align-self: center;
-		padding-right: 60px;
+		padding-right: 42px;
 		
 		.isReversed & {
 			grid-column: 1 /2;
@@ -57,7 +63,11 @@
 	
 	@media $(x-large) {
 		padding-top: calc($TITLE_OFFSET_WHEN_XLARGE - 0.5em);
-		padding-right: 72px;
+	
+		.isReversed & {
+			grid-column: 2 / 3;
+			padding-left: 0;
+		}
 	}
 
 	:global(p) {
@@ -69,10 +79,6 @@
 	}
 }
 
-/* Workaround: Mixins cannot be included in a nested global */
-.copy :global(p:first-of-type) {
-	@mixin title;
-}
 
 .image {
 	background-color: white;
@@ -91,7 +97,14 @@
 			grid-column: 2 / 3;
 		}
 	}
+
+	@media $(x-large) {
+		.isReversed & {
+			grid-column: 3 / 4;
+		}
+	}
 }
+
 .image img {
 	object-fit: cover;
 	position: absolute;
