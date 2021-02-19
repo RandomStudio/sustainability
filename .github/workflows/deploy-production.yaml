@@ -25,7 +25,7 @@ jobs:
         uses: appleboy/ssh-action@master
         with:
           host: ${{ env.SERVER_IP }}
-          username: staging-bot
+          username: random-studio
           key: ${{ secrets.RS_SSH_KEY }}
           port: ${{ env.SERVER_PORT }}
           script: mkdir -p /var/www/sustainability.random.studio
@@ -34,6 +34,6 @@ jobs:
         env:
           ARGS: "-e -c -r --delete"
           DEPLOY_KEY: ${{ secrets.RS_SSH_KEY }}
-          USERNAME: staging-bot
+          USERNAME: random-studio
           FOLDER: "./${{ env.SOURCE_DIR }}/"
           SERVER_DESTINATION: '/var/www/sustainability.random.studio'
