@@ -15,7 +15,8 @@ export default function Home({ files }) {
       </section>
       {
         files.map(({ actions, description, headline, id, image, links, title }) => (
-          <section className={styles.section} key={id} id={id}>
+          <section className={styles.section} key={id}>
+            <a className={styles.anchor} id={id}></a>
             <Title id={id} title={title} />
             <div className={`${styles.column} isWithinNavigation`}>
               <Hero hasNavigation image={`/images/${image}`} isReversed>
