@@ -1,6 +1,6 @@
 .accordions {
 	@media $(medium) {
-		margin-top: 72px;
+		margin-top: 72px !important;
 	}
 }
 

@@ -75,7 +75,9 @@
 	}
 
 	@media $(huge) {
-		width: 320px;
+		margin: 0;
+		padding-right: 12px;
+		width: min(332px, calc(70vw / 5));
 	}
 
 	&:nth-child(n+4) {
