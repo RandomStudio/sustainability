@@ -20,7 +20,7 @@
 
 .header {
 	--links: 0;
-	@mixin copy;
+	@mixin navigation;
 	z-index: 10;
 	position: sticky;
 	top: 0;
@@ -59,7 +59,6 @@
 .principles {
 	margin-left: auto;
 	display: block;
-	line-height: 1;
 }
 
 .menu {
@@ -84,6 +83,11 @@
 
 	@media $(x-large) {
 		width: 20vw;
+	}
+
+	@media (min-width: $(huge-px)) {
+		width: 15vw;
+		max-width: 250px;
 	}
 
 	a {
@@ -122,6 +126,10 @@
 		pointer-events: auto;
 		z-index: 9;
 	}
+}
+
+:global(#navcheckbox:checked) + .header {
+	mix-blend-mode: normal;
 }
 
 :global(#navcheckbox:checked) + .header .menu {
