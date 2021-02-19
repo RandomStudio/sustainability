@@ -72,7 +72,7 @@ const Title = ({ className, id, isOnRight, title }) => {
 
 	return (
 		<label className={`${className} ${styles.title} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} htmlFor="navcheckbox" ref={ref}>
-			<h2 id={id}>
+			<h2>
 				{title}
 			</h2>
 		</label>

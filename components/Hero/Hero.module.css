@@ -44,7 +44,7 @@
 	@media $(medium) {
 		grid-column: 2 / 3;
 		width: 100%;
-		align-self: center;
+		align-self: flex-start;
 		padding-right: 42px;
 		
 		.isReversed & {
