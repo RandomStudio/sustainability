@@ -29,9 +29,11 @@
 	flex-direction: row;
 	justify-content: flex-end;
 	margin-bottom: 52px;
-	mix-blend-mode: difference;
-
+	background-color: black;
+	
 	@media $(medium) {
+		background-color: transparent;
+		mix-blend-mode: difference;
 		margin-bottom: 0;
 	}
 
@@ -130,6 +132,10 @@
 
 :global(#navcheckbox:checked) + .header {
 	mix-blend-mode: normal;
+
+	.principles {
+		opacity: 0;
+	}
 }
 
 :global(#navcheckbox:checked) + .header .menu {

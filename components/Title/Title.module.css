@@ -6,6 +6,9 @@
 	max-width: 50vw;
 	z-index: 11;
 	opacity: 1;
+	mix-blend-mode: difference;
+	pointer-events: auto;
+
 
 	@media $(medium) {
 		--top-offset: $TITLE_OFFSET_WHEN_MEDIUM;
@@ -27,6 +30,7 @@
 
 	&.isActive {
 		cursor: pointer;
+		pointer-events: auto;
 	}
 
 	&.isAbove {
