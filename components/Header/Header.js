@@ -49,6 +49,7 @@ const Header = ({ setNavCheckedState }) => {
 	const scrollToLink = (e, id) => {
 		e.preventDefault();
 		const el = document.getElementById(id);
+		console.log(id)
 		el.scrollIntoView({
 			behavior: 'smooth',
 		});

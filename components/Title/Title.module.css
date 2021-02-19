@@ -9,7 +9,6 @@
 	mix-blend-mode: difference;
 	pointer-events: auto;
 
-
 	@media $(medium) {
 		--top-offset: $TITLE_OFFSET_WHEN_MEDIUM;
 	}
@@ -26,15 +25,17 @@
 		height: 0;
 		margin-bottom: calc(-1 * var(--top-offset));
 		padding-top: var(--top-offset);
+		padding-bottom: 82px;
 	}
 
+	&.isTop {
+		@media $(medium) {
+			padding-bottom: 0;
+		}
+	}
 	&.isActive {
 		cursor: pointer;
 		pointer-events: auto;
-	}
-
-	&.isAbove {
-		opacity: 0;
 	}
 }
 
@@ -64,4 +65,5 @@
 
 :global(#navcheckbox:checked ~ main > section) .title {
 	opacity: 0;
+	pointer-events: none;
 }
