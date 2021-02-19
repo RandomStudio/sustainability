@@ -43,7 +43,6 @@ body {
 .main {
   background-color: black;
   color: white;
-  max-width: $max-width;
   margin: 0 auto 120px;
   width: 100%;
 }

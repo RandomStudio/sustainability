@@ -1,5 +1,15 @@
 .accordion {
 	@mixin wrapper;
+
+	@media $(x-large) {
+		padding: 0 15%;
+	}
+
+	@media $(huge) {
+		padding: 0;
+		margin: 0 auto;
+		max-width: calc(min($(huge-px), 70vw));
+	}
 }
 
 .checkbox {

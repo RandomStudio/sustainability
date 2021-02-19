@@ -2,17 +2,24 @@
 	@mixin wrapper;
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 48px;
-	overflow-y: hidden;
+	margin-bottom: 56px;
+	overflow-y: visible;
+	position: relative;
 	
 	@media $(small)  {
 		display: flex;
 		flex-direction: column;
-		margin-bottom: 152px;
+		margin-bottom: 128px;
 	}
 
 	@media $(x-large) {
 		padding: 0 15%;
+	}
+
+	@media $(huge) {
+		padding: 0;
+		margin: 0 auto;
+		max-width: calc(min($(huge-px), 70vw));
 	}
 }
 
@@ -22,8 +29,9 @@
 
 .title {
 	margin-bottom: 36px;
-
+	
 	@media $(small)  {
+		margin-bottom: 48px;
 		grid-column: 1 / 4;
 	}
 }
@@ -64,7 +72,10 @@
 
 	@media $(large) {
 		width: calc(100% / 3 - (32px / 3));
-		margin-right: 16px;
+	}
+
+	@media $(huge) {
+		width: 320px;
 	}
 
 	&:nth-child(n+4) {
@@ -93,7 +104,7 @@
 	background-color: rgba(255,255,2550.5);
 	width: 100%;
 	padding-top: 70%;
-	margin: 0 0 12px;
+	margin: 0 0 16px;
 	overflow: hidden;
 }
 
@@ -102,14 +113,14 @@
 }
 
 .subtitle {
-	margin-bottom: 12px;
-
-	@media $(small) {
-		margin-bottom: 58px;
-	}
+	margin-bottom: 8px;
 }
 
 .copy {
 	@mixin copy;
-	margin-bottom: 36px;
+	margin-bottom: 32px;
+
+	@media $(small) {
+		margin-bottom: 24px;
+	}
 }

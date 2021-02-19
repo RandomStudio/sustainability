@@ -3,9 +3,10 @@
 	grid-template-columns: 100%;
 	grid-template-rows: auto auto;
 	width: 100%;
-	margin-bottom: 104px;
-
+	margin-bottom: 56px;
+	
 	@media $(medium) {
+		margin-bottom: 0;
 		grid-template-columns: 50% 50%;
 		grid-template-rows: minmax(min-content, 90vh);
 	}
@@ -21,14 +22,13 @@
 	}
 }
 
-.hero:last-child {
-	@media $(medium) {
-		margin-bottom: 0;
-	}
-}
-
 .copy {
 	@mixin copy;
+	margin-bottom: 32px;
+
+	@media $(huge) {
+		max-width: 66%;
+	}
 }
 
 .copy :global(p:first-of-type) {
@@ -39,7 +39,7 @@
 	@mixin wrapper;
 	grid-row: 1/2;
 	width: 100vw;
-	margin-bottom: 48px;
+	margin-bottom: 32px;
 
 	@media $(medium) {
 		grid-column: 2 / 3;
@@ -120,19 +120,6 @@
 
 		.isReversed & {
 			object-position: left;
-		}
-	}
-
-	@media (min-width: $(max-width)) {
-		top: 0;
-		right: 0;
-		left: initial;
-		bottom: initial;
-		width: initial;
-	
-		.isReversed & {
-			right: initial;
-			left: 0;
 		}
 	}
 }

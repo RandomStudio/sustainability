@@ -3,12 +3,10 @@
 	border-radius: 20px;
 	padding: 36px 24px 44px;
 	width: 100%;
-	min-height: 35vw;
 	margin-bottom: 12px;
 
 	@media $(medium) {
-		min-height: calc(50vw * 0.4);
-		padding: 36px 44px 44px;
+		padding: 20px 24px 48px;
 	}
 
 	&.isOutline {
@@ -24,6 +22,6 @@
 }
 
 .copy {
-	@mixin copy;
+	@mixin navigation;
 	line-height: 1.5;
 }

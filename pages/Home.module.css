@@ -1,5 +1,10 @@
 .section {
 	display: block;
+	margin-bottom: 112px;
+	
+	@media $(medium) {
+		margin-bottom: 128px;
+	}
 }
 
 .column {
@@ -26,9 +31,5 @@ label.introTitle {
 		padding-top: 0; 
 		margin-bottom: 56px;
 		transform: none;
-	}
-
-	@media (min-width: $(max-width)) {
-		transform: translateX(calc((100vw - 1440px) / -2))
 	}
 }

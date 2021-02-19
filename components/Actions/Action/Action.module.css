@@ -6,7 +6,7 @@ $aspect-ratio: 0.75;
 	padding: 16px 20px 36px;
 	width: 100%;
 	min-height: 132px;
-	margin-bottom: 12px;
+	margin-bottom: 8px;
 
 	@media $(medium) {
 		min-height: 184px;
