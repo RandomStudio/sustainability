@@ -24,11 +24,6 @@
 		margin-bottom: calc(-1 * var(--top-offset));
 		padding-top: var(--top-offset);
 	}
-	
-	@media $(x-large) {
-		/* Shift to far left of screen. 504 relates to initial left offset in X axis from centre */
-		transform: translateX(-15vw);
-	}
 
 	&.isActive {
 		cursor: pointer;
