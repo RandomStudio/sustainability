@@ -17,9 +17,19 @@
 	}
 
 	@media $(huge) {
-		padding: 0;
-		margin: 0 auto;
-		max-width: calc(min($(huge-px), 70vw));
+		padding: 0 0 0 15%;
+	}
+
+	&::after {
+		@media $(huge) {
+			position: absolute;
+			right: 0;
+			top: 0;
+			bottom: 0;
+			width: 30vw;
+			background: linear-gradient(270deg, #000000 0%, rgba(0, 0, 0, 0) 100%);
+			content: '';
+		}
 	}
 }
 
