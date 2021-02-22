@@ -8,6 +8,7 @@
 	opacity: 1;
 	mix-blend-mode: difference;
 	pointer-events: auto;
+	white-space: nowrap;
 
 	@media $(medium) {
 		--top-offset: $TITLE_OFFSET_WHEN_MEDIUM;
