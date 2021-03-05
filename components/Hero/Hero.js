@@ -7,8 +7,8 @@ const Hero = ({ children, className, hasNavigation, image, alt, isReversed }) =>
 		</div>
 		<div className={styles.image}>
 			<picture>
-				<source srcset={`${image}.webp`} type="image/webp" />
-  				<source srcset={`${image}.jpg`} type="image/jpeg" />
+				<source srcSet={`${image}.webp`} type="image/webp" />
+  				<source srcSet={`${image}.jpg`} type="image/jpeg" />
 				<img alt={alt} decoding="async" loading="lazy" src={`${image}.jpg`} />
 			</picture>
 		</div>

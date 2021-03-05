@@ -8,8 +8,8 @@ const Links = ({ links }) => (
 				<article className={styles.article} key={link}>
 					<div className={styles.imageFrame}>
 						<picture>
-							<source srcset={`/images/${image}.webp`} type="image/webp" />
-							<source srcset={`/images/${image}.jpg`} type="image/jpeg" />
+							<source srcSet={`/images/${image}.webp`} type="image/webp" />
+							<source srcSet={`/images/${image}.jpg`} type="image/jpeg" />
 							<img className={styles.image} alt={title} decoding="async" loading="lazy" src={`/images/${image}.jpg`} />
 						</picture>
 					</div>
