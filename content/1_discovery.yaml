@@ -1,7 +1,7 @@
 id: discovery
 title: Discovery
 headline: We set solid sustainable foundations.
-image: featured/01_discovery.png
+image: featured/01_discovery
 alt: A woman sitting in a meeting room talking to another person
 description:
   - This could include an audit of the clients sustainability history, to give teams an understanding of where their clients business is at. Sustainability is also discussed during project kick offs and with the client, aiming to set targets and goals for running a sustainable project.
@@ -15,9 +15,9 @@ actions:
 links:
   -  title: Waste Not
      description: Waste Not is a simple way to search an open-source database of sustainable suppliers.
-     image: links/wastenot.png
+     image: links/wastenot
      link: https://wastenot.world
   -  title: Will you be my Partner?
      description: Nine steps to identify and establish successful collaborations for a circular economy.
-     image: links/willyoubemypartner.png
+     image: links/willyoubemypartner
      link: https://assets.website-files.com/5d26d80e8836af2d12ed1269/5ecb7d25cf839d5d79d7e6ca_20200525%20-%20Collaboration%20Paper.pdf
