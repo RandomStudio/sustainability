@@ -4,6 +4,10 @@
 	border-bottom: 1px solid white;
 }
 
+label > .input:focus {
+	display: none;
+}
+
 .input,
 .submit {
 	appearance: none;
@@ -17,12 +21,26 @@
 	margin: 0;
 }
 
-.input {
+.input,
+.label{
 	@mixin labels;
 	color: white;
 	padding: 0 0 0.25em;
 	width: 100%;
 }
+
+
+.label {
+	position: absolute;
+	left: 0;
+	opacity: 0.5;
+	pointer-events: none;
+}
+
+.input:not(:placeholder-shown) + .label {
+	display: none;
+}
+
 
 .submit {
 	position: absolute;

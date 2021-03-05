@@ -46,14 +46,18 @@ const Newsletter = ({ className }) => {
           </div>
         </>
       ) : (
-				<div className={styles.field}>
-					<input
+        <div className={styles.field}>
+          <input
+            id="email"
             className={styles.input}
-            placeholder="enter your email address"
+            placeholder=" "
             onChange={handleInput}
             type="email"
             value={email}
           />
+          <label for="email" className={styles.label} >
+              Enter your email address
+          </label>
           <input
             alt="submit"
             className={styles.submit}
@@ -61,7 +65,7 @@ const Newsletter = ({ className }) => {
             type="image"
           />
           {error !== '' && <p className={styles.error}>{error}</p>}
-				</div>
+        </div>
       )}
     </form>
   );
