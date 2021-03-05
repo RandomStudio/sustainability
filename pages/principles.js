@@ -10,14 +10,14 @@ const Principles = () => {
       <Head>
         <title>Goals & Principles | Sustainability Toolkit</title>
       </Head>
-      <Hero image="/images/featured/gp_intro.png" isReversed>
+      <Hero image="/images/featured/gp_intro" alt="A heavily stylised virtual catwalk model" isReversed>
         <p>Random Studio aims to create work which connects people, and connects them to their environment.</p>
         <p>The studio consists of an international team of 30+ visual artists, designers, producers, creative technologists, producers and software engineers, enabling Random to control the entire design process from ideation to production and installation. It is this capacity; the ability to dream, design and build small pieces of the future— that positions the studio so uniquely, showing our clients what ‘could be’ and encouraging them to take the next step.</p>
       </Hero>
       <Accordion className={styles.accordions} id="goals" title="Goals">
         <div className={styles.halfCol}>
           <p>
-            Random Studio wants to have a positive impact on the world, helping both decision makers of the industries we service, and our design peers, bridge the gap from status quo to new, sustainable ways of doing things. 
+            Random Studio wants to have a positive impact on the world, helping both decision makers of the industries we service, and our design peers, bridge the gap from status quo to new, sustainable ways of doing things.
           </p>
           <p>
             Our own intrinsic impulse is to create. Our studio is an environment that invites creativity and exploration. A place where we work with our intuition to find unexpected solutions. Futures that allow our clients and ourselves to grow.

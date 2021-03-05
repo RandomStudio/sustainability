@@ -1,7 +1,8 @@
 id: development
 title: Development
 headline: Consider the real-world impact of digital computing.
-image: featured/03_development.png
+image: featured/03_development
+alt: A laptop surrounded by technical instruments
 description:
   - Digital computation has a real-world impact that is obscured to most people. The power usage of both individual servers and data centres is directly dependent on how we task them and the design of the software that completes these tasks. Digital operations like queries, file transfers, image analysis and the use of AI all have a real, environmental footprint that quickly scales.
   - Sustainable design thinking can be applied at a systems-level, such as considering cloud hosting for large scale online roll-outs. Choosing hosting partners carefully is the first step, with optimising both server-side and client-side processing second, to allow for potentially very significant environmental impact reduction. This optimisation may range from more efficient algorithms that reduce the power consumption of servers to the background colour of websites that require less power to display.
@@ -13,17 +14,17 @@ actions:
 links:
   - title: Inspiration – The Climate Fixathon
     description: The world's first online hackathon to help fix the climate
-    image: links/climatefixathon.png
+    image: links/climatefixathon
     link: https://fixathon.io/entries
   - title: How to Build a Low-tech Website?
     description: Our new blog is designed to radically reduce the energy use associated with accessing our content.
-    image: links/howtobuildalowtechwebsite.png
+    image: links/howtobuildalowtechwebsite
     link: https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html
   - title: Web Design and Carbon Impact
     description: How can we, as web professionals, help to make the web more energy efficient.
-    image: links/webdesignandcarbonimpact.png
+    image: links/webdesignandcarbonimpact
     link: https://cmhb.de/web-design-and-carbon-impact
   - title: AI Has a Real Environmental Impact
     description: Here’s How Designers Are Handling It
-    image: links/AIhasarealenvironmentalimpact.png
+    image: links/AIhasarealenvironmentalimpact
     link: https://eyeondesign.aiga.org/yes-ai-has-a-carbon-footprint-so-how-do-we-deal-with-it/
