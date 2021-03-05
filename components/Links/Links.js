@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './Links.module.css';
 
 const Links = ({ links }) => (
@@ -7,7 +8,7 @@ const Links = ({ links }) => (
 			{links.map(({ description, image, link, title }) => (
 				<article className={styles.article} key={link}>
 					<div className={styles.imageFrame}>
-						<img decoding="async" loading="lazy"
+						<Image layout="fill" loading="lazy"
 							className={styles.image}
 							src={`/images/${image}`}
 							alt={title}

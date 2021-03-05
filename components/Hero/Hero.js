@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import styles from './Hero.module.css';
 
 const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
@@ -6,7 +7,7 @@ const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
 			{children}
 		</div>
 		<div className={styles.image}>
-			<img decoding="async" loading="lazy" src={image} />
+			<Image layout="fill" loading="lazy" src={image} />
 		</div>
 	</div>
 )
