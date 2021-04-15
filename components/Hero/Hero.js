@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 
-const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
-	<div className={`${styles.hero} ${isReversed ? styles.isReversed : ''} ${hasNavigation ? styles.hasNavigation : ''} ${className}`}>
+const Hero = ({ children, className, hasNavigation, image, isIntro }) => (
+	<div className={`${styles.hero} ${isIntro ? styles.isIntro : ''} ${hasNavigation ? styles.hasNavigation : ''} ${className}`}>
 		<div className={styles.copy}>
 			{children}
 		</div>
@@ -12,7 +12,7 @@ const Hero = ({ children, className, hasNavigation, image, isReversed }) => (
 )
 
 Hero.defaultProps = {
-	isReversed: false,
+	isIntro: false,
 }
 
 export default Hero;

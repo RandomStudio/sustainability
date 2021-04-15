@@ -61,8 +61,8 @@
 	@media $(large) {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	
-	@media $(x-large) {
-		grid-template-columns: repeat(4, 1fr);
+		
+	@media $(huge) {
+		grid-template-columns: repeat(5, 1fr);
 	}
 }

@@ -1,25 +1,27 @@
 .hero {
 	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: auto auto;
+	grid-template-areas: "copy" "image";
 	width: 100%;
+	column-gap: 0;
 	margin-bottom: 56px;
 	
 	@media $(medium) {
 		margin-bottom: 0;
 		grid-template-areas: "image gap copy";
 		grid-template-columns: 0.5fr 72px 0.5fr;
-		column-gap: 0;
 		grid-template-rows: minmax(min-content, 90vh);
 	}
 	
 	@media $(x-large) {
+		grid-template-areas: "title copy gap image";
+		grid-template-columns: 0.3fr 0.7fr 72px 50vw;
 		grid-template-rows: minmax(720px, min-content);
+	}
 
-		&.isReversed {
-			grid-template-areas: "title copy gap image";
-			grid-template-columns: 0.15fr 0.35fr 72px 0.5fr;
-			grid-template-rows: minmax(720px, min-content);
+	&.isIntro {
+		@media $(x-large) {
+			grid-template-areas: "image gap copy";
+			grid-template-columns: 50vw 72px calc(50vw - 72px);
 		}
 	}
 }
@@ -32,6 +34,10 @@
 	@media $(huge) {
 		max-width: 66%;
 	}
+
+	.isIntro & {
+		align-self: flex-end;
+	}
 }
 
 .copy :global(p:first-of-type) {
@@ -40,7 +46,6 @@
 
 .copy {
 	@mixin wrapper;
-	grid-row: 1/2;
 	width: 100vw;
 	margin-bottom: 32px;
 
@@ -77,19 +82,17 @@
 .image {
 	background-color: white;
 	grid-area: image;
-	grid-row: 2 / 3;
 	width: 100vw;
 	height: 125vw;
 	position: relative;
 	
 	@media $(medium) {
-		grid-row: 1 / 2;
 		width: 100%;
 		height: 100%;
 	}
 
 	@media $(x-large) {
-		aspect-ratio: 3/2;
+		padding-top: 66%;
 	}
 }
 
@@ -104,11 +107,12 @@
 	width: 100%;
 
 	@media $(medium) {
-		object-position: right;
+		object-position: left;
 
-		.isReversed & {
-			object-position: left;
+		.isIntro & {
+			object-position: right;
 		}
 	}
+
 }
 			
