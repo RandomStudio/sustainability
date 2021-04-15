@@ -5,12 +5,12 @@ image: featured/01_discovery.png
 description:
   - This could include an audit of the clients sustainability history, to give teams an understanding of where their clients business is at. Sustainability is also discussed during project kick offs and with the client, aiming to set targets and goals for running a sustainable project. 
 actions:
-  - Set goals with the client, aligning and defining a sustainable strategy
-  - Map out target requirements when working toward a certificate
-  - Connect with potential local partners
-  - Maintain an accurate listing of studio-owned equipment, materials & software
-  - Perform a client asset & resource audit
-  - Include sustainability in project kick-off process
+  - copy: Set goals with the client, aligning and defining a sustainable strategy
+  - copy: Map out target requirements when working toward a certificate
+  - copy: Connect with potential local partners
+  - copy: Maintain an accurate listing of studio-owned equipment, materials & software
+  - copy: Perform a client asset & resource audit
+  - copy: Include sustainability in project kick-off process
 links:
   -  title: Waste Not
      description: Waste Not is a simple way to search an open-source database of sustainable suppliers.

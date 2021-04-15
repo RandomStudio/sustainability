@@ -35,10 +35,12 @@ export default function Home({ files }) {
 export async function getStaticProps(context) {
   const yaml = require('js-yaml');
   const fs = require('fs');
-  const files = fs.readdirSync('./content').map(filename => {
-    const data = yaml.load(fs.readFileSync(`./content/${filename}`, 'utf8'));
+
+  const files = fs.readdirSync('./content/process').map(filename => {
+    const data = yaml.load(fs.readFileSync(`./content/process/${filename}`, 'utf8'));
     return data;
   });
+
   return {
     props: {
       files

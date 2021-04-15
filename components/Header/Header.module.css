@@ -130,6 +130,12 @@
 	}
 }
 
+.search {
+	margin-left: 24px;
+	vertical-align: middle;
+	cursor: pointer;
+}
+
 :global(#navcheckbox:checked) + .header {
 	mix-blend-mode: normal;
 

@@ -1,0 +1,52 @@
+.columns {
+	@mixin wrapper;
+	margin-top: 52px;
+
+	@media $(small) {
+		display: grid;
+		row-gap: 52px;
+		column-gap: 52px;
+		grid-template-columns: repeat(4, 256px);
+		margin-top: 72px;
+	}
+}
+
+.group {
+	@mixin navigation;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0;
+	margin-bottom: 0;
+
+	@media $(small) {
+		margin: 0;
+	}
+}
+
+.title {
+	opacity: 0.5;
+}
+
+.tag {
+	position: relative;
+	width: auto;
+	list-style: none;
+}
+
+.disabled {
+	opacity: 0.25;
+	display: inline-block;
+	cursor: not-allowed;
+}
+
+.count {
+	font-size: 0.5em;
+	opacity: 0.5;
+	padding-left: 0.4em;
+	vertical-align: super;
+}
+
+.disabled + .count {
+	opacity: 0.25;
+}

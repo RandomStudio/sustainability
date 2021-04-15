@@ -66,6 +66,7 @@ const Header = ({ setNavCheckedState }) => {
 					: <Link href="/">Sustainability Toolkit</Link>}
 				</nav>
 				<Link href="/principles"><a className={`${styles.principles} ${router.pathname === '/principles' ? styles.isActive : ''}`}>Goals & Principles</a></Link>
+				<Link href="/lookup"><img className={styles.search} src="/search.svg" /></Link>
 			</header>
 			<label className={styles.close} htmlFor="navcheckbox"></label>
 		</>
