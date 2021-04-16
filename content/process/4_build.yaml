@@ -13,7 +13,7 @@ actions:
   - copy: Source local production partners in order to reduce transport footprint
   - copy: Establish local library of sustainable materials for reference and inspiration
   - copy: Seek suppliers and partners who apply sustainable practices themselves
-    tag:
+    tags:
       - ethics
       - some
       - other
