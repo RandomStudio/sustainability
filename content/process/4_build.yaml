@@ -13,6 +13,11 @@ actions:
   - copy: Source local production partners in order to reduce transport footprint
   - copy: Establish local library of sustainable materials for reference and inspiration
   - copy: Seek suppliers and partners who apply sustainable practices themselves
+    tag:
+      - ethics
+      - some
+      - other
+      - content
 links:
   - title: A Better Source
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.
