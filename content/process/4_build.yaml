@@ -9,6 +9,8 @@ actions:
   - copy: Consider renting when working with electronics for temporary use
   - copy: Build modular so individual materials can be reused
   - copy: Prefer ethically made, non-toxic materials (FSC/PEFC)
+    tags:
+      - ethics
   - copy: Optimise material usage for project duration; bio-degradable material for temporary installs
   - copy: Source local production partners in order to reduce transport footprint
   - copy: Establish local library of sustainable materials for reference and inspiration
@@ -23,6 +25,8 @@ links:
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.
     image: links/abettersource.png
     link: https://abettersource.org/
+    tags:
+      - ethics
   - title: Material District
     description: The world’s leading match-making platform in the field of innovative materials.
     image: links/materialdistrict.png
