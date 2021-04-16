@@ -6,9 +6,8 @@
 	}
 
 	@media $(huge) {
-		padding: 0;
-		margin: 0 auto;
-		max-width: calc(min($(huge-px), 70vw));
+		grid-area: accordion;
+		width: 75%;
 	}
 }
 

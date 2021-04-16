@@ -2,6 +2,12 @@
 	@media $(medium) {
 		margin-top: 72px !important;
 	}
+	@media $(huge) {
+		display: grid;
+		grid-template-areas: "space1 accordion accordion accordion space1";
+		grid-template-columns: 0.15fr 0.35fr 72px 0.35fr 0.15fr;
+		grid-auto-rows: min-content;
+	}
 }
 
 .halfCol {

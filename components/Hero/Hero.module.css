@@ -14,7 +14,7 @@
 	
 	@media $(x-large) {
 		grid-template-areas: "title copy gap image";
-		grid-template-columns: 0.3fr 0.7fr 72px 50vw;
+		grid-template-columns: calc((50vw - 72px) * 0.3) calc((50vw - 72px) * 0.7) 72px 50vw;
 		grid-template-rows: minmax(720px, min-content);
 	}
 
@@ -38,10 +38,6 @@
 	.isIntro & {
 		align-self: flex-end;
 	}
-}
-
-.copy :global(p:first-of-type) {
-	@mixin title;
 }
 
 .copy {
@@ -70,12 +66,16 @@
 	}
 
 	:global(p) {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
 	}
 
 	:global(p:last-child) {
 		margin-bottom: 0;
 	}
+}
+
+.copy :global(p:first-of-type) {
+	@mixin title;
 }
 
 

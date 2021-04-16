@@ -21,12 +21,12 @@
 	}
 
 	@media $(medium) {
-		top: calc(24px - var(--top-offset));
-		margin-top: 0;
+		//top: calc(24px - var(--top-offset));
+		//margin-top: 0;
 		height: 0;
-		margin-bottom: calc(-1 * var(--top-offset));
-		padding-top: var(--top-offset);
-		padding-bottom: 82px;
+		//margin-bottom: calc(-1 * var(--top-offset));
+		//padding-top: var(--top-offset);
+		//padding-bottom: 82px;
 	}
 
 	&.isTop {
