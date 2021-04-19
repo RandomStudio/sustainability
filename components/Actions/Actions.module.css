@@ -1,33 +1,12 @@
 .actions {
-	@mixin wrapper;
-	display: grid;
-	grid-template-areas: "title" "actions";
-	grid-template-rows: auto;
+	@mixin narrowWrapper;
+	display: flex;
+	flex-direction: column;
 	width: 100%;
 	margin-bottom: 56px;
 	
 	@media $(small) {
-		grid-template-areas: "title title" "actions actions";
-		row-gap: 12px;
-		grid-template-rows: min-content auto;
 		margin-bottom: 72px;
-	}
-	
-	@media $(large) {
-		grid-template-rows: min-content auto;
-		grid-template-areas: "title title title" "actions actions actions";
-	}
-
-	@media $(x-large) {
-		padding: 0 15%;
-	}
-	
-	@media $(huge) {
-		padding: 0;
-		grid-template-areas:
-			"spaceleft title title title spaceright"
-			"spaceleft actions actions actions spaceright";
-		grid-template-columns: 0.15fr 0.35fr 72px 0.35fr 0.15fr;
 	}
 }
 
@@ -36,7 +15,7 @@
 }
 
 .title {
-	grid-area: title;
+	width: 100%;
 	margin-bottom: 32px;
 
 	@media $(small)  {
@@ -45,11 +24,11 @@
 }
 
 .wrapper {
+	/* ##FIVECOLUMN */
 	display: grid;
 	grid-template-columns: 100%;
 	grid-template-rows: auto;
 	width: 100%;
-	grid-area: actions;
 
 	@media $(small) {
 		grid-template-columns: repeat(2, 1fr);

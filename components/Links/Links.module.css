@@ -1,5 +1,5 @@
 .articles {
-	@mixin wrapper;
+	@mixin narrowWrapper;
 	display: flex;
 	flex-direction: column;
 	margin-bottom: 56px;
@@ -7,19 +7,7 @@
 	position: relative;
 	
 	@media $(small)  {
-		display: flex;
-		flex-direction: column;
 		margin-bottom: 128px;
-	}
-
-	@media $(x-large) {
-		padding: 0 15%;
-	}
-
-	@media $(huge) {
-		grid-template-areas: "space title title title title" "space links links links links";
-		grid-template-columns: 0.15fr 0.35fr 72px 0.35fr 0.15fr;
-		padding: 0 0 0 15%;
 	}
 
 	&::after {
@@ -40,7 +28,7 @@
 }
 
 .title {
-	grid-area: title;
+	width: 100%;
 	margin-bottom: 36px;
 	
 	@media $(small)  {
@@ -52,25 +40,24 @@
 .container {
 	width: 100%;
 	color: white;
-	scrollbar-color: rgba(255,255,255,0.25) $dark-grey;
-	grid-area: links;
-
-	&::-webkit-scrollbar,
-	&::-webkit-scrollbar-track {
-	  background-color: $dark-grey;
-	}
-
-	&::-webkit-scrollbar-thumb {
-	  background-color: rgba(255,255,255,0.25);
-	  border-radius: 6px;
-	  border: 3px solid $dark-grey;
-	}
+	scrollbar-color: black black;
 
 	@media $(small) {
 		display: flex;
 		flex-direction: row;
 		overflow-y: hidden;
 		overflow-x: auto;
+	}
+
+	&::-webkit-scrollbar,
+	&::-webkit-scrollbar-track {
+	  background-color: black;
+	}
+
+	&::-webkit-scrollbar-thumb {
+	  background-color: black;
+	  border-radius: 6px;
+	  border: 3px solid black;
 	}
 }
 
@@ -81,7 +68,7 @@
 
 	@media $(small) {
 		width: calc(100% / 2 - (32px / 2));
-		margin-right: 16px;
+		margin-right: 12px;
 	}
 
 	@media $(large) {

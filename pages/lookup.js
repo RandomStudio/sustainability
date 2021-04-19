@@ -15,18 +15,20 @@ const Lookup = ({ groups }) => {
       <Head>
         <title>Lookup | Sustainability Toolkit</title>
       </Head>
-      <div className={styles.columns}>
-        {groups.map(({ title, tags }) => (
-          <ul className={styles.group}>
-            <h3 className={styles.title}>{title}</h3>
-            {tags.map(({ id, count, title }) => (
-              <li className={styles.tag}>
-                {getLinkJSX(id, title, count)}
-                <span className={styles.count}>{count}</span>
-              </li>
-            ))}
-          </ul>
-        ))}
+      <div className={styles.wrapper}>
+        <div className={styles.columns}>
+          {groups.map(({ title, tags }) => (
+            <ul className={styles.group}>
+              <h3 className={styles.title}>{title}</h3>
+              {tags.map(({ id, count, title }) => (
+                <li className={styles.tag}>
+                  {getLinkJSX(id, title, count)}
+                  <span className={styles.count}>{count}</span>
+                </li>
+              ))}
+            </ul>
+          ))}
+        </div>
       </div>
     </>
   )
