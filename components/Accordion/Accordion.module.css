@@ -1,12 +1,5 @@
 .accordion {
-	@mixin wrapper;
-
-	@media $(x-large) {
-		padding: 0 15%;
-	}
-
 	@media $(huge) {
-		grid-area: accordion;
 		width: 75%;
 	}
 }

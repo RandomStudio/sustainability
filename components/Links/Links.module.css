@@ -119,8 +119,9 @@
 	margin-bottom: 8px;
 	
 	:global(h3) {
+		display: block;
 		text-overflow: ellipsis;
-		height: 64px;
+		max-height: 64px;
 		-webkit-line-clamp: 2;
 		line-clamp: 2;
 		white-space: wrap;
@@ -130,6 +131,12 @@
 
 .copy {
 	@mixin copy;
+	text-overflow: ellipsis;
+	max-height: 5em;
+	-webkit-line-clamp: 2;
+	line-clamp: 2;
+	white-space: wrap;
+	overflow: hidden;
 	margin-bottom: 32px;
 
 	@media $(small) {

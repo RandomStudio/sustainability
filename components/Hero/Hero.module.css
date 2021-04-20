@@ -14,7 +14,7 @@
 	
 	@media $(x-large) {
 		grid-template-areas: "title copy gap image";
-		grid-template-columns: calc((50vw - 72px) * 0.3) calc((50vw - 72px) * 0.7) 72px 50vw;
+		grid-template-columns: 15vw calc(35vw - 72px) 72px 50vw;
 		grid-template-rows: minmax(720px, min-content);
 	}
 
