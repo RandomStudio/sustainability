@@ -4,14 +4,17 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export",
+    "build": "next build && next export && node optimize.js",
+    "images": "node optimize.js",
     "start": "next start"
   },
   "dependencies": {
+    "glob": "^7.1.6",
     "lodash": "^4.17.21",
     "next": "10.0.6",
     "react": "17.0.1",
-    "react-dom": "17.0.1"
+    "react-dom": "17.0.1",
+    "sharp": "^0.28.1"
   },
   "devDependencies": {
     "js-yaml": "^4.0.0",

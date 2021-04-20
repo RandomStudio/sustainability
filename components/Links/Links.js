@@ -1,4 +1,5 @@
 import styles from './Links.module.css';
+import Image from '../Image/Image';
 
 const Links = ({ links, title }) => (
 	<div className={styles.articles}>
@@ -7,10 +8,13 @@ const Links = ({ links, title }) => (
 			{links?.map(({ description, image, link, title }) => (
 				<article className={styles.article} key={link}>
 					<div className={styles.imageFrame}>
-						<img decoding="async" loading="lazy"
-							className={styles.image}
-							src={`/images/${image}`}
+						<Image
 							alt={title}
+							className={styles.image}
+							decoding="async"
+							loading="lazy"
+							sizes={[220, 350]}
+							src={`/images/${image}`}
 						/>
 					</div>
 					<a href={link} className={styles.subtitle}><h3>{title}</h3></a>
