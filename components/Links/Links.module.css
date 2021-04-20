@@ -10,7 +10,7 @@
 		margin-bottom: 128px;
 	}
 
-	@media $(huge) {
+	@media $(x-large) {
 		padding: 0 0 0 15vw;
 		width: 85vw;
 	}
@@ -27,7 +27,7 @@
 			content: '';
 		}
 		
-		@media $(huge) {
+		@media $(x-large) {
 			right: -15vw;
 		}
 	}
@@ -48,16 +48,18 @@
 }
 
 .container {
-	--block-width: calc((100% - (12px * (var(--quantity) - 1))) / var(--quantity));
+	--block-width: calc((70vw - (12px * (var(--quantity) - 1))) / var(--quantity));
 	width: 100%;
 	color: white;
 	scrollbar-color: black black;
 
 	@media $(small) {
 		--quantity: 2;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(20, min-content);
+		grid-template-rows: repeat(3, min-content);
+		row-gap: 0;
+		column-gap: 12px;
 		overflow-y: hidden;
 		overflow-x: auto;
 	}
@@ -85,22 +87,18 @@
 .article {
 	display: flex;
 	flex-direction: column;
-	flex-shrink: 0;
-
+	margin-bottom: 32px;
+	
 	@media $(small) {
-		width: var(--block-width);
-		margin-right: 12px;
-	}
-
-	&:last-child {
-		margin-right: 0;
+		display: contents;
+		margin: 0;
 	}
 
 	&:nth-child(n+4) {
 		display: none;
 
 		@media $(small) {
-			display: flex;
+			display: contents;
 		}
 	}
 
@@ -109,7 +107,8 @@
 .spacer {
 	display: none;
 	@media $(small) {
-		width: var(--block-width);
+		flex-grow: 1;
+		min-width: var(--block-width);
 		display: block;
 		position: relative;
 		height: 100%;
@@ -131,9 +130,10 @@
 .imageFrame {
 	position: relative;
 	background-color: rgba(255,255,2550.5);
-	width: 100%;
+	width: var(--block-width);
 	padding-top: 70%;
 	margin: 0 0 16px;
+	grid-row: 1 / 2;
 	overflow: hidden;
 }
 
@@ -143,6 +143,7 @@
 
 .subtitle {
 	margin-bottom: 8px;
+	grid-row: 2 / 3;
 	
 	:global(h3) {
 		display: block;
@@ -157,15 +158,12 @@
 
 .copy {
 	@mixin copy;
+	grid-row: 3 / 4;
 	text-overflow: ellipsis;
 	max-height: 5em;
 	-webkit-line-clamp: 2;
 	line-clamp: 2;
 	white-space: wrap;
+	display: block;
 	overflow: hidden;
-	margin-bottom: 32px;
-
-	@media $(small) {
-		margin-bottom: 24px;
-	}
 }
