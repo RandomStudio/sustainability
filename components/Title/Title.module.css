@@ -10,27 +10,11 @@
 	pointer-events: auto;
 	white-space: nowrap;
 
-	@media $(medium) {
-		--top-offset: $TITLE_OFFSET_WHEN_MEDIUM;
-	}
 	@media $(large) {
-		--top-offset: $TITLE_OFFSET_WHEN_LARGE;
-	}
-	@media $(x-large) {
-		--top-offset: $TITLE_OFFSET_WHEN_XLARGE;
-	}
-
-	@media $(medium) {
-		//top: calc(24px - var(--top-offset));
-		//margin-top: 0;
-		height: 0;
-		//margin-bottom: calc(-1 * var(--top-offset));
-		//padding-top: var(--top-offset);
-		//padding-bottom: 82px;
 	}
 
 	&.isTop {
-		@media $(medium) {
+		@media $(large) {
 			padding-bottom: 0;
 		}
 	}
