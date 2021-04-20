@@ -1,4 +1,5 @@
 import styles from './Hero.module.css';
+import Image from '../Image/Image';
 
 const Hero = ({ children, className, hasNavigation, image, isIntro }) => (
 	<div className={`${styles.hero} ${isIntro ? styles.isIntro : ''} ${hasNavigation ? styles.hasNavigation : ''} ${className}`}>
@@ -6,7 +7,7 @@ const Hero = ({ children, className, hasNavigation, image, isIntro }) => (
 			{children}
 		</div>
 		<div className={styles.image}>
-			<img decoding="async" loading="lazy" src={image} />
+			<Image decoding="async" loading="lazy" sizes={[450, 720, 1024, 1280, 2048]} src={image} />
 		</div>
 	</div>
 )

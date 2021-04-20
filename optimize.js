@@ -12,7 +12,9 @@ if (!fs.existsSync(CACHE_DIR)){
 const optimizeImage = async ([path, sizes]) => {
 	const [extension, ...filename] = path.split('.').reverse();
 	for await (size of sizes) {
-		const resized = await sharp(OUT_DIR + path).resize(size);
+		const original = await sharp(OUT_DIR + path);
+		
+		const resized = original.width > size ? original.resize(size) : original;
 		await resized.toFile(`${OUT_DIR}${filename}_${size}.${extension}`)
 		await resized.webp().toFile(`${OUT_DIR}${filename}_${size}.webp`)
 	}
