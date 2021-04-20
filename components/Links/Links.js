@@ -17,6 +17,7 @@ const Links = ({ links, title }) => (
 					<p className={styles.copy}>{description}</p>
 				</article>
 			))}
+			<div className={styles.spacer} />
 		</div>
 	</div>
 )

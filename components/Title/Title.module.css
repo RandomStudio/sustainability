@@ -11,6 +11,9 @@
 	white-space: nowrap;
 
 	@media $(large) {
+		height: 0;
+		margin-top: 160px;
+		margin-bottom: -160px;
 	}
 
 	&.isTop {
