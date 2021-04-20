@@ -78,9 +78,12 @@
 	align-items: flex-start;
 	flex-direction: column;
 	background-color: transparent;
+	transition: max-height 600ms ease-out;
 
 	@media $(large) {
 		width: 25vw;
+		height: 100vh;
+		max-height: 0;
 	}
 
 	@media $(x-large) {
@@ -103,7 +106,6 @@
 	
 
 	&.hasNav {
-		max-height: clc;
 		pointer-events: none;
 		
 		a {
@@ -145,7 +147,8 @@
 }
 
 :global(#navcheckbox:checked) + .header .menu {
-	max-height: calc(var(--links) * 2.5em);
+	/* max-height: calc(var(--links) * 2.5em); */
+	max-height: 100vh;
 	z-index: 20;
 	background-color: black;
 	pointer-events: auto;
