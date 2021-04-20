@@ -16,15 +16,15 @@ const Image = ({ sizes, src, ...props }) => {
 		const fs = require('fs');
 		let currentJson = '{}';
 		// Note: this happens at build time so path is relative to project root
-		if (fs.existsSync('./images.json')){
-			currentJson = fs.readFileSync('./images.json');
+		if (fs.existsSync('./imageLog.json')){
+			currentJson = fs.readFileSync('./imageLog.json');
 		}
 		const currentData = JSON.parse(currentJson);
 		const updatedData = JSON.stringify({
 			...currentData,
 			[src]: sizes,
 		});
-		fs.writeFileSync('./images.json', updatedData);
+		fs.writeFileSync('./imageLog.json', updatedData);
 	}
 
 	return (
