@@ -34,7 +34,7 @@ const Image = ({ sizes, src, ...props }) => {
 		<picture>
 			<source type="image/webp" srcset={srcSet.map(srcs => srcs[0]).join(', ')} />
 			<source srcset={srcSet.map(srcs => srcs[1]).join(', ')} />
-			<img src={srcSet[0]?.[1]} {...props} />
+			<img src={`${filename}_${sizes[0]}.${extension}`} {...props} />
 		</picture>
 	
 	)
