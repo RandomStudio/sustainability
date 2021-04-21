@@ -44,6 +44,10 @@ actions:
       - Materials
       - Equipment
   - copy: Include sustainability in project kick-off process
+    tags:
+      - Discovery
+      - Client Communication
+      - Goal Setting
 links:
   -  title: Waste Not
      description: Waste Not is a simple way to search an open-source database of sustainable suppliers.
