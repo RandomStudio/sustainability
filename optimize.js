@@ -56,10 +56,21 @@ const optimizeImage = async ([filePath, sizes], hasValidCache) => {
 
 		const original = sharp(OUT_DIR + filePath);
 		const resized = original.width > size ? original.resize(size) : original;
-		await resized.toFile(`${OUT_DIR}${filename}_${size}.${extension}`);
-		await resized.toFile(`${CACHE_DIR}${filename}_${size}.${extension}`);
-		await resized.webp().toFile(`${OUT_DIR}${filename}_${size}.webp`);
-		await resized.webp().toFile(`${CACHE_DIR}${filename}_${size}.webp`);
+
+		const outStandard = `${OUT_DIR}${filename}_${size}.${extension}`;
+		const cacheStandard = `${CACHE_DIR}${filename}_${size}.${extension}`;
+
+		const outWebp = `${OUT_DIR}${filename}_${size}.webp`;
+		const cacheWebp = `${CACHE_DIR}${filename}_${size}.webp`;
+
+		await resized.toFile(outStandard);
+		await resized.webp({
+			quality: 45,
+			reductionEffort: 6,
+		}).toFile(outWebp);
+
+		fs.copyFileSync(outStandard, cacheStandard);
+		fs.copyFileSync(outWebp, cacheWebp);
 	}
 }
 
