@@ -160,7 +160,7 @@
 	@mixin copy;
 	grid-row: 3 / 4;
 	text-overflow: ellipsis;
-	max-height: 5em;
+	max-height: 80px;
 	-webkit-line-clamp: 2;
 	line-clamp: 2;
 	white-space: wrap;
