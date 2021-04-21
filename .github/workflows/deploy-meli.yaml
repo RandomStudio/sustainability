@@ -1,6 +1,7 @@
 name: main
 on: [ push ]
 env:
+  SERVED_FOLDER: "./public" 
   MELI_SITE: "5a66db10-247c-407a-aa6c-238716607d5c"
   MELI_TOKEN: "8528e3534916af3383a08d569ee3ec5944ecdf1406222d5458d945107790bcf9"
 jobs:
@@ -17,7 +18,7 @@ jobs:
           npm run build
       - name: "publish"
         run: |
-          npx -p "@getmeli/cli" meli upload ./public \
+          npx -p "@getmeli/cli" meli upload $SERVED_FOLDER \
             --url "https://meli.random.studio" \
             --site "$MELI_SITE" \
             --token "$MELI_TOKEN" \
