@@ -64,6 +64,8 @@ const optimizeImage = async ([filePath, sizes], hasValidCache) => {
 		const outWebp = `${OUT_DIR}${filename}_${size}.webp`;
 		const cacheWebp = `${CACHE_DIR}${filename}_${size}.webp`;
 
+		console.log('Created', outStandard)
+		console.log('Created', outWebp)
 		await resized.toFile(outStandard);
 		await resized.webp({
 			quality: 45,
@@ -83,6 +85,7 @@ const process = async () => {
 		if (!filePath.includes('.')) {
 			return;
 		}
+		console.log('Processing', filePath)
 		const hasValidCache = checkCache(filePath);
 		await optimizeImage(entry, hasValidCache);
 
