@@ -46,7 +46,7 @@ const optimizeImage = async ([filePath, sizes], hasValidCache) => {
 			console.log('Found all files cached')
 			await sharp(`${CACHE_DIR}${filename}_${size}.${extension}`).toFile(`${OUT_DIR}${filename}_${size}.${extension}`)
 			await sharp(`${CACHE_DIR}${filename}_${size}.webp`).toFile(`${OUT_DIR}${filename}_${size}.webp`)
-			return;
+			continue;
 		}
 
 		if (hasValidCache) {
