@@ -20,7 +20,7 @@ jobs:
           path: |
             ${{ github.workspace }}/.next/cache
             ${{ github.workspace }}/.imageCache
-          key: ${{ runner.os }}-nextjs-20210421-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ runner.os }}-nextjs-20210421-2-${{ hashFiles('**/package-lock.json') }}
       - name: Build
         run: yarn build
       - name: Create folders
