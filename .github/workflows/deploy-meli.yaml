@@ -1,7 +1,7 @@
 name: main
 on: [ push ]
 env:
-  SERVED_FOLDER: "./public" 
+  SERVED_FOLDER: "./out" 
   MELI_SITE: "5a66db10-247c-407a-aa6c-238716607d5c"
   MELI_TOKEN: "8528e3534916af3383a08d569ee3ec5944ecdf1406222d5458d945107790bcf9"
 jobs:
@@ -9,13 +9,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-node@v1
+      - name: Install dependencies
+        run: yarn
+      - uses: actions/cache@v2
+        name: Load from cache
         with:
-          node-version: '14'
-      - name: "build"
-        run: |
-          npm install
-          npm run build
+          path: |
+            ${{ github.workspace }}/.next/cache
+            ${{ github.workspace }}/.imageCache
+          key: ${{ runner.os }}-nextjs-20210421-3-${{ hashFiles('**/package-lock.json') }}
+      - name: Build
+        run: yarn build
       - name: "publish"
         run: |
           npx -p "@getmeli/cli" meli upload $SERVED_FOLDER \
