@@ -1,6 +1,5 @@
 const fs = require('fs');
 const path = require('path');
-const glob = require('glob');
 const sharp = require('sharp');
 
 const CACHE_DIR = './imageCache';
