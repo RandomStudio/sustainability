@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from './Title.module.css';
-import { TOP_OFFSET_WHEN_MEDIUM } from '../../styles/variables';
 
 const useIntersectionObserver = (ref) => {
 	// State and setter for storing whether element is visible

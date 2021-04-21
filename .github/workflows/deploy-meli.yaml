@@ -1,0 +1,26 @@
+name: main
+on: [ push ]
+env:
+  MELI_SITE: "5a66db10-247c-407a-aa6c-238716607d5c"
+  MELI_TOKEN: "8528e3534916af3383a08d569ee3ec5944ecdf1406222d5458d945107790bcf9"
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '12'
+      - name: "build"
+        run: |
+          npm ci
+          npm run build
+      - name: "publish"
+        run: |
+          npx -p "@getmeli/cli" meli upload ./public \
+            --url "https://meli.random.studio" \
+            --site "$MELI_SITE" \
+            --token "$MELI_TOKEN" \
+            --release "$GITHUB_SHA"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
