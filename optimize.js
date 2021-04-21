@@ -83,7 +83,7 @@ const process = async () => {
 	for await (entry of Object.entries(JSON.parse(imageIndex))) {
 		const [filePath] = entry;
 		if (!filePath.includes('.')) {
-			return;
+			continue;
 		}
 		console.log('Processing', filePath)
 		const hasValidCache = checkCache(filePath);
