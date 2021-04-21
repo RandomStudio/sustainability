@@ -39,3 +39,44 @@
   tags:
     - test
     - test2
+
+- title: Phases
+  tags:
+    - Discovery
+    - Design
+    - Development
+    - Build
+    - Install
+    - Logistics
+    - Wrap-up
+- title: Project Management
+  tags:
+    - Communication
+    - Client Communication
+    - Strategy
+    - Goal Setting
+    - Audit / Analysis
+    - Certification
+    - Measuring
+- title: Studio Management
+  tags:
+    - Studio Management
+    - Team Education
+- title: Design
+  tags:
+    - Research (For anyone doing prep-work, essential information, inspiration)
+    - Ideation
+    - Concept
+    - UX Design
+    - Modular Design
+    - Post-Use
+- title: Development
+  tags:
+    - Software Design
+    - Technology
+- title: Production
+  tags:
+    - Production
+    - Suppliers & Production Partners
+    - Materials
+    - Equipment
