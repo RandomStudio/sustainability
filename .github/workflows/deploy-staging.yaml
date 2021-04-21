@@ -17,7 +17,9 @@ jobs:
         run: yarn
       - uses: actions/cache@v2
         with:
-          path: ${{ github.workspace }}/.next/cache
+          path: |
+            ${{ github.workspace }}/.next/cache
+            ${{ github.workspace }}/.imageCache
           key: ${{ runner.os }}-nextjs-20210215-${{ hashFiles('**/package-lock.json') }}
       - name: Build
         run: yarn build

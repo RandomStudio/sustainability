@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const sharp = require('sharp');
 
-const CACHE_DIR = './imageCache';
+const CACHE_DIR = './.imageCache';
 const DB_FILE = './imageLog.json';
 const OUT_DIR = './out';
 
