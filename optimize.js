@@ -91,7 +91,7 @@ const process = async () => {
 
 		if (!hasValidCache) {
 			const current = fs.statSync(OUT_DIR + filePath);
-			fs.writeFileSync(CACHE_DIR + filePath, current.size)
+			fs.writeFileSync(CACHE_DIR + filePath, `${current.size}`)
 		}
 	}
 
