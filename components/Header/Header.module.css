@@ -83,7 +83,7 @@
 	@media $(large) {
 		width: 25vw;
 		height: 100vh;
-		max-height: 0;
+		max-height: 82px;
 	}
 
 	@media $(x-large) {

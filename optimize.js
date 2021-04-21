@@ -3,6 +3,7 @@ const glob = require('glob');
 const sharp = require('sharp');
 
 const CACHE_DIR = './imageCache';
+const DB_FILE = './imageLog.json';
 const OUT_DIR = './out';
 
 if (!fs.existsSync(CACHE_DIR)){
@@ -22,11 +23,13 @@ const optimizeImage = async ([path, sizes]) => {
 }
 
 const process = async () => { 
-	const imageIndex = fs.readFileSync('./imageLog.json');
+	const imageIndex = fs.readFileSync(DB_FILE);
 
 	for await (entry of Object.entries(JSON.parse(imageIndex))) {
 		optimizeImage(entry);
 	}
+
+	fs.unlinkSync(DB_FILE)
 }
 
 process();
