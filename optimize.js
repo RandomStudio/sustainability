@@ -16,9 +16,10 @@ const checkCache = (filePath) => {
 		return false;
 	}
 
-	const original = fs.statSync(CACHE_DIR + filePath);
+	const originalSize = fs.readFileSync(CACHE_DIR + filePath, 'utf8');
 	const current = fs.statSync(OUT_DIR + filePath);
-	if (original.size !== current.size) {
+
+	if (originalSize !== `${current.size}`) {
 		console.log('Filehas changed since cache')
 		const [extension, ...filename] = path.basename(filePath).split('.').reverse();
 		console.log(filePath, extension, filename)
@@ -86,9 +87,8 @@ const process = async () => {
 		await optimizeImage(entry, hasValidCache);
 
 		if (!hasValidCache) {
-			const from = OUT_DIR + filePath
-			const to = CACHE_DIR + filePath
-			fs.copyFileSync(from, to);
+			const current = fs.statSync(OUT_DIR + filePath);
+			fs.writeFileSync(CACHE_DIR + filePath, current.size)
 		}
 	}
 
