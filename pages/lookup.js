@@ -3,38 +3,37 @@ import { groupBy } from 'lodash';
 import Head from 'next/head';
 import Link from 'next/link';
 
-const Lookup = ({ groups }) => {
-  const getLinkJSX = (id, title, count) => {
-    if (count < 1) {
-      return <div className={styles.disabled}>{title}</div>
-    }
-    return <Link href={`/tag/${id}`}>{title}</Link>
+const getLinkJSX = (id, title, count) => {
+  if (count < 1) {
+    return <div className={styles.disabled}>{title}</div>
   }
-  return (
-    <>
-      <Head>
-        <title>Lookup | Sustainability Toolkit</title>
-      </Head>
-      <div className={styles.wrapper}>
-        <div className={styles.columns}>
-          {groups.map(({ title, tags }) => (
-            <ul className={styles.group}>
-              <h3 className={styles.title}>{title}</h3>
-              {tags.map(({ id, count, title }) => (
-                <li className={styles.tag}>
-                  {getLinkJSX(id, title, count)}
-                  <span className={styles.count}>{count}</span>
-                </li>
-              ))}
-            </ul>
-          ))}
-        </div>
-      </div>
-    </>
-  )
+  return <Link href={`/tag/${id}`}>{title}</Link>
 }
 
-export async function getStaticProps(context) {
+const Lookup = ({ groups }) => (
+  <>
+    <Head>
+      <title>Lookup | Sustainability Toolkit</title>
+    </Head>
+    <div className={styles.wrapper}>
+      <div className={styles.columns}>
+        {groups.map(({ title, tags }) => (
+          <ul className={styles.group}>
+            <h3 className={styles.title}>{title}</h3>
+            {tags.map(({ id, count, title }) => (
+              <li className={styles.tag}>
+                {getLinkJSX(id, title, count)}
+                <span className={styles.count}>{count}</span>
+              </li>
+            ))}
+          </ul>
+        ))}
+      </div>
+    </div>
+  </>
+);
+
+export async function getStaticProps() {
   const yaml = require('js-yaml');
   const fs = require('fs');
   const TAG_FILE = 'tags.yaml';

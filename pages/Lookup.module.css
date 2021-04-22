@@ -31,7 +31,6 @@
 }
 
 .group {
-	@mixin navigation;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
@@ -44,10 +43,12 @@
 }
 
 .title {
+	@mixin navigation;
 	opacity: 0.5;
 }
 
 .tag {
+	@mixin navigation;
 	position: relative;
 	width: auto;
 	list-style: none;
