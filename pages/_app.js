@@ -2,8 +2,13 @@ import Head from 'next/head';
 import { useEffect, useState } from 'react';
 import Footer from '../components/Footer/Footer';
 import Header from '../components/Header/Header';
+import smoothscroll from 'smoothscroll-polyfill';
 import { useRouter } from 'next/router'
 import '../styles/globals.css'
+
+if (typeof window !== 'undefined') {
+  smoothscroll.polyfill();
+}
 
 function MyApp({ Component, pageProps }) {
   const [isChecked, setIsChecked] = useState(false);

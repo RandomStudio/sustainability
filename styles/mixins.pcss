@@ -13,6 +13,38 @@
 	}
 }
 
+@define-mixin narrowWrapper {
+	@mixin wrapper;
+	width: 100%;
+
+	@media $(x-large) {
+		padding: 0 15%;
+	}
+}
+
+/* Mixin plugin jumbles this up and breaks it. Unable to make DRY with current version, search codebase for ##FIVECOLUMN for uses */
+@define-mixin fiveColumn {
+	display: grid;
+	grid-template-columns: 100%;
+	grid-template-rows: auto;
+	width: 100%;
+
+	@media $(small) {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 12px;
+		row-gap: 12px;
+		grid-template-rows: min-content auto;
+	}
+	
+	@media $(large) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+		
+	@media $(huge) {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
 @define-mixin title {
 	font-size: 32px;
 	line-height: 1.25;
@@ -38,22 +70,17 @@
 }
 
 @define-mixin navigation {
-	font-size: 19px;
+	font-size: 20px;
 	line-height: 1.5;
-
-	@media $(medium) {
-		font-size: 20px;
-	}
 }
 
 @define-mixin copy {
 	font-size: 16px;
-	line-height: 20px;
+	line-height: 1.5;
 	letter-spacing: 0.01em;
 
-	@media $(medium) {
-		font-size: 17px;
-		line-height: 24px;
+	@media $(x-large) {
+		font-size: 18px;
 	}
 }
 

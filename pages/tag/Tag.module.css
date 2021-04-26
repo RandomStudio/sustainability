@@ -1,0 +1,9 @@
+.section {
+	display: block;
+	margin-bottom: 72px 0 112px;
+	position: relative;
+	
+	@media $(medium) {
+		margin: 72px 0 128px;
+	}
+}

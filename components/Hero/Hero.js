@@ -1,22 +1,19 @@
 import styles from './Hero.module.css';
+import Image from '../Image/Image';
 
-const Hero = ({ children, className, hasNavigation, image, alt, isReversed }) => (
-	<div className={`${styles.hero} ${isReversed ? styles.isReversed : ''} ${hasNavigation ? styles.hasNavigation : ''} ${className}`}>
+const Hero = ({ alt, children, className, hasNavigation, image, isIntro }) => (
+	<div className={`${styles.hero} ${isIntro ? styles.isIntro : ''} ${hasNavigation ? styles.hasNavigation : ''} ${className}`}>
 		<div className={styles.copy}>
 			{children}
 		</div>
 		<div className={styles.image}>
-			<picture>
-				<source srcSet={`${image}.webp`} type="image/webp" />
-  				<source srcSet={`${image}.jpg`} type="image/jpeg" />
-				<img alt={alt} decoding="async" loading="lazy" src={`${image}.jpg`} />
-			</picture>
+			<Image alt={alt} decoding="async" loading="lazy" sizes={[450, 720, 1024, 1280]} src={image} />
 		</div>
 	</div>
 )
 
 Hero.defaultProps = {
-	isReversed: false,
+	isIntro: false,
 }
 
 export default Hero;

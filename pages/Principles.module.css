@@ -1,4 +1,8 @@
 .accordions {
+	@mixin narrowWrapper;
+}
+
+.accordions {
 	@media $(medium) {
 		margin-top: 72px !important;
 	}
@@ -32,6 +36,7 @@
 .halfCol,
 .twoCol {
 	@mixin copy;
+
 	:global(h3) {
 		break-after: avoid;
 		margin-top: 1em;

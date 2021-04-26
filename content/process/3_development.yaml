@@ -8,9 +8,9 @@ description:
   - Sustainable design thinking can be applied at a systems-level, such as considering cloud hosting for large scale online roll-outs. Choosing hosting partners carefully is the first step, with optimising both server-side and client-side processing second, to allow for potentially very significant environmental impact reduction. This optimisation may range from more efficient algorithms that reduce the power consumption of servers to the background colour of websites that require less power to display.
   - When considering projects that entail a more physical build-out, simple steps such as implementing proper sleep & wake schedules for all computers and servers, more efficient idle modes and other software enhancements can make a significant impact in reducing the power consumption of these installations.
 actions:
-  - Consider operational use of the product and look for opportunities to reduce computation
-  - Consider less energy consuming colour schemes for web design or long running installations
-  - Optimise software design to minimise energy usage
+  - copy: Consider operational use of the product and look for opportunities to reduce computation
+  - copy: Consider less energy consuming colour schemes for web design or long running installations
+  - copy: Optimise software design to minimise energy usage
 links:
   - title: Inspiration – The Climate Fixathon
     description: The world's first online hackathon to help fix the climate

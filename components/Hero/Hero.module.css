@@ -1,77 +1,65 @@
 .hero {
 	display: grid;
-	grid-template-columns: 100%;
-	grid-template-rows: auto auto;
+	grid-template-areas: "copy" "image";
 	width: 100%;
+	column-gap: 0;
 	margin-bottom: 56px;
-
-	@media $(medium) {
+	
+	@media $(large) {
 		margin-bottom: 0;
-		grid-template-columns: 50% 50%;
+		grid-template-areas: "image gap copy";
+		grid-template-columns: 0.5fr 72px 0.5fr;
 		grid-template-rows: minmax(min-content, 90vh);
 	}
 
 	@media $(x-large) {
-		grid-template-columns: 50% 50%;
+		grid-template-areas: "title copy gap image";
+		grid-template-columns: 15vw calc(35vw - 72px) 72px 50vw;
 		grid-template-rows: minmax(720px, min-content);
+	}
 
-		&.isReversed {
-			grid-template-columns: 15% 35% 50%;
-			grid-template-rows: minmax(720px, min-content);
+	&.isIntro {
+		@media $(x-large) {
+			grid-template-areas: "image gap copy";
+			grid-template-columns: 50vw 72px calc(50vw - 72px);
 		}
 	}
 }
 
 .copy {
 	@mixin copy;
+	grid-area: copy;
 	margin-bottom: 32px;
 
 	@media $(huge) {
 		max-width: 66%;
 	}
-}
 
-.copy :global(p:first-of-type) {
-	@mixin title;
+	.isIntro & {
+		align-self: flex-end;
+	}
 }
 
 .copy {
 	@mixin wrapper;
-	grid-row: 1/2;
 	width: 100vw;
 	margin-bottom: 32px;
 
-	@media $(medium) {
-		grid-column: 2 / 3;
+	@media $(large) {
 		width: 100%;
 		align-self: flex-start;
 		padding-right: 42px;
-
-		.isReversed & {
-			grid-column: 1 /2;
-		}
-	}
-
-	@media $(medium) {
+		padding-left: 0;
 		padding-bottom: 80px;
-		padding-top: calc($TITLE_OFFSET_WHEN_MEDIUM + 1.25em);
-	}
-
-	@media $(large) {
-		padding-top: calc($TITLE_OFFSET_WHEN_LARGE + 1.25em);
+		padding-top: calc(128px + 1.25em);
 	}
 
 	@media $(x-large) {
-		padding-top: calc($TITLE_OFFSET_WHEN_XLARGE - 0.5em);
-
-		.isReversed & {
-			grid-column: 2 / 3;
-			padding-left: 0;
-		}
+		padding-top: calc(160px - 0.5em);
 	}
 
 	:global(p) {
-		margin-bottom: 1em;
+		margin-bottom: 0.5em;
 	}
 
 	:global(p:last-child) {
@@ -79,29 +67,25 @@
 	}
 }
 
+.copy :global(p:first-of-type) {
+	@mixin title;
+}
+
 
 .image {
 	background-color: rgba(255,255,255,0.1);
-	grid-row: 2 / 3;
+	grid-area: image;
 	width: 100vw;
 	height: 125vw;
 	position: relative;
-
-	@media $(medium) {
-		grid-row: 1 / 2;
-		grid-column: 1 / 2;
+	
+	@media $(large) {
 		width: 100%;
 		height: 100%;
-
-		.isReversed & {
-			grid-column: 2 / 3;
-		}
 	}
 
 	@media $(x-large) {
-		.isReversed & {
-			grid-column: 3 / 4;
-		}
+		padding-top: 66%;
 	}
 }
 
@@ -115,11 +99,12 @@
 	height: 100%;
 	width: 100%;
 
-	@media $(medium) {
-		object-position: right;
+	@media $(large) {
+		object-position: left;
 
-		.isReversed & {
-			object-position: left;
+		.isIntro & {
+			object-position: right;
 		}
 	}
+
 }

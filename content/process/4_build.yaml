@@ -6,20 +6,29 @@ alt: Flight cases in a space under construction
 description:
   - When building installations we should opt for materials that are made sustainably and that fit the lifecycle of the project. These materials range from sustainable versions of go-to construction materials like MDF and plywood to recycled, innovative or even storytelling materials made from unexpected resources, like mycelium or surfaces made from coffee grinds.
 actions:
-  - Optimise material usage for project duration – use higher grade, bespoke material options for longer-term projects
-  - Consider renting when working with electronics for temporary use
-  - Build modular so individual materials can be reused
-  - Prefer ethically made, non-toxic materials (FSC/PEFC)
-  - Optimise material usage for project duration; bio-degradable material for temporary installs
-  - Source local production partners in order to reduce transport footprint
-  - Establish local library of sustainable materials for reference and inspiration
-  - Seek suppliers and partners who apply sustainable practices themselves
+  - copy: Optimise material usage for project duration – use higher grade, bespoke material options for longer-term projects
+  - copy: Consider renting when working with electronics for temporary use
+  - copy: Build modular so individual materials can be reused
+  - copy: Prefer ethically made, non-toxic materials (FSC/PEFC)
+    tags:
+      - ethics
+  - copy: Optimise material usage for project duration; bio-degradable material for temporary installs
+  - copy: Source local production partners in order to reduce transport footprint
+  - copy: Establish local library of sustainable materials for reference and inspiration
+  - copy: Seek suppliers and partners who apply sustainable practices themselves
+    tags:
+      - ethics
+      - some
+      - other
+      - content
 links:
   - title: A Better Source
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.
     image: links/abettersource
     link: https://abettersource.org/
+    tags:
+      - ethics
   - title: Material District
     description: The world’s leading match-making platform in the field of innovative materials.
-    image: links/materialdistrict
+    image: links/materialdistrict.png
     link: https://materialdistrict.com/material/

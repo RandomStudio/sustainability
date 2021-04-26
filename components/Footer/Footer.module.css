@@ -9,7 +9,7 @@
 	@media $(medium) {
 		grid-template-rows: auto;
 		grid-gap: 48px;
-		grid-template-columns: min-content min-content 236px;
+		grid-template-columns: auto min-content 236px;
 	}
 
 	@media $(large) {
@@ -18,8 +18,8 @@
 	}
 	
 	@media $(x-large) {
+		padding: 0;
 		grid-template-rows: auto;
-		padding-left: 0;
 		grid-gap: 0;
 		grid-template-columns: 15% min-content auto 236px 100px;
 	}
@@ -50,11 +50,6 @@
 		grid-row: 1 / 2;
 	}
 
-	&:nth-child(2) {
-		@media $(x-large) {
-			padding-left: 20px;
-		}
-	}
 	.subheading {
 		opacity: 0.7;
 	}
@@ -77,6 +72,12 @@
 			border-bottom: 1px solid white;
 			content: '';
 		}
+	}
+}
+
+.amsterdam {
+	@media $(x-large) {
+		padding-left: 32px;
 	}
 }
 

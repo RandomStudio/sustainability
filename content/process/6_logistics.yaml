@@ -7,9 +7,9 @@ description:
   - As a final measure, we can offer an offset model for environmental impact effected by the project that cannot be otherwise prevented or mitigated, such as flights. This should be seen as a last stopgap solution to any areas of the project that could not find a real sustainable solution, ie. electronics.
   - This offset can include contributions to the various certified organisations that we already work with, such as Carbonkiller, Rainforest Alliance, Trees For All, etc…
 actions:
-  - Provide an accurate summary of mitigated emissions
-  - Establish a list of certified environmental organisations
-  - Keep track of unpreventable emissions like flights
+  - copy: Provide an accurate summary of mitigated emissions
+  - copy: Establish a list of certified environmental organisations
+  - copy: Keep track of unpreventable emissions like flights
 links:
   - title: Is Carbon Offsetting A Good Way To Reduce Your Environmental Impact?
     description: A genius way to reduce environmental impact?

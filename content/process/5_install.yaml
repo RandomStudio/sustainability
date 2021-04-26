@@ -6,11 +6,11 @@ alt: A man backstage controlling technology
 description:
   - When working with a project that will be running elsewhere, the source of energy is often out of our hands. Finding ways to reduce energy usage is where we can make a real difference. For example opting for less energy intensive electronics (if available), using natural sources like sunlight, or having the project shut down whenever it’s not in use.
 actions:
-  - Consider a scheduled sleep-mode when the project is not in use
-  - Opt for renewable electricity derived from natural sources
-  - Use energy efficiency as criteria when selecting equipment
-  - Align with client on balance between sustainability and the need for visual impact
-  - Calculate and evaluate real-world energy consumption of our projects
+  - copy: Consider a scheduled sleep-mode when the project is not in use
+  - copy: Opt for renewable electricity derived from natural sources
+  - copy: Use energy efficiency as criteria when selecting equipment
+  - copy: Align with client on balance between sustainability and the need for visual impact
+  - copy: Calculate and evaluate real-world energy consumption of our projects
 links:
   - title: Bedazzled by Energy Efficiency
     description: To focus on energy efficiency is to make present ways of life non-negotiable.

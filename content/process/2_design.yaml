@@ -7,10 +7,10 @@ description:
   - Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead are aiming to achieve goals in terms of eliciting emotions in the context of various brands and products; using either spectacle or convention-breaking designs to attract and focus attention.
   - Yet when sustainability is considered at the earliest stages, it can help guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable materials or are inefficient to manufacture and hard to re-use. For example, considering shipping logistics early in the design process could reduce or even prevent environmental impact in later stages of production.
 actions:
-  - Use VR prototyping where possible to reduce waste
-  - Use modular design if it reduces the project’s footprint
-  - Design for post-use, for example opting for reusable materials or rental
-  - Consider sustainability while ideating during the concept phase
+  - copy: Use VR prototyping where possible to reduce waste
+  - copy: Use modular design if it reduces the project’s footprint
+  - copy: Design for post-use, for example opting for reusable materials or rental
+  - copy: Consider sustainability while ideating during the concept phase
 links:
   -  title: In a perfect world
      description: My students’ wishes for more sustainable design practices.

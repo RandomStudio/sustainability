@@ -18,7 +18,7 @@ module.exports = {
 			"postcss-preset-env",
 			{
 				"autoprefixer": {
-					"grid": "autoplace"
+					"grid": false
 				},
 				"browsers": "> 0.5%, last 2 versions, not dead",
 				"stage": 0,

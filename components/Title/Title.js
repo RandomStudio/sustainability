@@ -1,6 +1,5 @@
 import { useEffect, useState, useRef } from 'react';
 import styles from './Title.module.css';
-import { TOP_OFFSET_WHEN_MEDIUM } from '../../styles/variables';
 
 const useIntersectionObserver = (ref) => {
 	// State and setter for storing whether element is visible
@@ -71,11 +70,14 @@ const Title = ({ className, id, isTop, title }) => {
 	}, [isIntersecting]);
 
 	return (
-		<label className={`${className} ${styles.title} ${isTop ? styles.isTop : ''} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} htmlFor="navcheckbox" ref={ref}>
-			<h2>
-				{title}
-			</h2>
-		</label>
+		<>
+			<a className={styles.anchor} id={id}></a>
+			<label className={`${className} ${styles.title} ${isTop ? styles.isTop : ''} ${isActive ? `${styles.isActive} activeTitle` : ''} ${isAbove ? styles.isAbove : ''}`} htmlFor="navcheckbox" ref={ref}>
+				<h2>
+					{title}
+				</h2>
+			</label>
+		</>
 	);
 }
 
