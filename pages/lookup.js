@@ -18,7 +18,7 @@ const Lookup = ({ groups }) => (
     <div className={styles.wrapper}>
       <div className={styles.columns}>
         {groups.map(({ title, tags }) => (
-          <ul className={styles.group}>
+          <ul className={styles.group} key={title}>
             <h3 className={styles.title}>{title}</h3>
             {tags.map(({ id, count, title }) => (
               <li className={styles.tag}>
