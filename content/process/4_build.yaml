@@ -1,8 +1,8 @@
 id: build
+alt: Flight cases in a space under construction
 title: Build
 headline: Favouring local, sustainable and ethically produced materials.
-image: featured/04_build
-alt: Flight cases in a space under construction
+image: featured/04_build.png
 description:
   - When building installations we should opt for materials that are made sustainably and that fit the lifecycle of the project. These materials range from sustainable versions of go-to construction materials like MDF and plywood to recycled, innovative or even storytelling materials made from unexpected resources, like mycelium or surfaces made from coffee grinds.
 actions:
@@ -24,7 +24,7 @@ actions:
 links:
   - title: A Better Source
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.
-    image: links/abettersource
+    image: links/abettersource.png
     link: https://abettersource.org/
     tags:
       - ethics

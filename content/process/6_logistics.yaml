@@ -1,7 +1,7 @@
 id: logistics
 title: Logistics
 headline: Minimise shipping and travel, and compensate when we can’t avoid it.
-image: featured/06_logistics
+image: featured/06_logistics.png
 alt: Curved metal rails
 description:
   - As a final measure, we can offer an offset model for environmental impact effected by the project that cannot be otherwise prevented or mitigated, such as flights. This should be seen as a last stopgap solution to any areas of the project that could not find a real sustainable solution, ie. electronics.
@@ -14,8 +14,8 @@ links:
   - title: Is Carbon Offsetting A Good Way To Reduce Your Environmental Impact?
     description: A genius way to reduce environmental impact?
     link: https://medium.com/@tabitha.whiting/is-carbon-offsetting-a-good-way-to-reduce-your-environmental-impact-19cd50f4af9a
-    image: links/carbonoffsetting
+    image: links/carbonoffsetting.png
   - title: Web design without wings – Do digital professionals really need to fly?
     description: What is the carbon footprint of our work in digital?
     link: https://www.wholegraindigital.com/blog/web-design-without-wings/
-    image: links/webdesignwings
+    image: links/webdesignwings.png
