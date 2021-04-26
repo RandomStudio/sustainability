@@ -11,8 +11,8 @@
 	}
 
 	@media $(x-large) {
-		padding: 0 0 0 15vw;
-		width: 85vw;
+		padding: 0 0 0 15%;
+		width: 85%;
 	}
 
 	&::after {
@@ -48,7 +48,7 @@
 }
 
 .container {
-	--block-width: calc((70vw - (12px * (var(--quantity) - 1))) / var(--quantity));
+	--block-width: calc((70vw - (12px * var(--quantity))) / var(--quantity));
 	width: 100%;
 	color: white;
 	scrollbar-color: black black;

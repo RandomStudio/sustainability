@@ -28,7 +28,7 @@ const Footer = () => {
 	return (
 		<footer className={styles.footer}>
 			<Newsletter className={styles.newsletter} />
-			<address className={styles.address}>
+			<address className={`${styles.address} ${styles.amsterdam}`}>
 				<h4 className={styles.subheading}>Random Amsterdam</h4>
 				<p>
 					Westzaanstraat 10<br />

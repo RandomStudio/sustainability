@@ -18,6 +18,7 @@
 	}
 	
 	@media $(x-large) {
+		padding: 0;
 		grid-template-rows: auto;
 		grid-gap: 0;
 		grid-template-columns: 15% min-content auto 236px 100px;
@@ -71,6 +72,12 @@
 			border-bottom: 1px solid white;
 			content: '';
 		}
+	}
+}
+
+.amsterdam {
+	@media $(x-large) {
+		padding-left: 32px;
 	}
 }
 

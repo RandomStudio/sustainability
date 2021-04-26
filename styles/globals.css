@@ -34,6 +34,10 @@ p {
        url('/fonts/random/Random-Regular.svg#svgFontName') format('svg');
 }
 
+html, body {
+  min-height: 100vh;
+}
+
 body {
 	@mixin bodyText;
   width: 100%;
