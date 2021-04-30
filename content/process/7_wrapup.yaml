@@ -8,23 +8,37 @@ description:
 actions:
   - copy: External + internal sustainability report
     tags:
-      - test
+      - Team Education
+      - Measuring
+      - Client Communication
+      - Certification
   - copy: Document sustainable choices made throughout
     tags:
-      - test2
-      - test
+      - Team Education
+      - Measuring
+      - Goal Setting
   - copy: Include sustainability in end of project review
+    tags:
+      - Team Education
+      - Measuring
+      - Client Communication
 links:
   - title: Case study – Rockwool Circle Scan
     description: Opportunities to grow the circular economy in the built environment
     link: https://www.circle-economy.com/resources/circle-scan-rockwool-opportunities-to-grow-the-circular-economy-in-the-built-environment
     image: links/casestudyrockwool.png
     tags:
-      - test
+      - Team Education
+      - Measuring
+      - Strategy
+      - Goal Setting
   - title: Start measuring your organisation’s carbon footprint
     description: Wholegrain Digital’s approach to carbon tracking.
     link: https://www.wholegraindigital.com/blog/measuring-your-carbon-footprint/
     image: links/measurefootprint.png
     tags:
-      - test
-      - test2
+      - Team Education
+      - Measuring
+      - Audit / Analysis
+      - Strategy
+      - Goal Setting

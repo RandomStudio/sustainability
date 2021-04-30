@@ -7,28 +7,73 @@ description:
   - When building installations we should opt for materials that are made sustainably and that fit the lifecycle of the project. These materials range from sustainable versions of go-to construction materials like MDF and plywood to recycled, innovative or even storytelling materials made from unexpected resources, like mycelium or surfaces made from coffee grinds.
 actions:
   - copy: Optimise material usage for project duration – use higher grade, bespoke material options for longer-term projects
+    tags:
+      - Strategy
+      - Goal Setting
+      - Materials
+      - Equipment
+      - Production
   - copy: Consider renting when working with electronics for temporary use
+    tags:
+      - Materials
+      - Equipment
+      - Suppliers & Production Partners
+      - Post-Use
+      - Production
   - copy: Build modular so individual materials can be reused
+    tags:
+      - Modular Design
+      - Materials
+      - Suppliers & Production Partners
+      - Post-Use
+      - Strategy
   - copy: Prefer ethically made, non-toxic materials (FSC/PEFC)
     tags:
-      - ethics
+      - Materials
+      - Post-Use
+      - Certification
   - copy: Optimise material usage for project duration; bio-degradable material for temporary installs
+    tags:
+      - Strategy
+      - Materials
+      - Post-Use
+      - Certification
   - copy: Source local production partners in order to reduce transport footprint
+    tags:
+      - Suppliers & Production Partners
+      - Equipment
+      - Materials
+      - Production
   - copy: Establish local library of sustainable materials for reference and inspiration
+    tags:
+      - Materials
+      - Post-Use
+      - Team Education
+      - Equipment
+      - Research
+      - Studio Management
   - copy: Seek suppliers and partners who apply sustainable practices themselves
     tags:
-      - ethics
-      - some
-      - other
-      - content
+      - Suppliers & Production Partners
+      - Production
+      - Equipment
+      - Strategy
 links:
   - title: A Better Source
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.
     image: links/abettersource.png
     link: https://abettersource.org/
     tags:
-      - ethics
+      - Research
+      - Materials
+      - Post-Use
   - title: Material District
     description: The world’s leading match-making platform in the field of innovative materials.
     image: links/materialdistrict.png
     link: https://materialdistrict.com/material/
+    tags:
+      - Materials
+      - Suppliers & Production Partners
+      - Research
+      - Post-Use
+

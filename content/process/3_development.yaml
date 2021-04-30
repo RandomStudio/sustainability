@@ -9,22 +9,54 @@ description:
   - When considering projects that entail a more physical build-out, simple steps such as implementing proper sleep & wake schedules for all computers and servers, more efficient idle modes and other software enhancements can make a significant impact in reducing the power consumption of these installations.
 actions:
   - copy: Consider operational use of the product and look for opportunities to reduce computation
+    tags:
+      - Measuring
+      - Software Design
+      - Technology
   - copy: Consider less energy consuming colour schemes for web design or long running installations
+    tags:
+      - Measuring
+      - UX Design
+      - Software Design
   - copy: Optimise software design to minimise energy usage
+    tags:
+      - Software Design
+      - UX Design
+      - Technology
+      - Measuring
+      - Audit / Analysis
 links:
   - title: Inspiration – The Climate Fixathon
     description: The world's first online hackathon to help fix the climate
     image: links/climatefixathon.png
     link: https://fixathon.io/entries
+    tags:
+      - Research
+      - Technology
+      - Ideation
+      - Concept
   - title: How to Build a Low-tech Website?
     description: Our new blog is designed to radically reduce the energy use associated with accessing our content.
     image: links/howtobuildalowtechwebsite.png
     link: https://solar.lowtechmagazine.com/2018/09/how-to-build-a-lowtech-website.html
+    tags:
+      - Software Design
+      - Technology
+      - Measuring
+      - Audit / Analysis
   - title: Web Design and Carbon Impact
     description: How can we, as web professionals, help to make the web more energy efficient.
     image: links/webdesignandcarbonimpact.png
     link: https://cmhb.de/web-design-and-carbon-impact
+    tags:
+      - Measuring
+      - UX Design
+      - Software Design
   - title: AI Has a Real Environmental Impact
     description: Here’s How Designers Are Handling It
     image: links/AIhasarealenvironmentalimpact.png
     link: https://eyeondesign.aiga.org/yes-ai-has-a-carbon-footprint-so-how-do-we-deal-with-it/
+    tags:
+      - Ideation
+      - Software Design
+      - Technology

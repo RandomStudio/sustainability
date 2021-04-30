@@ -8,14 +8,35 @@ description:
   - This offset can include contributions to the various certified organisations that we already work with, such as Carbonkiller, Rainforest Alliance, Trees For All, etc…
 actions:
   - copy: Provide an accurate summary of mitigated emissions
+    tags:
+      - Measuring
+      - Audit / Analysis
+      - Team Education
   - copy: Establish a list of certified environmental organisations
+    tags:
+      - Audit / Analysis
+      - Certification
+      - Suppliers & Production Partners
+      - Studio Management
   - copy: Keep track of unpreventable emissions like flights
+    tags:
+      - Measuring
+      - Team Education
 links:
   - title: Is Carbon Offsetting A Good Way To Reduce Your Environmental Impact?
     description: A genius way to reduce environmental impact?
     link: https://medium.com/@tabitha.whiting/is-carbon-offsetting-a-good-way-to-reduce-your-environmental-impact-19cd50f4af9a
     image: links/carbonoffsetting.png
+    tags:
+      - Team Education
+      - Measuring
+      - Technology
+      - Goal Setting
   - title: Web design without wings – Do digital professionals really need to fly?
     description: What is the carbon footprint of our work in digital?
     link: https://www.wholegraindigital.com/blog/web-design-without-wings/
     image: links/webdesignwings.png
+    tags:
+      - Team Education
+      - Measuring
+      - Goal Setting

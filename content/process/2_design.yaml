@@ -7,19 +7,59 @@ description:
   - Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead are aiming to achieve goals in terms of eliciting emotions in the context of various brands and products; using either spectacle or convention-breaking designs to attract and focus attention.
   - Yet when sustainability is considered at the earliest stages, it can help guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable materials or are inefficient to manufacture and hard to re-use. For example, considering shipping logistics early in the design process could reduce or even prevent environmental impact in later stages of production.
 actions:
+  - copy: Design using existing equipment and materials
+    tags:
+      - Equipment
+      - Materials
+      - Studio Management
+      - Team Education
+      - Post-Use
   - copy: Use VR prototyping where possible to reduce waste
+    tags:
+      - Concept
+      - Prototyping
+      - Equipment
+      - Technology
   - copy: Use modular design if it reduces the project’s footprint
+    tags:
+      - Modular Design
+      - UX Design
+      - Software Design
+      - Post-Use
   - copy: Design for post-use, for example opting for reusable materials or rental
+    tags:
+      - Concept
+      - Post-Use
+      - Materials
+      - Production
+
   - copy: Consider sustainability while ideating during the concept phase
+    tags:
+      - Design
+      - Ideation
+      - Concept
 links:
   -  title: In a perfect world
      description: My students’ wishes for more sustainable design practices.
      image: links/inaperfectworld.png
      link: https://medium.com/@pjn123/in-a-perfect-world-my-students-wishes-for-more-sustainable-design-practices-f8efcd0fe08b
+     tags:
+      - Design
+      - Ideation
+      - Concept
+      - Post-Use
+      - Modular Design
+      - Research
   -  title: Software is Polluting the World - Sustainable UX
      description: A design approach to reducing carbon emissions.
      image: links/softwareispollutingtheworld.png
      link: https://www.kentdebruin.com/blog/software-is-polluting-the-world
+     tags:
+      - Design
+      - Ideation
+      - Concept
+      - UX Design
+      - Post-Use
   -  title: Ethical Design
      description: We design and build ethical technology that respects human rights, effort, and experience.
      image: links/ethicaldesign.png
