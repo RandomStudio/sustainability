@@ -7,7 +7,7 @@ const getLinkJSX = (id, title, count) => {
   if (count < 1) {
     return <div className={styles.disabled}>{title}</div>
   }
-  return <Link href={`/tag/${id}`}>{title}</Link>
+  return <Link href={`/tag/${encodeURIComponent(id)}`}>{title}</Link>
 }
 
 const Lookup = ({ groups }) => (

@@ -27,7 +27,7 @@ export function getStaticPaths () {
   const tagGroups = yaml.load(fs.readFileSync(`./content/tags.yaml`, 'utf8'));
   const tagIDs = tagGroups.reduce((all, current) => [...all, ...current.tags], []).map(tag => ({
     params: {
-      id: tag
+      id: encodeURIComponent(tag),
     }
   }));
 
@@ -41,15 +41,16 @@ export async function getStaticProps({ params }) {
   const yaml = require('js-yaml');
   const fs = require('fs');
 
-  const {id} = params;
+  const { id } = params;
+
   const matchingContent = fs.readdirSync('./content/process').reduce((result, filename) => {
     const {
       actions,
       links
     } = yaml.load(fs.readFileSync(`./content/process/${filename}`, 'utf8'));
 
-    const matchingActions = actions.filter(({ tags }) => tags?.includes(id) ?? false);
-    const matchingLinks = links.filter(({ tags }) => tags?.includes(id) ?? false);
+    const matchingActions = actions.filter(({ tags }) => tags?.map(tag => encodeURIComponent(tag)).includes(id) ?? false);
+    const matchingLinks = links.filter(({ tags }) => tags?.map(tag => encodeURIComponent(tag)).includes(id) ?? false);
 
     return {
       actions: [...result.actions, ...matchingActions],
@@ -59,8 +60,8 @@ export async function getStaticProps({ params }) {
 
   return { 
     props: {
-      id,
       ...matchingContent,
+      id: decodeURIComponent(id),
     }
   }
 }
