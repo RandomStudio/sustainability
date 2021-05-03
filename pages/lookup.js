@@ -2,12 +2,13 @@ import styles from './Lookup.module.css';
 import { groupBy } from 'lodash';
 import Head from 'next/head';
 import Link from 'next/link';
+import { createTagId } from '../utils/createTagId';
 
 const getLinkJSX = (id, title, count) => {
   if (count < 1) {
     return <div className={styles.disabled}>{title}</div>
   }
-  return <Link href={`/tag/${encodeURIComponent(id)}`}>{title}</Link>
+  return <Link href={`/tag/${createTagId(id)}`}>{title}</Link>
 }
 
 const Lookup = ({ groups }) => (
@@ -56,7 +57,7 @@ export async function getStaticProps() {
     const { tags } = details;
   
     const tagsWithCounts = tags.map(tag => ({
-      id: encodeURIComponent(tag),
+      id: createTagId(tag),
       title: tag,
       count: allTagsGrouped[tag]?.length ?? 0,
     }));

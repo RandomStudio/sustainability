@@ -1,11 +1,10 @@
 import styles from './Tag.module.css';
 import Actions from '../../components/Actions/Actions'
-import Hero from '../../components/Hero/Hero'
 import Links from '../../components/Links/Links'
-import Title from '../../components/Title/Title'
 import Head from 'next/head';
+import { createTagId } from '../../utils/createTagId';
 
-export default function Tag({ actions, id, links }) {
+export default function Tag({ actions, name, links }) {
   return (
     <>
       <Head>
@@ -13,7 +12,7 @@ export default function Tag({ actions, id, links }) {
       </Head>
       <section className={styles.section}>
         <div className={`${styles.column} isWithinNavigation`}>
-          <Actions actions={actions} hasSubmit={false} title={id} />
+          <Actions actions={actions} hasSubmit={false} title={name} />
           {links && links.length > 0 && <Links links={links} title="Additional Resources" />}
         </div>
       </section>
@@ -27,7 +26,7 @@ export function getStaticPaths () {
   const tagGroups = yaml.load(fs.readFileSync(`./content/tags.yaml`, 'utf8'));
   const tagIDs = tagGroups.reduce((all, current) => [...all, ...current.tags], []).map(tag => ({
     params: {
-      id: encodeURIComponent(tag),
+      id: createTagId(tag),
     }
   }));
 
@@ -49,8 +48,8 @@ export async function getStaticProps({ params }) {
       links
     } = yaml.load(fs.readFileSync(`./content/process/${filename}`, 'utf8'));
 
-    const matchingActions = actions.filter(({ tags }) => tags?.map(tag => encodeURIComponent(tag)).includes(id) ?? false);
-    const matchingLinks = links.filter(({ tags }) => tags?.map(tag => encodeURIComponent(tag)).includes(id) ?? false);
+    const matchingActions = actions.filter(({ tags }) => tags?.map(tag => createTagId(tag)).includes(id) ?? false);
+    const matchingLinks = links.filter(({ tags }) => tags?.map(tag => createTagId(tag)).includes(id) ?? false);
 
     return {
       actions: [...result.actions, ...matchingActions],
@@ -58,10 +57,14 @@ export async function getStaticProps({ params }) {
     };
   }, { actions: [], links: []});
 
+  const tags = yaml.load(fs.readFileSync(`./content/tags.yaml`, 'utf8')).reduce((all, current) => [...all, ...current.tags], []);
+
+  const displayName = tags.find(tag => createTagId(tag) === id);
+
   return { 
     props: {
       ...matchingContent,
-      id: decodeURIComponent(id),
+      name: displayName
     }
   }
 }
