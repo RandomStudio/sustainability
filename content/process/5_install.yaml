@@ -1,34 +1,55 @@
 id: install
 title: Install
-headline: Maximise efficiency and minimise non-renewable energy use.
+headline: Minimise non-renewable energy use on site.
 image: featured/05_install.png
 alt: A man backstage controlling technology
 description:
-  - When working with a project that will be running elsewhere, the source of energy is often out of our hands. Finding ways to reduce energy usage is where we can make a real difference. For example opting for less energy intensive electronics (if available), using natural sources like sunlight, or having the project shut down whenever it’s not in use.
+  - The choice of venue often determines the energy mix available onsite, and this choice is sometimes out of our control. Nonetheless, we should be proactive in investigating the energy supply situation for each site. In some cases, it may be possible to select a different venue or propose alternative energy sources. At the very least, we should be able to quantify the expected energy consumption of our project and track its costs (unit cost, and mix of renewable/non-renewable sources).
+  - Once the selection of location(s) is done, we still have work to do. The choice of hardware, and how we use that hardware, can have a big impact on the energy consumption of the installation while it’s running on site.
 actions:
+  - copy: Opt for renewable electricity derived from natural sources, wherever possible
+    tags:
+      - Install 
+      - Technology
+      - Measuring
   - copy: Consider a scheduled sleep-mode when the project is not in use
     tags:
+      - Install
       - Equipment
       - Software Design
       - Technology
       - Measuring
-  - copy: Opt for renewable electricity derived from natural sources
-    tags:
+  - copy: Enable idle or low power modes on any hardware that supports these features
+    tags: 
+      - Install
       - Technology
-      - Measuring
-  - copy: Use energy efficiency as criteria when selecting equipment
+      - Equipment
+  - copy: Consider the efficiency of heating (and insulation) or cooling (and ventilation) requirements
+    tags: 
+      - Install
+      - Equipment
+      - Technology
+  - copy: Use energy efficiency as criteria when selecting equipment, not just up-front cost
     tags:
+      - Install
       - Equipment
       - Technology
       - Measuring
   - copy: Align with client on balance between sustainability and the need for visual impact
     tags:
+      - Install
       - Client Communication
       - Goal Setting
       - Strategy
       - Concept
-  - copy: Calculate and evaluate real-world energy consumption of our projects
+  - copy: 'Think carefully about which tasks run more efficiently locally or which could be run on cloud/server infrastructure'
+    tags: 
+      - Install
+      - Equipment
+      - Technology
+  - copy: Estimate and then evaluate the energy consumption of our projects
     tags:
+      - Install
       - Measuring
       - Audit / Analysis
       - Certification
@@ -39,6 +60,7 @@ links:
     link: https://solar.lowtechmagazine.com/2018/01/bedazzled-by-energy-efficiency.html
     image: links/energyefficiency.png
     tags:
+      - Install
       - Equipment
       - Technology
       - Measuring
@@ -47,6 +69,7 @@ links:
     link: https://solar.lowtechmagazine.com/2009/06/embodied-energy-of-digital-technology.html
     image: links/
     tags:
+      - Install
       - Equipment
       - Technology
       - Measuring
@@ -55,6 +78,7 @@ links:
     link: https://www.archdaily.com/380911/light-matters-seeing-the-light-with-james-turrell
     image: links/lightmatters.png
     tags:
+      - Install
       - Equipment
       - Technology
       - Measuring
