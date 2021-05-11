@@ -1,33 +1,38 @@
 id: wrapup
 title: Wrap-up
-headline: Measure our impact to enable our progress.
+headline: We can only improve if we can measure our impact.
 image: featured/07_wrapup.png
 alt: Two women talking in an office filled with plants
 description:
-  - When we measure the steps that we take, mapping where we have opted for a sustainable choice, we can summarise what we have achieved at the end of the project in the form of a report. This is to help our client and ourselves to better understand where we have made a difference, and where we can still improve in the future.
+  - We need to document and measure the steps and choices made with respect to sustainability throughout each project. This enables us to summarise what we have achieved in the form of a report.
+  - The purpose of the report is to help our clients and ourselves to appreciate where we have made a positive difference, and identify areas where we can improve next time.
 actions:
-  - copy: External + internal sustainability report
+  - copy: Key people should be reminded to document sustainable choices in their own work, throughout the project
     tags:
+      - Wrap-up
+      - Team Education
+      - Measuring
+      - Goal Setting
+  - copy: Include the topic of sustainability in the end-of-project review
+    tags:
+      - Wrap-up
+      - Team Education
+      - Measuring
+      - Client Communication
+  - copy: Produce both an external and internal sustainability report
+    tags:
+      - Wrap-up
       - Team Education
       - Measuring
       - Client Communication
       - Certification
-  - copy: Document sustainable choices made throughout
-    tags:
-      - Team Education
-      - Measuring
-      - Goal Setting
-  - copy: Include sustainability in end of project review
-    tags:
-      - Team Education
-      - Measuring
-      - Client Communication
 links:
   - title: Case study – Rockwool Circle Scan
     description: Opportunities to grow the circular economy in the built environment
     link: https://www.circle-economy.com/resources/circle-scan-rockwool-opportunities-to-grow-the-circular-economy-in-the-built-environment
     image: links/casestudyrockwool.png
     tags:
+      - Wrap-up
       - Team Education
       - Measuring
       - Strategy
@@ -37,6 +42,7 @@ links:
     link: https://www.wholegraindigital.com/blog/measuring-your-carbon-footprint/
     image: links/measurefootprint.png
     tags:
+      - Wrap-up
       - Team Education
       - Measuring
       - Audit / Analysis
