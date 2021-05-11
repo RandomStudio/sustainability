@@ -32,7 +32,7 @@ actions:
       - Audit / Analysis
 links:
   - title: Inspiration – The Climate Fixathon
-    description: 'The world's first online hackathon to help fix the climate'
+    description: The world's first online hackathon to help fix the climate
     image: links/climatefixathon.png
     link: https://fixathon.io/entries
     tags:
