@@ -1,11 +1,16 @@
 id: discovery
 title: Discovery
-headline: We set solid sustainable foundations.
+headline: Talk about sustainability early on.
 image: featured/01_discovery.png
 description:
-  - This could include an audit of the clients sustainability history, to give teams an understanding of where their clients business is at. Sustainability is also discussed during project kick offs and with the client, aiming to set targets and goals for running a sustainable project. 
+  - Sustainability needs to be highlighted before the real work begins, to avoid having to retrofit and post-rationalise later on. Before the very first meeting, it could help to do an audit of the client’s sustainability history - the goal here is not to judge or criticise, but to give the team a realistic understanding of where their client’s business is at. Sustainability should be discussed during project kick offs (internally, and with the client). This is the time to set some targets and goals for running a sustainable project.
 actions:
-  - copy: Set goals with the client, aligning and defining a sustainable strategy
+  - copy: Include sustainability explicitly as part of the project kick-off process
+    tags:
+      - Discovery
+      - Client Communication
+      - Goal Setting
+  - copy: Set goals with the client: define a sustainable strategy and ensure both sides are aligned
     tags:
       - Discovery
       - Communication
@@ -13,28 +18,20 @@ actions:
       - Strategy
       - Goal Setting
       - Measuring
-  - copy: Map out target requirements when working toward a certificate
-    tags:
-      - Discovery
-      - Communication
-      - Client Communication
-      - Strategy
-      - Certification
-      - Measuring
   - copy: Connect with potential local partners
     tags:
       - Discovery
       - Communication
       - Production
       - Suppliers & Production Partners
-  - copy: Maintain an accurate listing of studio-owned equipment, materials & software
+  - copy: Maintain an accurate listing of studio-owned equipment, materials and software
     tags:
       - Discovery
       - Research
       - Studio Management
       - Materials
       - Equipment
-  - copy: Perform a client asset & resource audit
+  - copy: Perform a client asset and resource audit
     tags:
       - Discovery
       - Research
@@ -43,14 +40,18 @@ actions:
       - Audit / Analysis
       - Materials
       - Equipment
-  - copy: Include sustainability in project kick-off process
+  - copy: When working toward a formal certification, map out target requirements
     tags:
       - Discovery
+      - Communication
       - Client Communication
-      - Goal Setting
+      - Strategy
+      - Certification
+      - Measuring
+
 links:
   -  title: Waste Not
-     description: Waste Not is a simple way to search an open-source database of sustainable suppliers.
+     description: A simple way to search an open-source database of sustainable suppliers.
      image: links/wastenot.png
      link: https://wastenot.world
      tags:
