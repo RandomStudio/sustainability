@@ -1,33 +1,38 @@
 id: development
 title: Development
-headline: Consider the real-world impact of digital computing.
+headline: We cannot separate the digital world from the physical one.
 image: featured/03_development.png
 alt: A laptop surrounded by technical instruments
 description:
-  - Digital computation has a real-world impact that is obscured to most people. The power usage of both individual servers and data centres is directly dependent on how we task them and the design of the software that completes these tasks. Digital operations like queries, file transfers, image analysis and the use of AI all have a real, environmental footprint that quickly scales.
-  - Sustainable design thinking can be applied at a systems-level, such as considering cloud hosting for large scale online roll-outs. Choosing hosting partners carefully is the first step, with optimising both server-side and client-side processing second, to allow for potentially very significant environmental impact reduction. This optimisation may range from more efficient algorithms that reduce the power consumption of servers to the background colour of websites that require less power to display.
-  - When considering projects that entail a more physical build-out, simple steps such as implementing proper sleep & wake schedules for all computers and servers, more efficient idle modes and other software enhancements can make a significant impact in reducing the power consumption of these installations.
+  - 'Digital computation can seem abstract and ephemeral, but it does have a real-world impact. “Virtual” realities can only exist thanks to the extraction of very real materials, mass manufacturing, global supply chains and electrical energy production. Likewise, the “cloud” is constituted through infrastructure that is very much solid.'
+  - 'Sustainable design thinking can be applied at a systems architecture level, such as carefully considering hosting options for large scale, “always available” online roll-outs. Next in order of importance is optimising both server-side and client-side processing to conserve computing resources.'
 actions:
-  - copy: Consider operational use of the product and look for opportunities to reduce computation
+  - copy: Choose hosting solutions powered by renewable energy wherever possible
+    tags: 
+      - Development
+      - Suppliers & Production Partners
+      - Technology
+  - copy: Especially for heavy-computation tasks, run the jobs or process the data only when strictly necessary
     tags:
+      - Development
       - Measuring
       - Software Design
       - Technology
-  - copy: Consider less energy consuming colour schemes for web design or long running installations
+  - copy: Consider energy-efficient (dark) colour schemes for web design or long running installations
     tags:
+      - Development
       - Measuring
       - UX Design
       - Software Design
-  - copy: Optimise software design to minimise energy usage
+  - copy: Reduce remote data transfer as much as possible
     tags:
-      - Software Design
-      - UX Design
+      - Development
       - Technology
       - Measuring
       - Audit / Analysis
 links:
   - title: Inspiration – The Climate Fixathon
-    description: The world's first online hackathon to help fix the climate
+    description: 'The world's first online hackathon to help fix the climate'
     image: links/climatefixathon.png
     link: https://fixathon.io/entries
     tags:
