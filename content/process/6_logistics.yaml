@@ -22,11 +22,11 @@ actions:
       - Logistics
       - Measuring
       - Studio Management
-   - copy: Keep track of unpreventable emissions, especially air travel
-     tags:
-      - Logistics
-      - Measuring
-      - Team Education
+  - copy: Keep track of unpreventable emissions, especially air travel
+    tags:
+    - Logistics
+    - Measuring
+    - Team Education
   - copy: Provide an accurate summary of mitigated emissions
     tags:
       - Logistics
