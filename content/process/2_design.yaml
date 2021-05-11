@@ -1,12 +1,11 @@
 id: design
 title: Design
-headline: Sustainable design begins with the right idea.
+headline: It’s better to pick a sustainable idea from the start than fix it later.
 image: featured/02_design.png
 alt: A woman working on a laptop
 description:
-  - Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead are aiming to achieve goals in terms of eliciting emotions in the context of various brands and products; using either spectacle or convention-breaking designs to attract and focus attention.
-  - Yet when sustainability is considered at the earliest stages, it can help guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable materials or are inefficient to manufacture and hard to re-use. For example, considering shipping logistics early in the design process could reduce or even prevent environmental impact in later stages of production.
-actions:
+  - Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead have other primary goals, e.g. emotion, spectacle and convention-breaking designs that attract and focus attention.
+  - Nonetheless, when sustainability is considered at the earliest stages it becomes possible to guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable/non-reusable materials or unnecessary long distance shipping.
   - copy: Design using existing equipment and materials
     tags:
       - Equipment
@@ -14,12 +13,6 @@ actions:
       - Studio Management
       - Team Education
       - Post-Use
-  - copy: Use VR prototyping where possible to reduce waste
-    tags:
-      - Concept
-      - Prototyping
-      - Equipment
-      - Technology
   - copy: Use modular design if it reduces the project’s footprint
     tags:
       - Modular Design
@@ -32,12 +25,17 @@ actions:
       - Post-Use
       - Materials
       - Production
-
   - copy: Consider sustainability while ideating during the concept phase
     tags:
       - Design
       - Ideation
       - Concept
+  - copy: Use VR prototyping where possible to reduce waste
+    tags:
+      - Concept
+      - Prototyping
+      - Equipment
+      - Technology
 links:
   -  title: In a perfect world
      description: My students’ wishes for more sustainable design practices.
@@ -51,7 +49,7 @@ links:
       - Modular Design
       - Research
   -  title: Software is Polluting the World - Sustainable UX
-     description: A design approach to reducing carbon emissions.
+     description: 'Sustainable UX: a design approach to reducing carbon emissions.'
      image: links/softwareispollutingtheworld.png
      link: https://www.kentdebruin.com/blog/software-is-polluting-the-world
      tags:
@@ -64,11 +62,20 @@ links:
      description: We design and build ethical technology that respects human rights, effort, and experience.
      image: links/ethicaldesign.png
      link: https://2017.ind.ie/ethical-design/
+     tags: 
+      - Design
+      - Concept
+      - Ideation
   -  title: Product Design for Sustainability
      description: How products we build today can make the world more sustainable tomorrow.
      image: links/productdesignforsustainability.png
      link: https://uxdesign.cc/product-design-for-sustainability-3fffbb2a7f0e?gi=e215533cdb9#.9bpuf0fk2
+     tags: 
+      - UX Design
+      - Design
   -  title: Circular Design Guide
      description: Explore methods that help you understand, define, make, and release circular innovations.
      image: links/circulardesignguide.png
      link: https://www.circulardesignguide.com/methods
+     tags: 
+      - Design
