@@ -10,7 +10,7 @@ export default function Home({ files }) {
       <section className={styles.intro} id="index">
         <Title className={styles.introTitle} id="index" isTop title="Sustainability Toolkit" />
         <Hero alt="A green office full of plants" image="/images/featured/toolkit_intro.jpg" isIntro>
-          <p>This toolkit includes an overview of practical application methods and tools that help us put sustainable principles into practice and covers topics such as material selection and design strategies, but also describes how to measure success.</p>
+          <p>This toolkit includes an overview of practical applications, methods and tools that help us put sustainable principles into practice. It covers topics such as material selection and design strategies, but also describes how to measure success.</p>
         </Hero>
       </section>
       {
