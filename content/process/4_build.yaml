@@ -14,7 +14,7 @@ actions:
       - Materials
       - Equipment
       - Production
-  - copy: For temporary/short-term projects: prefer biodegradable and/or recyclable material
+  - copy: 'For temporary/short-term projects: prefer biodegradable and/or recyclable material'
     tags:
       - Strategy
       - Materials
