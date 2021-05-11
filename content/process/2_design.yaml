@@ -9,6 +9,7 @@ description:
 actions:  
   - copy: Look for opportunities to incorporate existing materials and equipment in concepts
     tags:
+      - Design
       - Equipment
       - Materials
       - Studio Management
@@ -16,12 +17,14 @@ actions:
       - Post-Use
   - copy: Use modular design if it reduces the project’s footprint
     tags:
+      - Design
       - Modular Design
       - UX Design
       - Software Design
       - Post-Use
   - copy: Design for post-use, for example opting for reusable materials or rental
     tags:
+      - Design
       - Concept
       - Post-Use
       - Materials
@@ -29,10 +32,12 @@ actions:
   - copy: Consider sustainability while ideating during the concept phase
     tags:
       - Design
+      - Design
       - Ideation
       - Concept
   - copy: Use VR prototyping where possible to reduce waste
     tags:
+      - Design
       - Concept
       - Prototyping
       - Equipment
