@@ -9,6 +9,7 @@ description:
 actions:
   - copy: Use higher grade, bespoke material options only for longer duration projects
     tags:
+      - Build
       - Strategy
       - Goal Setting
       - Materials
@@ -16,12 +17,14 @@ actions:
       - Production
   - copy: 'For temporary/short-term projects: prefer biodegradable and/or recyclable material'
     tags:
+      - Build
       - Strategy
       - Materials
       - Post-Use
       - Certification
   - copy: Consider renting when working with electronics for temporary use
     tags:
+      - Build
       - Materials
       - Equipment
       - Suppliers & Production Partners
@@ -29,6 +32,7 @@ actions:
       - Production
   - copy: Build in a modular way, so individual materials can be reused more easily
     tags:
+      - Build
       - Modular Design
       - Materials
       - Suppliers & Production Partners
@@ -36,11 +40,13 @@ actions:
       - Strategy
   - copy: Prefer ethically made, non-toxic materials (FSC/PEFC)
     tags:
+      - Build
       - Materials
       - Post-Use
       - Certification
   - copy: Establish a local library of sustainable materials for reference and inspiration
     tags:
+      - Build
       - Materials
       - Post-Use
       - Team Education
@@ -49,12 +55,14 @@ actions:
       - Studio Management
   - copy: Source local production partners in order to reduce transport footprint
     tags:
+      - Build
       - Suppliers & Production Partners
       - Equipment
       - Materials
       - Production
   - copy: Seek suppliers and partners who apply sustainable practices themselves
     tags:
+      - Build
       - Suppliers & Production Partners
       - Production
       - Equipment
@@ -65,6 +73,7 @@ links:
     image: links/abettersource.png
     link: https://abettersource.org/
     tags:
+      - Build
       - Research
       - Materials
       - Post-Use
@@ -73,6 +82,7 @@ links:
     image: links/materialdistrict.png
     link: https://materialdistrict.com/material/
     tags:
+      - Build
       - Materials
       - Suppliers & Production Partners
       - Research
