@@ -44,8 +44,7 @@ export async function getStaticProps() {
       actions,
       links
     } = yaml.load(fs.readFileSync(`./content/process/${filename}`, 'utf8'));
-    
-    const tags = [...actions, ...links].reduce((result, { tags }) => [...result, ...(tags ?? [])], []);
+    const tags = [...(actions ?? []), ...(links ?? [])].reduce((result, { tags }) => [...result, ...(tags ?? [])], []);
 
     return tags;
   });
