@@ -1,9 +1,5 @@
 name: main
 on: [ push ]
-env:
-  SERVED_FOLDER: "./out" 
-  MELI_SITE: "5a66db10-247c-407a-aa6c-238716607d5c"
-  MELI_TOKEN: "8528e3534916af3383a08d569ee3ec5944ecdf1406222d5458d945107790bcf9"
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -22,10 +18,12 @@ jobs:
         run: yarn build
       - name: "publish"
         run: |
-          npx -p "@getmeli/cli" meli upload $SERVED_FOLDER \
-            --url "https://meli.random.studio" \
+          npx -p "@getmeli/cli" meli upload ./out \
+            --url "https://staging.random.studio" \
             --site "$MELI_SITE" \
             --token "$MELI_TOKEN" \
             --release "$GITHUB_SHA"
         env:
+          MELI_SITE: "e9b24899-6b0b-4694-acec-6f849462b360"
+          MELI_TOKEN: ${{ secrets.MELI_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
