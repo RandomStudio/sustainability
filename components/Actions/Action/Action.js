@@ -1,10 +1,22 @@
 import styles from "./Action.module.css";
-import { useState } from "react";
+import { useEffect, useState, createRef } from "react";
 import ReactMarkdown from "react-markdown";
+import { disableBodyScroll, clearAllBodyScrollLocks } from "body-scroll-lock";
 import Modal from "../../Modal/Modal";
 
 const Action = ({ copy, markdown, isContact, title }) => {
+  const modalRef = createRef();
   const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    if (modalRef.current && isOpen) {
+      disableBodyScroll(modalRef.current, { reserveScrollBarGap: true });
+    }
+
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [isOpen]);
 
   const Component = isContact ? "a" : "div";
   const classNames = `${styles.tile} ${title ? styles.hasTitle : ""} ${
@@ -29,7 +41,7 @@ const Action = ({ copy, markdown, isContact, title }) => {
       </Component>
 
       {markdown && isOpen && (
-        <Modal isOpen={isOpen} setIsOpen={setIsOpen}>
+        <Modal ref={modalRef} isOpen={isOpen} setIsOpen={setIsOpen}>
           <ReactMarkdown children={markdown} />
         </Modal>
       )}
