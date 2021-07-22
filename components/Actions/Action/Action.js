@@ -1,7 +1,11 @@
 import styles from "./Action.module.css";
 import Modal from "../../Modal/Modal";
 
-const Action = ({ copy, isContact, title }) => {
+const Action = ({ copy, markdown, isContact, title }) => {
+  if (markdown?.length > 0) {
+    console.log(markdown);
+  }
+
   const Component = isContact ? "a" : "div";
   const classNames = `${styles.tile} ${title ? styles.hasTitle : ""} ${
     isContact ? styles.isContact : ""
