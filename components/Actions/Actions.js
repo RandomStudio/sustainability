@@ -12,7 +12,7 @@ const Actions = ({ actions, id, markdowns, hasSubmit, title }) => {
           return data.markdown;
         }
       })
-      .filter(Boolean);
+      .filter(Boolean)[0];
   };
 
   return (
