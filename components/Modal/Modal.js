@@ -2,9 +2,18 @@ import styles from "./Modal.module.css";
 
 const Modal = ({ children, className, isOpen, setIsOpen }) =>
   isOpen && (
-    <div className={`${styles.modal} ${className ?? ""}`}>
-      <div className={styles.contents}>{children}</div>
-      <div onClick={() => setIsOpen(false)}>Close</div>
+    <div
+      className={`${styles.modal} ${className ?? ""}`}
+      onClick={() => setIsOpen(false)}
+    >
+      <div className={styles.wrapper}>
+        <div className={styles.content}>{children}</div>
+        <img
+          className={styles.close}
+          onClick={() => setIsOpen(false)}
+          src="/close.svg"
+        />
+      </div>
     </div>
   );
 
