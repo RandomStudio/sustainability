@@ -9,10 +9,11 @@ const Action = ({ copy, markdown, isContact, title }) => {
   const Component = isContact ? "a" : "div";
   const classNames = `${styles.tile} ${title ? styles.hasTitle : ""} ${
     isContact ? styles.isContact : ""
-  }`;
+  } ${markdown ? styles.hasContext : ""}`;
   return (
     <>
       <Component
+        onClick={() => markdown && setIsOpen(true)}
         className={classNames}
         {...(isContact ? { href: "mailto:sustainability@random.studio" } : {})}
       >
