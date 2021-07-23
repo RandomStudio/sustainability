@@ -64,7 +64,10 @@ export async function getStaticProps(context) {
   const markdownFiles = glob.sync(`${markdownPath}**/*.md`);
 
   const markdowns = markdownFiles.map((filepath) => {
-    const [id, index] = filepath.split(markdownPath)[1].split("/");
+    const [id, index] = filepath
+      .split(markdownPath)[1]
+      .replace("\\", "/")
+      .split("/");
     const markdown = fs.readFileSync(filepath, "utf-8");
     return {
       id: id.split("_")[1],
