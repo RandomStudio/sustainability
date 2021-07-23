@@ -1,14 +1,11 @@
 import styles from "./Modal.module.css";
 import { forwardRef } from "react";
 
-const Modal = forwardRef(({ children, className, isOpen, setIsOpen }, ref) => {
+const Modal = forwardRef(({ children, isOpen, setIsOpen }, ref) => {
   return (
     isOpen && (
-      <div
-        ref={ref}
-        className={`${styles.modal} ${className ?? ""}`}
-        onClick={() => setIsOpen(false)}
-      >
+      <div ref={ref} className={`${styles.modal}`}>
+        <div className={styles.overlay} onClick={() => setIsOpen(false)} />
         <div className={styles.wrapper}>
           <div className={styles.content}>{children}</div>
         </div>
