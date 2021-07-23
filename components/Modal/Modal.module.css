@@ -17,10 +17,13 @@
   margin-top: 65px;
   margin-bottom: 65px;
   border-radius: 20px;
-  /* background: rgba(19, 19, 19, 1); */
-  background: red;
-  width: 50%;
+  background: rgba(19, 19, 19, 1);
+  width: 90%;
   height: fit-content;
+
+  @media $(medium) {
+    width: 55%;
+  }
 }
 
 .content {
@@ -36,10 +39,17 @@
 }
 
 .close {
-  position: sticky;
-  margin-left: 42px;
-  top: 65px;
+  position: absolute;
   cursor: pointer;
   width: 20px;
   height: 20px;
+  top: 25px;
+  right: 5%;
+
+  @media $(medium) {
+    margin-left: 42px;
+    top: 125px;
+    right: unset;
+    position: sticky;
+  }
 }
