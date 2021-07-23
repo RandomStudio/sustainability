@@ -11,7 +11,7 @@
   justify-content: center;
   overflow-y: scroll;
   opacity: 0;
-  animation: slide 0.75s forwards ease-in;
+  animation: slide-in 0.75s forwards ease-in;
 }
 
 .overlay {
@@ -80,7 +80,7 @@
   }
 }
 
-@keyframes slide {
+@keyframes slide-in {
   100% {
     opacity: 1;
     top: 0;
