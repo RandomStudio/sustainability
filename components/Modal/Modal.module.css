@@ -1,6 +1,6 @@
 .modal {
   position: fixed;
-  top: 0;
+  top: 100%;
   bottom: 0;
   left: 0;
   right: 0;
@@ -10,6 +10,8 @@
   display: flex;
   justify-content: center;
   overflow-y: scroll;
+  opacity: 0;
+  animation: slide 0.75s forwards ease-in;
 }
 
 .overlay {
@@ -51,9 +53,9 @@
   }
 
   ul,
-  ol {
-    padding-top: 10px;
-    padding-bottom: 10px;
+  ol,
+  img {
+    padding: 10px 0px 10px 0;
   }
 
   li {
@@ -75,5 +77,12 @@
     top: 125px;
     right: unset;
     position: sticky;
+  }
+}
+
+@keyframes slide {
+  100% {
+    opacity: 1;
+    top: 0;
   }
 }
