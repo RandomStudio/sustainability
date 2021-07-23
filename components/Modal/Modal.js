@@ -11,12 +11,12 @@ const Modal = forwardRef(({ children, className, isOpen, setIsOpen }, ref) => {
       >
         <div className={styles.wrapper}>
           <div className={styles.content}>{children}</div>
-          <img
-            className={styles.close}
-            onClick={() => setIsOpen(false)}
-            src="/close.svg"
-          />
         </div>
+        <img
+          className={styles.close}
+          onClick={() => setIsOpen(false)}
+          src="/close.svg"
+        />
       </div>
     )
   );
