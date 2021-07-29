@@ -9,9 +9,11 @@ const Action = ({ copy, markdown, isContact, title }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   useEffect(() => {
-    if (modalRef.current && isOpen) {
-      disableBodyScroll(modalRef.current, { reserveScrollBarGap: true });
+    if (!modalRef.current || !isOpen) {
+      return;
     }
+
+    disableBodyScroll(modalRef.current, { reserveScrollBarGap: true });
 
     return () => {
       clearAllBodyScrollLocks();
