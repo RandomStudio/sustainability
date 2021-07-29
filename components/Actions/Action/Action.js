@@ -41,7 +41,7 @@ const Action = ({ copy, markdown, isContact, title }) => {
       </Component>
 
       {markdown && isOpen && (
-        <Modal ref={modalRef} isOpen={isOpen} setIsOpen={setIsOpen}>
+        <Modal ref={modalRef} setIsOpen={setIsOpen}>
           <ReactMarkdown children={markdown} />
         </Modal>
       )}
