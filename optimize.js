@@ -12,7 +12,7 @@ if (!fs.existsSync(CACHE_DIR)){
 
 const checkCache = (filePath) => {
 	if (!fs.existsSync(CACHE_DIR + filePath)){
-		console.log('No cache')
+		console.log(`${filePath} not previously cached`)
 		return false;
 	}
 
@@ -20,9 +20,8 @@ const checkCache = (filePath) => {
 	const current = fs.statSync(OUT_DIR + filePath);
 
 	if (originalSize !== `${current.size}`) {
-		console.log('Filehas changed since cache')
+		console.log(`${filePath} changed since cache`)
 		const [extension, ...filename] = path.basename(filePath).split('.').reverse();
-		console.log(filePath, extension, filename)
 		const regex = new RegExp(`^${filename}?(_[0-9]*)\.(png|jpg|jpeg|webp)`)
 		
 		fs.readdirSync(CACHE_DIR + path.dirname(filePath))
@@ -32,7 +31,7 @@ const checkCache = (filePath) => {
 		return false;
 	}
 
-	console.log('Have cache')
+	console.log(`${filePath} is already cached`)
 	return true;
 }
 
@@ -44,14 +43,14 @@ const optimizeImage = async ([filePath, sizes], hasValidCache) => {
 		const webpExists = fs.existsSync(`${CACHE_DIR}${filename}_${size}.webp`);
 
 		if (hasValidCache && originalFormatExists && webpExists) {
-			console.log('Found all files cached')
+			console.log(`All files for ${size} already cached`)
 			await sharp(`${CACHE_DIR}${filename}_${size}.${extension}`).toFile(`${OUT_DIR}${filename}_${size}.${extension}`)
 			await sharp(`${CACHE_DIR}${filename}_${size}.webp`).toFile(`${OUT_DIR}${filename}_${size}.webp`)
 			continue;
 		}
 
 		if (hasValidCache) {
-			console.log('Have cache but need to rebuild file')
+			console.log(`Have cache of ${size} but need to rebuild`)
 		}
 		fs.mkdirSync(`${CACHE_DIR}${path.dirname(filePath)}`, { recursive: true });
 
@@ -88,9 +87,10 @@ const process = async () => {
 		console.log('Processing', filePath)
 		const hasValidCache = checkCache(filePath);
 		await optimizeImage(entry, hasValidCache);
-
+		
 		if (!hasValidCache) {
 			const current = fs.statSync(OUT_DIR + filePath);
+			console.log(current)
 			fs.writeFileSync(CACHE_DIR + filePath, `${current.size}`)
 		}
 	}
