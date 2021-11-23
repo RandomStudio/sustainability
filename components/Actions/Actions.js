@@ -11,7 +11,7 @@ const Actions = ({ actions, id, markdowns, hasSubmit, title }) => {
             copy={copy}
             key={index}
             markdown={
-              markdowns.find(
+              markdowns?.find(
                 (data) => data.id === id && data.index === index + 1
               )?.markdown
             }
