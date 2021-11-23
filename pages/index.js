@@ -64,7 +64,7 @@ export async function getStaticProps(context) {
   const actionsMarkdownPath = "./content/actions/";
   const actionsMarkdownFiles = glob.sync(`${actionsMarkdownPath}**/*.md`);
 
-  const actionsMarkdown = actionCopyFiles.reduce((result, filepath) => {
+  const actionsMarkdown = actionsMarkdownFiles.reduce((result, filepath) => {
     const [id] = path.basename(filepath).split('.');
     const markdown = fs.readFileSync(filepath, "utf-8");
 
