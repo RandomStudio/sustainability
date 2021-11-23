@@ -10,7 +10,7 @@ const Principles = () => {
       <Head>
         <title>Goals & Principles | Sustainability Toolkit</title>
       </Head>
-      <Hero image="/images/featured/gp_intro" alt="A heavily stylised virtual catwalk model">
+      <Hero image="/images/featured/gp_intro.png" alt="A heavily stylised virtual catwalk model">
         <p>Random Studio creates work which connects people to each other and to their environment.</p>
         <p>The studio consists of an international team of 30+ visual artists, designers, producers, creative technologists, producers and software engineers, enabling Random to control the entire design process from ideation to production and installation.</p>
         <p>It is this capacity - the ability to dream, design and build small pieces of the future - that positions the studio to inspire our clients with "what could be" and empower them to take the practical steps needed to get there.</p>
