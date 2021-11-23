@@ -5,7 +5,8 @@ image: featured/01_discovery.png
 description:
   - Sustainability needs to be highlighted before the real work begins, to avoid having to retrofit and post-rationalise later on. Before the very first meeting, it could help to do an audit of the client’s sustainability history - the goal here is not to judge or criticise, but to give the team a realistic understanding of where their client’s business is at. Sustainability should be discussed during project kick offs (internally, and with the client). This is the time to set some targets and goals for running a sustainable project.
 actions:
-  - copy: Include sustainability explicitly as part of the project kick-off process
+  - id: example_action
+    copy: Include sustainability explicitly as part of the project kick-off process
     tags:
       - Discovery
       - Client Communication

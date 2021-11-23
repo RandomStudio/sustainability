@@ -1,20 +1,16 @@
 import Action from "./Action/Action";
 import styles from "./Actions.module.css";
 
-const Actions = ({ actions, id, markdowns, hasSubmit, title }) => {
+const Actions = ({ actions, actionsCopy, id, hasSubmit, title }) => {
   return (
     <div className={styles.actions}>
       <h3 className={styles.title}>{title ?? "Actions"}</h3>
       <div className={styles.wrapper}>
-        {actions?.map(({ copy }, index) => (
+        {actions?.map(({ copy, id: actionId }, index) => (
           <Action
             copy={copy}
             key={index}
-            markdown={
-              markdowns?.find(
-                (data) => data.id === id && data.index === index + 1
-              )?.markdown
-            }
+            markdown={actionsCopy?.[actionId]}
           />
         ))}
         {hasSubmit && <Action copy="Propose a new action..." isContact />}

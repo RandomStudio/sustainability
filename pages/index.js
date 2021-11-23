@@ -5,7 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Links from "../components/Links/Links";
 import Title from "../components/Title/Title";
 
-export default function Home({ data: { files, markdowns } }) {
+export default function Home({ data: { actionsCopy, files } }) {
   return (
     <>
       <section className={styles.intro} id="index">
@@ -39,7 +39,7 @@ export default function Home({ data: { files, markdowns } }) {
                   <p key={index}>{paragraph}</p>
                 ))}
               </Hero>
-              <Actions actions={actions} id={id} markdowns={markdowns} />
+              <Actions actionsCopy={actionsCopy} actions={actions} id={id} />
               <Links links={links} />
             </div>
           </section>
@@ -52,6 +52,7 @@ export default function Home({ data: { files, markdowns } }) {
 export async function getStaticProps(context) {
   const yaml = require("js-yaml");
   const fs = require("fs");
+  const path =require('path');
 
   const files = fs.readdirSync("./content/process").map((filename) => {
     const data = yaml.load(
@@ -60,27 +61,24 @@ export async function getStaticProps(context) {
     return data;
   });
 
-  const markdownPath = "./content/markdown/";
-  const markdownFiles = glob.sync(`${markdownPath}**/*.md`);
+  const actionCopyPath = "./content/actions/";
+  const actionCopyFiles = glob.sync(`${actionCopyPath}**/*.md`);
 
-  const markdowns = markdownFiles.map((filepath) => {
-    const [id, index] = filepath
-      .split(markdownPath)[1]
-      .replace("\\", "/")
-      .split("/");
+  const actionsCopy = actionCopyFiles.reduce((result, filepath) => {
+    const [id] = path.basename(filepath).split('.');
     const markdown = fs.readFileSync(filepath, "utf-8");
+
     return {
-      id: id.split("_")[1],
-      index: Number(index.split(".md")[0]),
-      markdown,
+      ...result,
+      [id]: markdown,
     };
-  });
+  }, {});
 
   return {
     props: {
       data: {
+        actionsCopy,
         files,
-        markdowns,
       },
     },
   };
