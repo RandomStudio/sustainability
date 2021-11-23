@@ -5,7 +5,7 @@ import Hero from "../components/Hero/Hero";
 import Links from "../components/Links/Links";
 import Title from "../components/Title/Title";
 
-export default function Home({ data: { actionsCopy, files } }) {
+export default function Home({ data: { actionsMarkdown, files } }) {
   return (
     <>
       <section className={styles.intro} id="index">
@@ -39,7 +39,7 @@ export default function Home({ data: { actionsCopy, files } }) {
                   <p key={index}>{paragraph}</p>
                 ))}
               </Hero>
-              <Actions actionsCopy={actionsCopy} actions={actions} id={id} />
+              <Actions actionsMarkdown={actionsMarkdown} actions={actions} id={id} />
               <Links links={links} />
             </div>
           </section>
@@ -61,10 +61,10 @@ export async function getStaticProps(context) {
     return data;
   });
 
-  const actionCopyPath = "./content/actions/";
-  const actionCopyFiles = glob.sync(`${actionCopyPath}**/*.md`);
+  const actionsMarkdownPath = "./content/actions/";
+  const actionsMarkdownFiles = glob.sync(`${actionsMarkdownPath}**/*.md`);
 
-  const actionsCopy = actionCopyFiles.reduce((result, filepath) => {
+  const actionsMarkdown = actionCopyFiles.reduce((result, filepath) => {
     const [id] = path.basename(filepath).split('.');
     const markdown = fs.readFileSync(filepath, "utf-8");
 
@@ -77,7 +77,7 @@ export async function getStaticProps(context) {
   return {
     props: {
       data: {
-        actionsCopy,
+        actionsMarkdown,
         files,
       },
     },

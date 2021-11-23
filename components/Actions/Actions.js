@@ -1,7 +1,7 @@
 import Action from "./Action/Action";
 import styles from "./Actions.module.css";
 
-const Actions = ({ actions, actionsCopy, id, hasSubmit, title }) => {
+const Actions = ({ actions, actionsMarkdown, hasSubmit, title }) => {
   return (
     <div className={styles.actions}>
       <h3 className={styles.title}>{title ?? "Actions"}</h3>
@@ -10,7 +10,7 @@ const Actions = ({ actions, actionsCopy, id, hasSubmit, title }) => {
           <Action
             copy={copy}
             key={index}
-            markdown={actionsCopy?.[actionId]}
+            markdown={actionsMarkdown?.[actionId]}
           />
         ))}
         {hasSubmit && <Action copy="Propose a new action..." isContact />}
