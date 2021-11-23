@@ -67,6 +67,21 @@
   li {
     padding-bottom: 20px;
   }
+
+  a {
+    font-weight: bold;
+    position: relative;
+    display: inline-block;
+  }
+  a::after {
+    position: absolute;
+    bottom: 2px;
+    height: 2px;
+    width: 100%;
+    left: 0;
+    background-color: currentColor;
+    content: '';
+  }
 }
 
 .close {
