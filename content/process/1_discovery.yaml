@@ -11,7 +11,7 @@ actions:
       - Discovery
       - Client Communication
       - Goal Setting
-  - copy: Set goals with the client: define a sustainable strategy and ensure both sides are aligned
+  - copy: 'Set goals with the client: define a sustainable strategy and ensure both sides are aligned'
     tags:
       - Discovery
       - Communication
