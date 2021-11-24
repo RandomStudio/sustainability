@@ -8,7 +8,8 @@ description:
   - "Shipping of equipment and materials also needs to be considered. The “cheapest” option may have hidden costs if it requires transport over large distances."
   - As a final measure, we can offer an offset model for environmental impact that cannot be otherwise prevented or mitigated, such as flights and shipping of manufactured products (e.g. electronics). This offset can include contributions to the various certified organisations that we already work with, such as Carbonkiller, Rainforest Alliance, Trees For All, etc.
 actions:
-  - copy: Prefer remote (video conference) meetings and presentations
+  - id: logistics_remote
+    copy: Prefer remote (video conference) meetings and presentations
     tags:
       - Logistics
       - Studio Management
@@ -27,19 +28,49 @@ actions:
       - Logistics
       - Measuring
       - Team Education
-  - copy: Provide an accurate summary of mitigated emissions
-    tags:
-      - Logistics
-      - Measuring
-      - Audit / Analysis
-      - Team Education
-  - copy: Offset any unpreventable emissions through certified environmental organisations
+  - id: logistics_offset
+    copy: Offset any unpreventable emissions through certified environmental organisations
     tags:
       - Logistics
       - Audit / Analysis
       - Certification
       - Suppliers & Production Partners
       - Studio Management
+  - id: logistics_externalities
+    copy: Keep track of, and minimise our externalities
+    tags:
+      - Logistics
+      - Measuring
+      - Strategy
+  - id: logistics_nutrient
+    copy: Consider our material waste as a nutrient to another system
+    tags:
+      - Logistics
+      - Post-Use
+      - Strategy
+      - Materials
+      - Ideation
+  - id: logistics_reuse
+    copy: Integrate recycling and reuse in the project life cycle
+    tags:
+      - Logistics
+      - Post-Use
+      - Concept
+      - Production
+      - Materials
+  - id: logistics_steward
+    copy: Take full Product Stewardship
+    tags:
+      - Logistics
+      - Strategy
+      - Production
+  - id: logistics_documentation
+    copy: Keep track of the sustainable actions we took through documentation
+    tags:
+      - Logistics
+      - Measurement
+      - Studio Management
+      - Production
 
 links:
   - title: Is Carbon Offsetting A Good Way To Reduce Your Environmental Impact?
