@@ -5,13 +5,13 @@ image: featured/01_discovery.png
 description:
   - Sustainability needs to be highlighted before the real work begins, to avoid having to retrofit and post-rationalise later on. Before the very first meeting, it could help to do an audit of the client’s sustainability history - the goal here is not to judge or criticise, but to give the team a realistic understanding of where their client’s business is at. Sustainability should be discussed during project kick offs (internally, and with the client). This is the time to set some targets and goals for running a sustainable project.
 actions:
-  - id: example_action
+  - id: discovery_include
     copy: Include sustainability explicitly as part of the project kick-off process
     tags:
       - Discovery
       - Client Communication
       - Goal Setting
-  - copy: "Set goals with the client: define a sustainable strategy and ensure both sides are aligned"
+  - copy: 'Set goals with the client: define a sustainable strategy and ensure both sides are aligned'
     tags:
       - Discovery
       - Communication
@@ -19,13 +19,15 @@ actions:
       - Strategy
       - Goal Setting
       - Measuring
-  - copy: Connect with potential local partners
+  - id: discovery_connect
+    copy: Connect with potential local partners
     tags:
       - Discovery
       - Communication
       - Production
       - Suppliers & Production Partners
-  - copy: Maintain an accurate listing of studio-owned equipment, materials and software
+  - id: discovery_maintain
+    copy: Maintain an accurate listing of studio-owned equipment, materials and software
     tags:
       - Discovery
       - Research
