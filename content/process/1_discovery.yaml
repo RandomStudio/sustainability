@@ -35,7 +35,7 @@ actions:
       - Materials
       - Equipment
   - id: discovery_perform
-  - copy: Perform a client asset and resource audit
+    copy: Perform a client asset and resource audit
     tags:
       - Discovery
       - Research
@@ -53,7 +53,7 @@ actions:
       - Certification
       - Measuring
   - id: discovery_stakeholders
-  - copy: Consider the effects of the project on different stakeholders
+    copy: Consider the effects of the project on different stakeholders
     tags:
       - Discovery
       - Research
@@ -62,7 +62,7 @@ actions:
       - Strategy
       - Suppliers & Production Partners
   - id: discovery_systems
-  - copy: Understand the different systems that interact with our work
+    copy: Understand the different systems that interact with our work
     tags:
       - Discovery
       - Research
