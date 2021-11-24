@@ -7,7 +7,8 @@ description:
   - Apart from very few exceptions, most of our concepts will not be about sustainability itself but instead have other primary goals, e.g. emotion, spectacle and convention-breaking designs that attract and focus attention.
   - Nonetheless, when sustainability is considered at the earliest stages it becomes possible to guide the design away from unsustainable solutions that rely on heavy power usage, non-renewable/non-reusable materials or unnecessary long distance shipping.
 actions:
-  - copy: Look for opportunities to incorporate existing materials and equipment in concepts
+  - id: design_reuse
+    copy: Look for opportunities to incorporate existing materials and equipment in concepts
     tags:
       - Design
       - Equipment
@@ -15,24 +16,14 @@ actions:
       - Studio Management
       - Team Education
       - Post-Use
-  - copy: Use modular design if it reduces the project’s footprint
+  - id: design_methods
+    copy: Explore sustainable design methods while ideating during the concept phase
     tags:
       - Design
+      - Team Education
       - Modular Design
-      - UX Design
-      - Software Design
       - Post-Use
-  - copy: Design for post-use, for example opting for reusable materials or rental
-    tags:
-      - Design
-      - Concept
-      - Post-Use
-      - Materials
-      - Production
-  - copy: Consider sustainability while ideating during the concept phase
-    tags:
-      - Design
-      - Design
+      - Studio Management
       - Ideation
       - Concept
   - copy: Use VR prototyping where possible to reduce waste
@@ -42,6 +33,39 @@ actions:
       - Prototyping
       - Equipment
       - Technology
+  - id: design_circular
+    copy: Approach the design process from a circular perspective
+    tags:
+      - Design
+      - Ideation
+      - Concept
+      - Strategy
+      - Measuring
+      - Materials
+      - Team Education
+  - id: design_agent
+    copy: Consider yourself as an agent of change in the transition to a sustainable world
+    tags:
+      - Design
+      - Concept
+      - Strategy
+      - Team Education
+  - id: design_nature
+    copy: Apply nature-based design concepts
+    tags:
+      - Design
+      - Strategy
+      - Concept
+      - Team Education
+  - id: design_service
+    copy: Consider integrating a Product Service System into the design
+    tags:
+      - Design
+      - Strategy
+      - Materials
+      - Suppliers & Production Partners
+      - Client Communication
+
 links:
   - title: In a perfect world
     description: My students’ wishes for more sustainable design practices.
