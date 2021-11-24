@@ -20,14 +20,14 @@ actions:
       - Goal Setting
       - Measuring
   - id: discovery_connect
-  - copy: Connect with potential local partners
+    copy: Connect with potential local partners
     tags:
       - Discovery
       - Communication
       - Production
       - Suppliers & Production Partners
   - id: discovery_maintain
-  - copy: Maintain an accurate listing of studio-owned equipment, materials and software
+    copy: Maintain an accurate listing of studio-owned equipment, materials and software
     tags:
       - Discovery
       - Research
