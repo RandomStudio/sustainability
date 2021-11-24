@@ -58,18 +58,27 @@
     padding-bottom: 20px;
   }
 
+  p {
+    margin-bottom: 1em;
+  }
+
   ul,
   ol,
   img {
     padding: 10px 0px 10px 0;
   }
 
+  p + ul {
+    margin-top: -0.5em;
+  }
+
   li {
-    padding-bottom: 20px;
+    margin-left: 32px;
+    padding-left: 4px;
+    padding-bottom: 0.5em;
   }
 
   a {
-    font-weight: bold;
     position: relative;
     display: inline-block;
   }
