@@ -34,6 +34,7 @@ actions:
       - Studio Management
       - Materials
       - Equipment
+  - id: discovery_perform
   - copy: Perform a client asset and resource audit
     tags:
       - Discovery
@@ -51,6 +52,23 @@ actions:
       - Strategy
       - Certification
       - Measuring
+  - id: discovery_stakeholders
+  - copy: Consider the effects of the project on different stakeholders
+    tags:
+      - Discovery
+      - Research
+      - Communication
+      - Client Communication
+      - Strategy
+      - Suppliers & Production Partners
+  - id: discovery_systems
+  - copy: Understand the different systems that interact with our work
+    tags:
+      - Discovery
+      - Research
+      - Strategy
+      - Materials
+      - Equipment
 
 links:
   - title: Waste Not
