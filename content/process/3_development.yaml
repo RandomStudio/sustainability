@@ -7,7 +7,8 @@ description:
   - "Digital computation can seem abstract and ephemeral, but it does have a real-world impact. “Virtual” realities can only exist thanks to the extraction of very real materials, mass manufacturing, global supply chains and electrical energy production. Likewise, the “cloud” is constituted through infrastructure that is very much solid."
   - "Sustainable design thinking can be applied at a systems architecture level, such as carefully considering hosting options for large scale, “always available” online roll-outs. Next in order of importance is optimising both server-side and client-side processing to conserve computing resources."
 actions:
-  - copy: Choose hosting solutions powered by renewable energy wherever possible
+  - id: development_hosting
+    copy: Choose hosting solutions powered by renewable energy wherever possible
     tags:
       - Development
       - Suppliers & Production Partners
@@ -18,18 +19,35 @@ actions:
       - Measuring
       - Software Design
       - Technology
-  - copy: Consider energy-efficient (dark) colour schemes for web design or long running installations
-    tags:
-      - Development
-      - Measuring
-      - UX Design
-      - Software Design
   - copy: Reduce remote data transfer as much as possible
     tags:
       - Development
       - Technology
       - Measuring
       - Audit / Analysis
+  - id: development_assets
+    copy: Be mindful of using (extremely) large amounts of digital assets
+    tags:
+      - Development
+      - Software Design
+  - id: development_request
+    copy: Load content by request, not by default
+    tags:
+      - Development
+  - id: development_caching
+    copy: Implement server side caching or static technology to minimise server load
+    tags:
+      - Development
+      - Technology
+  - id: development_image
+    copy: Always utilize the best possible image compression
+    tags:
+      - Development
+      - Software Design
+  - id: development_ethics
+    copy: Use ethical web services
+    tags:
+      - Development
 links:
   - title: Inspiration – The Climate Fixathon
     description: The world's first online hackathon to help fix the climate

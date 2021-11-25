@@ -7,7 +7,8 @@ description:
   - The choice of venue often determines the energy mix available onsite, and this choice is sometimes out of our control. Nonetheless, we should be proactive in investigating the energy supply situation for each site. In some cases, it may be possible to select a different venue or propose alternative energy sources. At the very least, we should be able to quantify the expected energy consumption of our project and track its costs (unit cost, and mix of renewable/non-renewable sources).
   - Once the selection of location(s) is done, we still have work to do. The choice of hardware, and how we use that hardware, can have a big impact on the energy consumption of the installation while it’s running on site.
 actions:
-  - copy: Opt for renewable electricity derived from natural sources, wherever possible
+  - id: install_renewable
+    copy: Opt for renewable electricity derived from natural sources, wherever possible
     tags:
       - Install
       - Technology
@@ -35,7 +36,8 @@ actions:
       - Equipment
       - Technology
       - Measuring
-  - copy: Align with client on balance between sustainability and the need for visual impact
+  - id: install_client
+    copy: Align with client on balance between sustainability and the need for visual impact
     tags:
       - Install
       - Client Communication
@@ -47,7 +49,8 @@ actions:
       - Install
       - Equipment
       - Technology
-  - copy: Estimate and then evaluate the energy consumption of our projects
+  - id: install_estimate
+    copy: Estimate and then evaluate the energy consumption of our projects
     tags:
       - Install
       - Measuring

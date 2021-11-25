@@ -7,7 +7,8 @@ description:
   - When building installations we should opt for materials that are made sustainably and that are appropriate for the lifecycle of the project.
   - Look for sustainable versions of go-to construction materials such as MDF and plywood. Even better, seek out innovative recycled materials, or materials made from unexpected resources, such as mycelium or surfaces made from coffee grinds. Wherever possible, keep an eye out for materials with a positive story to tell that is relevant to the project or the brand.
 actions:
-  - copy: Use higher grade, bespoke material options only for longer duration projects
+  - id: build_longer
+    copy: Use higher grade, bespoke material options only for longer duration projects
     tags:
       - Build
       - Strategy
@@ -15,7 +16,8 @@ actions:
       - Materials
       - Equipment
       - Production
-  - copy: "For temporary/short-term projects: prefer biodegradable and/or recyclable material"
+  - id: build_shorter
+    copy: "For temporary/short-term projects: prefer biodegradable and/or recyclable material"
     tags:
       - Build
       - Strategy
@@ -30,21 +32,14 @@ actions:
       - Suppliers & Production Partners
       - Post-Use
       - Production
-  - copy: Build in a modular way, so individual materials can be reused more easily
-    tags:
-      - Build
-      - Modular Design
-      - Materials
-      - Suppliers & Production Partners
-      - Post-Use
-      - Strategy
   - copy: Prefer ethically made, non-toxic materials (FSC/PEFC)
     tags:
       - Build
       - Materials
       - Post-Use
       - Certification
-  - copy: Establish a local library of sustainable materials for reference and inspiration
+  - id: build_library
+    copy: Find sustainable materials through our reference library
     tags:
       - Build
       - Materials
@@ -60,13 +55,49 @@ actions:
       - Equipment
       - Materials
       - Production
-  - copy: Seek suppliers and partners who apply sustainable practices themselves
+  - id: build_suppliers
+    copy: Seek suppliers and partners who apply sustainable practices themselves
     tags:
       - Build
       - Suppliers & Production Partners
       - Production
       - Equipment
       - Strategy
+  - id: build_context
+    copy: Consider material sustainability in the context of its application
+    tags:
+      - Build
+      - Materials
+      - Production
+      - Concept
+      - Research
+      - Strategy
+  - id: build_choices
+    copy: Check the impact of the material choices against a database
+    tags:
+      - Build
+      - Measuring
+      - Materials
+      - Production
+      - Research
+  - id: build_recycle
+    copy: Choose materials that have been recycled or used previously
+    tags:
+      - Build
+      - Post-Use
+      - Production
+      - Suppliers & Production Partners
+      - Materials
+      - Equipment
+  - id: build_volume
+    copy: Be conscious of the volume of materials used
+    tags:
+      - Build
+      - Materials
+      - Concept
+      - Measuring
+      - Production
+  
 links:
   - title: A Better Source
     description: A directory of environmentally conscious resources for planet-loving designers & businesses.

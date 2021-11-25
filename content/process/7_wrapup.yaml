@@ -13,13 +13,15 @@ actions:
       - Team Education
       - Measuring
       - Goal Setting
-  - copy: Include the topic of sustainability in the end-of-project review
+  - id: wrapup_review
+    copy: Include the topic of sustainability in the end-of-project review
     tags:
       - Wrap-up
       - Team Education
       - Measuring
       - Client Communication
-  - copy: Produce both an external and internal sustainability report
+  - id: wrapup_report
+    copy: Produce both an external and internal sustainability report
     tags:
       - Wrap-up
       - Team Education
