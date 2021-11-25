@@ -16,7 +16,7 @@
     
     Design for disasembly is making sure everything can be easily taken apart. This makes each component fit for reuse or easy recycling. With this method, pay attention to the connection mechanisms, the amount of different materials used, the way it's put together and the ease of extraction.  
     
-    **Questions to ask yourself while designing for disassembly:**
+    - **Questions to ask yourself while designing for disassembly:**
         - Are all parts completely removable? 
         - Is reusability being limited by the joint? 
         - Are the parts that need replacement most often recyclable and able to be removed without damaging the rest? 
