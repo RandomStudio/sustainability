@@ -4,16 +4,16 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export && node optimize.js",
+    "build": "next build && node optimize.js",
     "images": "node optimize.js",
     "start": "next start"
   },
   "dependencies": {
     "body-scroll-lock": "^4.0.0-beta.0",
     "lodash": "^4.17.21",
-    "next": "10.0.6",
-    "react": "17.0.1",
-    "react-dom": "17.0.1",
+    "next": "^13.4.7",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-markdown": "^6.0.2",
     "smoothscroll-polyfill": "^0.4.4"
   },
@@ -26,6 +26,6 @@
     "postcss-nested": "^5.0.3",
     "postcss-preset-env": "^6.7.0",
     "postcss-simple-vars": "^6.0.3",
-    "sharp": "^0.28.1"
+    "sharp": "^0.32.1"
   }
 }
